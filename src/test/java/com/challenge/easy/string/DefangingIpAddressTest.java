@@ -1,12 +1,13 @@
 package com.challenge.easy.string;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DefangingIpAddressTest {
 
     @Test
     public void defangIPaddrTest() {
-        // "1.1.1.1"
-        // "255.100.50.0"
+        Assert.assertEquals(DefangingIpAddress.defangIPaddr("1.1.1.1"), "1[.]1[.]1[.]1");
+        Assert.assertEquals(DefangingIpAddress.defangIPaddr("255.100.50.0"), "255[.]100[.]50[.]0");
     }
 }

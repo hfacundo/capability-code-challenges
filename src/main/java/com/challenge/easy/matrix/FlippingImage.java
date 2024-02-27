@@ -33,7 +33,7 @@ package com.challenge.easy.matrix;
  */
 public class FlippingImage {
 
-    public int[][] flipAndInvertImage(int[][] image) {
+    public static int[][] flipAndInvertImage(int[][] image) {
         return null;
     }
 
