@@ -1,5 +1,8 @@
 package com.challenge.easy.arrays;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
     # Number of Good Pairs
 
@@ -30,10 +33,27 @@ package com.challenge.easy.arrays;
 public class NumberOfGoodPairs {
 
     public static int numIdenticalPairs(int[] nums) {
-        return 0;
+        Map<Integer, Integer> map = new HashMap<>();
+        int output = 0;
+
+        for (int num: nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() >= 2) {
+                output+= getSum(entry.getValue());
+            }
+        }
+        return output;
     }
 
-    public static void main(String[] args) {
-
+    public static int getSum(int n) {
+        int sum = 0;
+        while (n > 1) {
+            n--;
+            sum+=n;
+        }
+        return sum;
     }
+
 }

@@ -20,17 +20,16 @@ public class TreeInorderTraversalTest {
         expected.add(3);
         expected.add(2);
 
-        Assert.assertEquals(expected, tree.inorderTraversal(root));
+        Assert.assertEquals(TreeInorderTraversal.inorderTraversal(root), expected);
     }
 
     @Test
     void inorderTraversalTest2() {
-        TreeInorderTraversal tree = new TreeInorderTraversal();
         TreeInorderTraversal.TreeNode root = null;
 
         List<Integer> expected = new ArrayList<>();
 
-        Assert.assertEquals(expected, tree.inorderTraversal(root));
+        Assert.assertEquals(TreeInorderTraversal.inorderTraversal(root), expected);
     }
 
     @Test
@@ -41,6 +40,6 @@ public class TreeInorderTraversalTest {
         List<Integer> expected = new ArrayList<>();
         expected.add(1);
 
-        Assert.assertEquals(expected, tree.inorderTraversal(root));
+        Assert.assertEquals(TreeInorderTraversal.inorderTraversal(root), expected);
     }
 }
