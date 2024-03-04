@@ -1,5 +1,8 @@
 package com.challenge.easy.string;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 /**
 
     # Check if the Sentence Is Pangram
@@ -25,7 +28,7 @@ package com.challenge.easy.string;
 public class CheckSentenceIsPangram {
 
     public static boolean checkIfPangram(String sentence) {
-        return false;
+        return Arrays.stream(sentence.split("")).sorted().distinct().collect(Collectors.joining()).length() == 26;
     }
 
     public static void main(String[] args) {

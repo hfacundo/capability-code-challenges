@@ -30,7 +30,7 @@ package com.challenge.easy.math;
 public class PalindromeNumber {
 
     public static boolean isPalindrome(int x) {
-        return false;
+        return String.valueOf(x).contentEquals(new StringBuilder(String.valueOf(x)).reverse());
     }
 
     public static void main(String[] args) {

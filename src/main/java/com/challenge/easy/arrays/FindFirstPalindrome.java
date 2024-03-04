@@ -1,5 +1,7 @@
 package com.challenge.easy.arrays;
 
+import java.util.Arrays;
+
 /**
      Given an array of strings words, return the first palindromic string in the array. If there is no such string, return an empty string "".
 
@@ -30,7 +32,7 @@ package com.challenge.easy.arrays;
 public class FindFirstPalindrome {
 
     public static String firstPalindrome(String[] words) {
-        return null;
+        return Arrays.stream(words).filter(s1 -> s1.contentEquals(new StringBuilder(s1).reverse())).findFirst().orElse("");
     }
 
     public static void main(String[] args) {
