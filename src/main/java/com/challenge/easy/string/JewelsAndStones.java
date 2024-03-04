@@ -1,5 +1,9 @@
 package com.challenge.easy.string;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 /**
 
      # Jewels and Stones
@@ -26,7 +30,7 @@ package com.challenge.easy.string;
 public class JewelsAndStones {
 
     public static int numJewelsInStones(String jewels, String stones) {
-        return 0;
+        return Stream.of(stones.split("")).filter(j -> Arrays.asList(jewels.split("")).contains(j)).collect(Collectors.toList()).size();
     }
 
     public static void main(String[] args) {
