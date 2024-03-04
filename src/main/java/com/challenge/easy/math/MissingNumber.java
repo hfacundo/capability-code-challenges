@@ -1,5 +1,8 @@
 package com.challenge.easy.math;
 
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 /**
     # Missing Number
 
@@ -30,7 +33,7 @@ package com.challenge.easy.math;
 public class MissingNumber {
 
     public static int missingNumber(int[] nums) {
-        return 0;
+        return IntStream.range(0, nums.length + 1).sum() - Arrays.stream(nums).sum();
     }
 
     public static void main(String[] args) {

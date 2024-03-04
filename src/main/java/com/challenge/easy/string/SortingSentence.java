@@ -1,5 +1,8 @@
 package com.challenge.easy.string;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 /**
     # Sorting the Sentence
 
@@ -32,7 +35,8 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+
+        return Arrays.stream(s.split(" ")).map(ss -> new StringBuilder(ss).reverse()).sorted().map(sb -> sb.substring(1)).map(s1 -> new StringBuilder(s1).reverse()).collect(Collectors.joining(" "));
     }
 
     public static void main(String[] args) {
