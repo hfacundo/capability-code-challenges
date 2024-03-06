@@ -1,6 +1,8 @@
 package com.challenge.easy.arrays;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
      # Find Words Containing Character.
@@ -36,7 +38,7 @@ import java.util.List;
 public class FindWordsContainingCharacter {
 
     public static List<Integer> findWordsContaining(String[] words, char x) {
-        return null;
+        return IntStream.range(0, words.length).filter(i -> words[i].indexOf(x) >= 0).boxed().collect(Collectors.toList());
     }
 
     public static void main(String[] args) {
