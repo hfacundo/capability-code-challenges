@@ -1,5 +1,7 @@
 package com.challenge.easy.matrix;
 
+import java.util.stream.IntStream;
+
 /**
     #
 
@@ -44,7 +46,9 @@ package com.challenge.easy.matrix;
 public class MatrixDiagonalSum {
 
     public static int diagonalSum(int[][] mat) {
-        return 0;
+        return IntStream.range(0, mat.length).map(i -> mat[i][i]).sum()
+                + IntStream.range(0, mat.length).map(i -> mat[i][mat.length - i - 1]).sum()
+                - IntStream.range(0, mat.length).filter(i -> i == mat.length / 2 && !(mat.length % 2 == 0)).map(i -> mat[i][i]).sum();
     }
 
     public static void main(String[] args) {
