@@ -31,10 +31,26 @@ package com.challenge.easy.binarysearch;
 public class KthMissingNumber {
 
     public static int findKthPositive(int[] arr, int k) {
-        return 0;
+        int misscount = 0;
+        int currentvalue = 0;
+        for(int valueCalculate: arr){
+            int different = valueCalculate - (currentvalue + 1);
+            if(misscount + different >= k){
+                return currentvalue + k - misscount;
+            }
+            misscount += different;
+            currentvalue = valueCalculate;
+        }
+        return arr[arr.length -1] + k - misscount;
     }
 
     public static void main(String[] args) {
+        int arry1[] = {2,3,4,7,11};
+        int k1 = 5;
+        System.out.println(findKthPositive(arry1, k1));
 
+        int arry2[] = {1,2,3,4};
+        int k2 = 2;
+        System.out.println(findKthPositive(arry2,k2));
     }
 }
