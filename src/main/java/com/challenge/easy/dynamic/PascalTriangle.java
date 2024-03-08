@@ -1,6 +1,8 @@
 package com.challenge.easy.dynamic;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 /**
     # Pascal's Triangle
@@ -33,10 +35,25 @@ import java.util.List;
 public class PascalTriangle {
 
     public static List<List<Integer>> generate(int numRows) {
-        return null;
+        List<List<Integer>> valueTriangle = new ArrayList<>();
+        IntStream.range(0,numRows).forEach(i->{
+            List<Integer> row = new ArrayList<>();
+            IntStream.range(0,i+1).forEach(j->{
+                if(j==0 || j==i){
+                    row.add(i);
+                }else{
+                    List<Integer> prevRow = valueTriangle.get(i-1);
+                    row.add(prevRow.get(j-1)+prevRow.get(j));
+                }
+            });
+
+        valueTriangle.add(row);
+        });
+        return valueTriangle;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(generate(5));
+        System.out.println(generate(1));
     }
 }
