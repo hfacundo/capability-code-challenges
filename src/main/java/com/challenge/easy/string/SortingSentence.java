@@ -1,5 +1,9 @@
 package com.challenge.easy.string;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.stream.Collectors;
+
 /**
     # Sorting the Sentence
 
@@ -32,7 +36,10 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+        return Arrays.stream(s.split(" "))
+                .sorted(Comparator.comparing(v -> v.charAt(v.length() - 1)))
+                .map(v -> v.replaceAll(".$", ""))
+                .collect(Collectors.joining(" "));
     }
 
     public static void main(String[] args) {
