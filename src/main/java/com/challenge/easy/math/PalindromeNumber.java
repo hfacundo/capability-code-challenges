@@ -1,5 +1,8 @@
 package com.challenge.easy.math;
 
+
+import java.util.ArrayList;
+
 /**
     # Palindrome Number
 
@@ -30,7 +33,24 @@ package com.challenge.easy.math;
 public class PalindromeNumber {
 
     public static boolean isPalindrome(int x) {
-        return false;
+        ArrayList<Integer> nums = new ArrayList<>();
+        boolean isPalindrome = x >= 0;
+
+        if(isPalindrome){
+            while(x > 0){
+                nums.add(x%10);
+                x/=10;
+            }
+            for (int i = 0; i < nums.size(); i++) {
+                int j = nums.size() -1 -i;
+                if(nums.get(i) != nums.get(j)){
+                    isPalindrome = false;
+                    break;
+                }
+            }
+        }
+
+        return isPalindrome;
     }
 
     public static void main(String[] args) {

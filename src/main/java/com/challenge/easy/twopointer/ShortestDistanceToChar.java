@@ -1,5 +1,7 @@
 package com.challenge.easy.twopointer;
 
+import java.util.ArrayList;
+
 /**
     # Shortest Distance To A Character
 
@@ -29,7 +31,26 @@ package com.challenge.easy.twopointer;
 public class ShortestDistanceToChar {
 
     public static int[] shortestToChar(String s, char c) {
-        return null;
+            int[] distances = new int[s.length()];
+        ArrayList<Integer> indexs = new ArrayList<>();
+        //obtener los indices
+        for (int i = 0; i < s.length(); i++)
+            if(s.charAt(i)==c){
+                indexs.add(i);
+            }
+
+        int currentIndex=0;
+        int lastAbs=distances.length;
+        //crear el nuevo arreglo
+        for (int i = 0; i < distances.length; i++) {
+            int numAbs= Math.abs(i-indexs.get(currentIndex));
+            if(currentIndex>0)
+                lastAbs =Math.abs(i-indexs.get(currentIndex-1));
+            distances[i]= Math.min(numAbs, lastAbs);
+            if(numAbs==0)
+                currentIndex++;
+        }
+        return distances;
     }
 
     public static void main(String[] args) {

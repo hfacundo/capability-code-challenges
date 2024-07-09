@@ -1,5 +1,7 @@
 package com.challenge.easy.string;
 
+import java.util.ArrayList;
+
 /**
 
     # Check if the Sentence Is Pangram
@@ -25,7 +27,13 @@ package com.challenge.easy.string;
 public class CheckSentenceIsPangram {
 
     public static boolean checkIfPangram(String sentence) {
-        return false;
+        ArrayList<Character> aux =new ArrayList<>();
+        int alphabetLength = 26;
+        for (char letter:sentence.toCharArray())
+            if(!aux.contains(letter))
+                aux.add(letter);
+
+        return aux.size()==alphabetLength;
     }
 
     public static void main(String[] args) {

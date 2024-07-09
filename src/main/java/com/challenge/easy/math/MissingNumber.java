@@ -1,5 +1,7 @@
 package com.challenge.easy.math;
 
+import java.util.Arrays;
+
 /**
     # Missing Number
 
@@ -30,7 +32,31 @@ package com.challenge.easy.math;
 public class MissingNumber {
 
     public static int missingNumber(int[] nums) {
-        return 0;
+        int missingNumber = 0;
+        //crear un arreglo con ese rango
+        int[] range = new int[nums.length+1];
+        //declarar el arreglo
+        for (int i = 0; i <=nums.length; i++)
+            range[i] = i;
+        //comparar los 2 arreglos para ver cual falta
+        Boolean isExist = false;
+        for (int i = 0; i < range.length; i++){
+            for (int j = 0; j < nums.length; j++) {
+                if(range[i] == nums[j]){
+                    isExist=true;
+                    break;
+                }
+                isExist=false;
+            }
+            if(!isExist){
+                missingNumber = i;
+                break;
+            }
+        }
+
+
+
+        return missingNumber;
     }
 
     public static void main(String[] args) {

@@ -1,5 +1,7 @@
 package com.challenge.easy.string;
 
+import java.lang.reflect.Array;
+
 /**
     # Sorting the Sentence
 
@@ -32,7 +34,23 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+        String[] words = s.split(" ");
+        String sentence = "";
+        int[] index = new int[words.length]; //[1,3,0,2]
+        //obtener indices
+        for (int i = 0; i <= words.length-1; i++){
+            index[i] = Integer.parseInt(""+words[i].charAt(words[i].length() - 1))-1;
+            words[i]=words[i].replace("" +words[i].charAt(words[i].length() - 1)," ");
+        }
+
+        //acomodar la cadena
+        for (int i = 0; i <= index.length-1; i++) {
+            //System.out.println("I: " + (i) + ",  Index: " + index[i]+", primer brinco Index: "+index[index[i]]+", segundo brinco Index: "+index[index[index[i]]]+"  : " +words[index[index[index[i]]]]);
+            sentence+=words[index[index[index[i]]]];
+        }
+
+        System.out.println("\n\n");
+        return sentence.trim();
     }
 
     public static void main(String[] args) {

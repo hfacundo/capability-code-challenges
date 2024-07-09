@@ -44,7 +44,14 @@ package com.challenge.easy.matrix;
 public class MatrixDiagonalSum {
 
     public static int diagonalSum(int[][] mat) {
-        return 0;
+        int suma = 0;
+        for (int i = 0; i <= mat.length -1; i++)
+            for (int j = 0; j <= mat[0].length - 1; j++) {
+                int k = mat[0].length - 1 - j;
+                suma+= i+j == i+k ? mat[i][j]:mat[i][j] + mat[i][k];
+                i++;
+            }
+        return suma;
     }
 
     public static void main(String[] args) {
