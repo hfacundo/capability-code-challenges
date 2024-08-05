@@ -25,7 +25,14 @@ package com.challenge.easy.string;
 public class CheckSentenceIsPangram {
 
     public static boolean checkIfPangram(String sentence) {
-        return false;
+        String pool = "abcdefghijklmnopqrstuvwxyz";
+        sentence = sentence.toLowerCase();
+        for(int i=0; i<pool.length(); i++) {
+            if(!sentence.contains(String.valueOf(pool.charAt(i)))) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {

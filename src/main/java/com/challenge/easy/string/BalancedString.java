@@ -36,7 +36,21 @@ package com.challenge.easy.string;
 public class BalancedString {
 
     public static int balancedStringSplit(String s) {
-        return 0;
+        return countSubstrings(0, 2, s);
+    }
+
+    private static int countSubstrings(int counter, int len, String pool) {
+        if(pool.length() == 0) {
+            return counter;
+        }
+        String s = pool.substring(0, len);
+        long lc = s.chars().filter(c -> c == 'L').count();
+        long rc = s.chars().filter(c -> c == 'R').count();
+        if(lc == rc) {
+            return countSubstrings(counter+1, 2, pool.substring(len));
+        } else {
+            return countSubstrings(counter, len+2, pool);
+        }
     }
 
     public static void main(String[] args) {

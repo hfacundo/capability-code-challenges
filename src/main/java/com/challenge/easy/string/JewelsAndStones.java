@@ -26,7 +26,12 @@ package com.challenge.easy.string;
 public class JewelsAndStones {
 
     public static int numJewelsInStones(String jewels, String stones) {
-        return 0;
+        int counter = 0;
+        for(int i = 0; i < jewels.length(); i++) {
+            final char ch = jewels.charAt(i);
+            counter += stones.chars().filter(c -> c == ch).count();
+        }
+        return counter;
     }
 
     public static void main(String[] args) {

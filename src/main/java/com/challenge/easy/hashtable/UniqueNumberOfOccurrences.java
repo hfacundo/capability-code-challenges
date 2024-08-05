@@ -1,5 +1,9 @@
 package com.challenge.easy.hashtable;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
     # Unique Number of Occurrences
 
@@ -26,7 +30,19 @@ package com.challenge.easy.hashtable;
 public class UniqueNumberOfOccurrences {
 
     public static boolean uniqueOccurrences(int[] arr) {
-        return false;
+        Map<Long, Integer> map = new HashMap<>();
+        for(int i=0; i<arr.length; i++) {
+            int num = arr[i];
+            if(map.containsValue(num)) {
+                continue;
+            }
+            long count = Arrays.stream(arr).filter(n -> n == num).count();
+            if(map.containsKey(count)) {
+                return false;
+            }
+            map.put(count, num);
+        }
+        return true;
     }
 
     public static void main(String[] args) {

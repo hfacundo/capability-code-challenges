@@ -25,7 +25,15 @@ package com.challenge.easy.hashtable;
 public class FirstUniqueChar {
 
     public static int firstUniqChar(String s) {
-        return 0;
+        int result = -1;
+        for(int i=0; i<s.length(); i++) {
+            final int index = i;
+            if(s.chars().filter(c -> c == s.charAt(index)).count() == 1) {
+                result = index;
+                break;
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) {

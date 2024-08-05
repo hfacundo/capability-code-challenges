@@ -1,5 +1,9 @@
 package com.challenge.easy.matrix;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 /**
     # Flipping An Image
 
@@ -34,7 +38,21 @@ package com.challenge.easy.matrix;
 public class FlippingImage {
 
     public static int[][] flipAndInvertImage(int[][] image) {
-        return null;
+        int n = image.length;
+        int[][] result = new int[n][n];
+        for(int i=0; i<n; i++) {
+            int[] row = image[i];
+            int[] newRow = new int[n];
+            for(int j=0; j<n; j++) {
+                newRow[j] = invert(row[n-1-j]);
+            }
+            result[i] = newRow;
+        }
+        return result;
+    }
+
+    private static int invert(int val) {
+        return val == 0 ? 1 : 0;
     }
 
     public static void main(String[] args) {

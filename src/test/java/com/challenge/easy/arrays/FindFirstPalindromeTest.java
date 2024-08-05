@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 @Test
 public class FindFirstPalindromeTest {
 
+    @Test
     public void firstPalindromeTest() {
         String test1 = FindFirstPalindrome.firstPalindrome(new String[] {"abc","car","ada","racecar","cool"});
         String test2 = FindFirstPalindrome.firstPalindrome(new String[] {"notapalindrome","racecar"});

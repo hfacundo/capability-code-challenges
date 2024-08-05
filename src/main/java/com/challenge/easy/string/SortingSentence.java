@@ -1,5 +1,9 @@
 package com.challenge.easy.string;
 
+import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
 /**
     # Sorting the Sentence
 
@@ -32,7 +36,20 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        String[] arr = s.split(" ") ;
+        SortedMap<Integer, String> map = new TreeMap<>();
+        for (String word : arr) {
+            int index = Integer.valueOf(word.substring(word.length()-1));
+            map.put(index, word.substring(0, word.length()-1));
+        }
+        for(String word: map.values()) {
+            if(sb.length() > 0) {
+                sb.append(" ");
+            }
+            sb.append(word);
+        }
+        return sb.toString();
     }
 
     public static void main(String[] args) {

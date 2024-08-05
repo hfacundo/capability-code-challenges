@@ -1,6 +1,8 @@
 package com.challenge.easy.dfs;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
     # Binary Tree Inorder Traversal
@@ -38,7 +40,19 @@ import java.util.List;
 public class TreeInorderTraversal {
 
     public List<Integer> inorderTraversal(TreeNode root) {
-        return null;
+        List<Integer> result = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode node = root;
+        while (node != null || stack.size() > 0) {
+            while (node != null) {
+                stack.push(node);
+                node = node.left;
+            }
+            node = stack.pop();
+            result.add(node.val);
+            node = node.right;
+        }
+        return result;
     }
 
     public static void main(String[] args) {
