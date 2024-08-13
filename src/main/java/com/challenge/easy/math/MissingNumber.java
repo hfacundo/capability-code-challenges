@@ -30,7 +30,12 @@ package com.challenge.easy.math;
 public class MissingNumber {
 
     public static int missingNumber(int[] nums) {
-        return 0;
+        int n = nums.length;
+        int ans = n;
+        for (int i = 0; i < n; ++i) {
+            ans ^= (i ^ nums[i]);
+        }
+        return ans;
     }
 
     public static void main(String[] args) {

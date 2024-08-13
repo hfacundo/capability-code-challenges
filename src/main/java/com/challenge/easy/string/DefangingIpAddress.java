@@ -23,7 +23,21 @@ package com.challenge.easy.string;
 public class DefangingIpAddress {
 
     public static String defangIPaddr(String address) {
-        return null;
+        String defangIP = "";
+
+        for(int i = 0; i < address.length(); i++)
+        {
+            char c = address.charAt(i);
+            if(c == '.')
+            {
+                defangIP += "[.]";
+            }
+            else
+            {
+                defangIP += c;
+            }
+        }
+        return defangIP;
     }
 
     public static void main(String[] args) {

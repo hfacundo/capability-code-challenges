@@ -1,5 +1,7 @@
 package com.challenge.easy.math;
 
+import java.math.BigInteger;
+
 /**
     # Palindrome Number
 
@@ -30,7 +32,11 @@ package com.challenge.easy.math;
 public class PalindromeNumber {
 
     public static boolean isPalindrome(int x) {
-        return false;
+        String originalString = Integer.toString(x);
+        BigInteger n = new BigInteger(Integer.toString(x));
+        String s = n.toString();
+        StringBuilder sb = new StringBuilder(s);
+        return sb.reverse().toString().equals(originalString);
     }
 
     public static void main(String[] args) {

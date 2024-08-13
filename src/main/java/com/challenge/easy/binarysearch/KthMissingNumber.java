@@ -1,5 +1,11 @@
 package com.challenge.easy.binarysearch;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
 /**
     # Kth Missing Positive Number
 
@@ -31,10 +37,25 @@ package com.challenge.easy.binarysearch;
 public class KthMissingNumber {
 
     public static int findKthPositive(int[] arr, int k) {
-        return 0;
+        int n = arr.length;
+        int low = 0, high = n - 1;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            int missing = arr[mid] - (mid + 1);
+            if (missing < k) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return k + high + 1;
     }
 
-    public static void main(String[] args) {
 
+
+    public static void main(String[] args) {
+        int[] arr = new int[]{2,3,4,7,11};
+
+        System.out.println(findKthPositive(arr, 5));
     }
 }
