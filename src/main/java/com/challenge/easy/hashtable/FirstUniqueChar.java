@@ -1,5 +1,7 @@
 package com.challenge.easy.hashtable;
 
+import java.util.Hashtable;
+
 /**
     # First Unique Character in a String
      Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
@@ -25,7 +27,27 @@ package com.challenge.easy.hashtable;
 public class FirstUniqueChar {
 
     public static int firstUniqChar(String s) {
-        return 0;
+        Hashtable<Character, Integer> letters = new Hashtable<>();
+        int n = 1;
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+
+            if (letters.containsKey(c)) {
+                letters.replace(c, letters.get(c)+1);
+            } else {
+                letters.put(c, n);
+            }
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (letters.get(c) == 1) {
+                return s.indexOf(c);
+            }
+        }
+
+        return -1;
     }
 
     public static void main(String[] args) {

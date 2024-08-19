@@ -1,5 +1,10 @@
 package com.challenge.easy.math;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 /**
     # Missing Number
 
@@ -30,7 +35,13 @@ package com.challenge.easy.math;
 public class MissingNumber {
 
     public static int missingNumber(int[] nums) {
-        return 0;
+        List<Integer> array = Arrays.stream(nums).boxed().sorted().collect(Collectors.toList());
+        List<Integer> missingNums = IntStream.range(0, array.size()+1).boxed().collect(Collectors.toList());
+        System.out.println(missingNums);
+
+        missingNums.removeAll(array);
+
+        return missingNums.get(0);
     }
 
     public static void main(String[] args) {

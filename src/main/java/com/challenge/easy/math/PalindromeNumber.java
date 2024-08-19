@@ -30,7 +30,14 @@ package com.challenge.easy.math;
 public class PalindromeNumber {
 
     public static boolean isPalindrome(int x) {
-        return false;
+        String number = String.valueOf(x);
+        String reversedNumber = "";
+
+        for (int i = number.length() - 1; i >= 0; i--) {
+            reversedNumber = reversedNumber + number.charAt(i);
+        }
+
+        return number.equals(reversedNumber);
     }
 
     public static void main(String[] args) {

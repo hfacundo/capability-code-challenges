@@ -1,5 +1,7 @@
 package com.challenge.easy.string;
 
+import java.util.HashMap;
+
 /**
     # Sorting the Sentence
 
@@ -32,7 +34,27 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+        HashMap<Integer, String> words = new HashMap<>();
+        String removedSpaces = s.replace(" ", "");
+        String sortedSentence = "";
+
+        int aux = 0;
+        for (int i = 0; i < removedSpaces.length(); i++) {
+            if (String.valueOf(removedSpaces.charAt(i)).matches("[1-9]")) {
+                words.put(Character.getNumericValue(removedSpaces.charAt(i)), removedSpaces.substring(aux, i));
+                aux = i+1;
+            }
+        }
+
+        for (int i = 1; i <= words.size(); i++) {
+            if (i == 1)
+                sortedSentence = sortedSentence.concat(words.get(i));
+            else
+                sortedSentence = sortedSentence.concat(" ").concat(words.get(i));
+
+        }
+
+        return sortedSentence;
     }
 
     public static void main(String[] args) {

@@ -30,7 +30,26 @@ package com.challenge.easy.arrays;
 public class FindFirstPalindrome {
 
     public static String firstPalindrome(String[] words) {
-        return null;
+        for (String word : words) {
+            String reversedWord = "";
+
+            reversedWord = reverseWord(word);
+
+            if (word.equalsIgnoreCase(reversedWord)) {
+                return word;
+            }
+        }
+
+        return "";
+    }
+
+    public static String reverseWord(String word) {
+        String reversedWord = "";
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversedWord = reversedWord + word.charAt(i);
+        }
+
+        return reversedWord;
     }
 
     public static void main(String[] args) {

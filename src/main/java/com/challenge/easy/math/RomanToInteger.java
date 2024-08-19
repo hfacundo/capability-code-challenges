@@ -47,7 +47,53 @@ package com.challenge.easy.math;
 public class RomanToInteger {
 
     public static int romanToInt(String s) {
-        return 0;
+        char[] arr = s.toCharArray();
+        int result = 0;
+
+        for (int i = arr.length-1; i >= 0; i--) {
+            if (i-1 < 0) {
+                result += convertRoman(arr[i]);
+            } else {
+                if (arr[i] == 'I') {
+                    result = result + convertRoman(arr[i]);
+                } else if (arr[i] == 'V' || arr[i] == 'X') {
+                    if (arr[i-1] == 'I') {
+                        result += convertRoman(arr[i]) - convertRoman(arr[i-1]);
+                        i--;
+                    } else {
+                        result = result + convertRoman(arr[i]);
+                    }
+                } else if (arr[i] == 'L' || arr[i] == 'C') {
+                    if (arr[i-1] == 'X') {
+                        result += convertRoman(arr[i]) - convertRoman(arr[i-1]);
+                        i--;
+                    } else {
+                        result += convertRoman(arr[i]);
+                    }
+                } else if (arr[i] == 'D' || arr[i] == 'M') {
+                    if (arr[i-1] == 'C') {
+                        result += convertRoman(arr[i]) - convertRoman(arr[i-1]);
+                        i--;
+                    } else {
+                        result += convertRoman(arr[i]);
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    public static int convertRoman(char c) {
+        return switch (c) {
+            case 'I' -> 1;
+            case 'V' -> 5;
+            case 'X' -> 10;
+            case 'L' -> 50;
+            case 'C' -> 100;
+            case 'D' -> 500;
+            case 'M' -> 1000;
+            default -> 0;
+        };
     }
 
     public static void main(String[] args) {

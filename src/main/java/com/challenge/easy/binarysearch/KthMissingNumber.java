@@ -1,5 +1,10 @@
 package com.challenge.easy.binarysearch;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 /**
     # Kth Missing Positive Number
 
@@ -31,7 +36,20 @@ package com.challenge.easy.binarysearch;
 public class KthMissingNumber {
 
     public static int findKthPositive(int[] arr, int k) {
-        return 0;
+        List<Integer> array = Arrays.stream(arr).boxed().collect(Collectors.toList());
+        List<Integer> range = IntStream.range(1, arr[arr.length-1]).boxed().collect(Collectors.toList());
+
+        range.removeAll(array);
+
+        if (range.size() >= k)
+            return range.get(k-1);
+
+        if (range.isEmpty()) {
+            return IntStream.range(array.size()+1, array.size()+k+1).boxed().collect(Collectors.toList()).get(k-1);
+        } else {
+            range.addAll(IntStream.range(range.get(range.size()-1)+1, range.size()+k-1).boxed().collect(Collectors.toList()));
+            return range.get(k-1);
+        }
     }
 
     public static void main(String[] args) {
