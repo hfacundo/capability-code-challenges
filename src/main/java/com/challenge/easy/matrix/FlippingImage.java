@@ -31,13 +31,36 @@ package com.challenge.easy.matrix;
          * 1 <= n <= 20
          * images[i][j] is either 0 or 1.
  */
+import java.util.*;
+
 public class FlippingImage {
 
     public static int[][] flipAndInvertImage(int[][] image) {
-        return null;
+    	int [][] invertedImage= new int [image.length][image.length];    	
+    	
+    	//reverse each row
+    	for(int i=0; i<image.length; i++) {
+    		for(int j=0, k=image.length-1; j<image.length && k>=0; j++, k--) {
+    			invertedImage[i][k] = image[i][j];
+    		}
+    	}
+    	
+    	//invert the image
+    	for(int i=0; i<invertedImage.length; i++) {
+    		for(int j=0; j<invertedImage.length; j++) {
+    			if(invertedImage[i][j] == 0) {
+    				invertedImage[i][j] = 1;
+    			} else {
+    				invertedImage[i][j] = 0;
+    			}
+    		
+    		}
+    	}
+    	
+        return invertedImage;
     }
 
     public static void main(String[] args) {
-
+    	//System.out.println(flipAndInvertImage(new int[][]{new int[]{1,1,0,0}, new int[]{1,0,0,1}, new int[]{0,1,1,1}, new int[]{1,0,1,0}}));
     }
 }

@@ -27,13 +27,35 @@ package com.challenge.easy.arrays;
          * 1 <= words[i].length <= 100
          * words[i] consists only of lowercase English letters.
  */
+
+import java.lang.*;
+import java.io.*; 
+
 public class FindFirstPalindrome {
 
     public static String firstPalindrome(String[] words) {
-        return null;
+    	String result = "";
+    	String temp = "";
+    
+    	for(int i=0; i<words.length; i++) {
+    		temp = words[i];
+    		boolean flag = true;
+    		
+    		for(int j=0; j<temp.length()/2; j++) {
+    			if(temp.charAt(j) != temp.charAt(temp.length()-(j+1))) {
+    				flag = false;
+    			} 
+    		}
+    		
+    		if(flag) {
+    			result = temp;
+    			break;
+    		}
+    	}
+        return result; 
     }
 
     public static void main(String[] args) {
-
+    	//firstPalindrome(new String[] {"def","ghi"});
     }
 }

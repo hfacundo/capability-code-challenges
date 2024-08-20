@@ -23,13 +23,31 @@ package com.challenge.easy.string;
          * jewels and stones consist of only English letters.
          * All the characters of jewels are unique.
  */
+
+import java.util.*;
+
 public class JewelsAndStones {
 
     public static int numJewelsInStones(String jewels, String stones) {
-        return 0;
+    	int result = 0;
+    	
+    	if(jewels.length() > 1 ) {
+    		
+    	}
+    	
+    	for(int i=0; i<jewels.length(); i++) {
+    		char jewel = jewels.charAt(i);
+    		for(int j=0; j<stones.length(); j++) {
+    			if(stones.charAt(j) == jewel) {
+    				result++;
+    			}
+    		}
+    	}
+    	
+        return result;
     }
 
     public static void main(String[] args) {
-
+    	//System.out.println(numJewelsInStones("z", "ZZ"));
     }
 }

@@ -27,13 +27,26 @@ package com.challenge.easy.math;
          * 0 <= nums[i] <= n
          * All the numbers of nums are unique.
  */
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class MissingNumber {
 
     public static int missingNumber(int[] nums) {
-        return 0;
+    	int missing = 0;
+    	List <Integer> numbers = Arrays.stream(nums).boxed().collect(Collectors.toList());
+    	    	
+    	for(int i=0; i<=numbers.size(); i++) {
+    		if(! numbers.contains(i)) {
+    			missing = i;
+    		}
+    	}
+    	
+        return missing;
     }
 
     public static void main(String[] args) {
-
+    	//System.out.println(missingNumber(new int[]{9,6,4,2,3,5,7,0,1}));
     }
 }

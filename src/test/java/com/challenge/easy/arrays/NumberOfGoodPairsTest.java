@@ -1,6 +1,7 @@
 package com.challenge.easy.arrays;
 
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import static com.challenge.easy.arrays.NumberOfGoodPairs.numIdenticalPairs;

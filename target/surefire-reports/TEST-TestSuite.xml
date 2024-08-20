@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="23" failures="0" name="TestSuite" time="0.068" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="21.0.2+13-58"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21.0.2\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\gabriela.a.chavez\Documents\code-challanges\capability-code-challenges"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="MX"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\gabriela.a.chavez\Documents\code-challanges\capability-code-challenges"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="21.0.2+13-58"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\GABRIE~1.CHA\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="classworlds.conf" value="C:\Users\gabriela.a.chavez\Documents\code-challanges\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5968990927915727126.tmp"/>
+    <property name="jansi.force" value="true"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk-21.0.2/bin/server;C:/Program Files/Java/jdk-21.0.2/bin;C:\Program Files\Java\jdk-21.0.2\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PowerShell\7\;C:\Users\gabriela.a.chavez\AppData\Local\Microsoft\WindowsApps;C:\Users\gabriela.a.chavez\AppData\Local\Programs\Git\cmd;C:\Users\gabriela.a.chavez\Documents\spring-tool-suite-3.9.18\sts-bundle\sts-3.9.18.RELEASE;;."/>
+    <property name="jansi.passthrough" value="true"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\gabriela.a.chavez"/>
+    <property name="user.timezone" value="America/Mexico_City"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="21"/>
+    <property name="user.name" value="gabriela.a.chavez"/>
+    <property name="java.class.path" value="C:\Users\gabriela.a.chavez\Documents\spring-tool-suite-3.9.18\sts-bundle\sts-3.9.18.RELEASE\plugins\org.eclipse.m2e.maven.runtime_1.18.0.20210618-2246\jars\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean install -Dstyle.color=always"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21.0.2"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="21.0.2"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\gabriela.a.chavez\Documents\code-challanges\capability-code-challenges\EMBEDDED"/>
+    <property name="style.color" value="always"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2024-01-16"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.challenge.easy.arrays.FindFirstPalindromeTest" name="firstPalindromeTest" time="0.011"/>
+  <testcase classname="com.challenge.easy.arrays.FindWordsContainingCharacterTest" name="numIdenticalPairsTest" time="0.002"/>
+  <testcase classname="com.challenge.easy.arrays.NumberOfGoodPairsTest" name="numIdenticalPairsTest" time="0.003"/>
+  <testcase classname="com.challenge.easy.binarysearch.KthMissingNumberTest" name="findKthPositiveTest" time="0.003"/>
+  <testcase classname="com.challenge.easy.dfs.TreeInorderTraversalTest" name="inorderTraversalTest1" time="0.008"/>
+  <testcase classname="com.challenge.easy.dfs.TreeInorderTraversalTest" name="inorderTraversalTest2" time="0"/>
+  <testcase classname="com.challenge.easy.dfs.TreeInorderTraversalTest" name="inorderTraversalTest3" time="0.001"/>
+  <testcase classname="com.challenge.easy.dynamic.PascalTriangleTest" name="generateTest" time="0.002"/>
+  <testcase classname="com.challenge.easy.hashtable.FirstUniqueCharTest" name="firstUniqCharTest" time="0.002"/>
+  <testcase classname="com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest" name="uniqueOccurrencesTest" time="0.002"/>
+  <testcase classname="com.challenge.easy.math.MissingNumberTest" name="missingNumberTest" time="0.003"/>
+  <testcase classname="com.challenge.easy.math.PalindromeNumberTest" name="isPalindromeTest" time="0.002"/>
+  <testcase classname="com.challenge.easy.math.RomanToIntegerTest" name="romanToIntTest" time="0.003"/>
+  <testcase classname="com.challenge.easy.matrix.FlippingImageTest" name="flipAndInvertImageTest" time="0.002"/>
+  <testcase classname="com.challenge.easy.matrix.MatrixDiagonalSumTest" name="diagonalSumTest" time="0.004"/>
+  <testcase classname="com.challenge.easy.recursion.FibonacciNumberTest" name="fib" time="0.002"/>
+  <testcase classname="com.challenge.easy.string.BalancedStringTest" name="balancedStringSplitTest" time="0.002"/>
+  <testcase classname="com.challenge.easy.string.CheckSentenceIsPangramTest" name="checkIfPangramTest" time="0.003"/>
+  <testcase classname="com.challenge.easy.string.DefangingIpAddressTest" name="defangIPaddrTest" time="0.003"/>
+  <testcase classname="com.challenge.easy.string.JewelsAndStonesTest" name="numJewelsInStonesTest" time="0.002"/>
+  <testcase classname="com.challenge.easy.string.ReverseWordsInStringIIITest" name="reverseWordsTest" time="0.002"/>
+  <testcase classname="com.challenge.easy.string.SortingSentenceTest" name="sortSentenceTest" time="0.002"/>
+  <testcase classname="com.challenge.easy.twopointer.ShortestDistanceToCharTest" name="shortestToCharTest" time="0.004"/>
+</testsuite>

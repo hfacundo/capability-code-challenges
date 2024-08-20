@@ -20,13 +20,17 @@ package com.challenge.easy.string;
         * The given address is a valid IPv4 address.
 
  */
+
+import java.util.*;
+
 public class DefangingIpAddress {
 
     public static String defangIPaddr(String address) {
-        return null;
+    	
+        return address.replace(".", "[.]");
     }
 
     public static void main(String[] args) {
-
+    	//System.out.println(defangIPaddr("1.1.1.1"));
     }
 }

@@ -29,13 +29,34 @@ package com.challenge.easy.string;
          * s contains no leading or trailing spaces.
 
  */
+import java.util.*;
+
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+    	String sorted = "";
+    	String[] splited = s.split("\\s+");
+    	String order = "";
+
+    	for(int i=0; i<splited.length; i++) {
+    		
+    		for(int j=0; j<splited.length; j++) {
+    			order = String.valueOf(i+1);
+    			if(splited[j].contains(order)) {
+        			sorted += splited[j].replace(order, "");
+        		}
+    		}
+    		
+    		if(i < splited.length-1) {
+    			sorted += " ";
+    		}
+    			
+    	}
+    	
+        return sorted;
     }
 
     public static void main(String[] args) {
-
+    	//System.out.println(sortSentence("is2 sentence4 This1 a3"));
     }
 }

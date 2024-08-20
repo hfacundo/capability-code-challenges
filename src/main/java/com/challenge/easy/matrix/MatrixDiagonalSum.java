@@ -18,17 +18,17 @@ package com.challenge.easy.matrix;
      https://assets.leetcode.com/uploads/2020/08/14/sample_1911.png
 
      Input: mat = [[1,2,3],
-     [4,5,6],
-     [7,8,9]]
+			       [4,5,6],
+			       [7,8,9]]
      Output: 25
      Explanation: Diagonals sum: 1 + 5 + 9 + 3 + 7 = 25
      Notice that element mat[1][1] = 5 is counted only once.
 
      Example 2:
          Input: mat = [[1,1,1,1],
-         [1,1,1,1],
-         [1,1,1,1],
-         [1,1,1,1]]
+			           [1,1,1,1],
+			           [1,1,1,1],
+			           [1,1,1,1]]
          Output: 8
 
      Example 3:
@@ -41,13 +41,39 @@ package com.challenge.easy.matrix;
          * 1 <= n <= 100
          * 1 <= mat[i][j] <= 100
  */
+import java.util.*;
+
 public class MatrixDiagonalSum {
 
     public static int diagonalSum(int[][] mat) {
-        return 0;
+    	int sum = 0;
+    	int medium = mat.length / 2;
+    	    	
+    	//primary diagonal
+    	for(int i=0; i<mat.length; i++) {
+    		for(int j=0; j<mat.length; j++) {
+    			if(i == j) {
+    				sum += mat[i][j];
+    			}
+    		}
+    	}
+    	
+    	//secondary diagonal
+    	for(int i=mat.length, j=0; i>0 && j<mat.length; i--, j++) {
+    		
+    		if((i-1)==medium && j==medium) {
+    			continue;
+    		}
+    		
+    		sum += mat[i-1][j];
+    		
+    	}
+    	
+    	
+        return sum;
     }
 
     public static void main(String[] args) {
-
+    	//System.out.println(diagonalSum(new int[][]{new int[]{1,1,1,1}, new int[]{1,1,1,1}, new int[]{1,1,1,1}, new int[]{1,1,1,1}}));
     }
 }

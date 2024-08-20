@@ -30,13 +30,34 @@ import java.util.List;
         * 1 <= numRows <= 30
 
  */
+import java.util.*;
+
 public class PascalTriangle {
 
     public static List<List<Integer>> generate(int numRows) {
-        return null;
+    	List<List<Integer>> triangle = new ArrayList<>();
+    	List<Integer> row = new ArrayList<Integer>();
+    	
+    	for(int i=0; i<numRows; i++) {
+    		  
+    		for (int j=0; j<=i; j++) {
+                row.add(factorial(i) / (factorial(i - j) * factorial(j)));
+            }
+    		
+    		triangle.add(new ArrayList<Integer>(row));
+    		row.clear();
+    	}
+    	
+        return triangle;
+    }
+    
+    public static int factorial(int n) {
+    	if (n == 0)
+            return 1;
+        return n * factorial(n - 1);
     }
 
     public static void main(String[] args) {
-
+    	//System.out.println(generate(5));
     }
 }

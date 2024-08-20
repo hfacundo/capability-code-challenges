@@ -26,13 +26,47 @@ package com.challenge.easy.twopointer;
          * s[i] and c are lowercase English letters.
          * It is guaranteed that c occurs at least once in s.
  */
+import java.util.*;
+
 public class ShortestDistanceToChar {
 
     public static int[] shortestToChar(String s, char c) {
-        return null;
+    	int result [] = new int [s.length()];
+    	List <Integer> charList = new ArrayList<Integer>();
+    	
+    	for(int i=0; i<s.length(); i++) {
+    		if(s.charAt(i) == c) {
+    			charList.add(i);
+    		}
+    	}
+    	    	
+    	int x = 0;
+    	int before = 0;
+    	int after = 0;
+    	int current = 0;
+    	
+    	for(int i=0; i<s.length(); i++) {
+    		if(i == charList.get(x)) {
+    			result[i] = 0;
+    			x++;
+    			continue;
+    		}
+    		
+    		if(x-1 < 0) {
+    			result[i] =charList.get(x) - i;
+    		} else {
+    			before = i - charList.get(x-1);
+    			current = charList.get(x) - i;
+        		
+        		result[i] = (current < before) ? current : before;
+    		}
+    	}
+  
+    	
+        return result;
     }
 
     public static void main(String[] args) {
-
+    	//shortestToChar("loveleetcode", 'e');
     }
 }

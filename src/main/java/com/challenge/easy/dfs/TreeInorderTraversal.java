@@ -2,6 +2,8 @@ package com.challenge.easy.dfs;
 
 import java.util.List;
 
+import com.challenge.easy.dfs.TreeInorderTraversal.TreeNode;
+
 /**
     # Binary Tree Inorder Traversal
 
@@ -35,14 +37,43 @@ import java.util.List;
 
      Follow up: Recursive solution is trivial, could you do it iteratively?
  */
+import java.util.*; 
+import java.util.Stack;
+
 public class TreeInorderTraversal {
 
     public List<Integer> inorderTraversal(TreeNode root) {
-        return null;
+    	List<Integer> order = new ArrayList<Integer>();
+    	Stack<TreeNode> nodes = new Stack<TreeNode>();
+    	TreeNode current = root;
+    	
+    	if(root == null) {
+    		return order;
+    	}
+    	
+    	while (current != null || nodes.size() > 0) {
+            while (current !=  null) {
+                nodes.push(current);
+                current = current.left;
+            }
+ 
+            current = nodes.pop();
+ 
+            order.add(current.val);
+
+            current = current.right;
+        }
+
+        return order;
     }
 
     public static void main(String[] args) {
-
+    	/*TreeInorderTraversal tree = new TreeInorderTraversal();
+        TreeInorderTraversal.TreeNode root = tree.new TreeNode(1);
+        root.right = tree.new TreeNode(2);
+        root.right.left = tree.new TreeNode(3);
+        
+        System.out.println(tree.inorderTraversal(root));*/
     }
 
     public class TreeNode {

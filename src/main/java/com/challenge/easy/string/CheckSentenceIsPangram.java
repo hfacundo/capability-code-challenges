@@ -22,13 +22,29 @@ package com.challenge.easy.string;
          * 1 <= sentence.length <= 1000
          * sentence consists of lowercase English letters.
  */
+
+import java.util.*;
+
 public class CheckSentenceIsPangram {
 
     public static boolean checkIfPangram(String sentence) {
-        return false;
+    	boolean result = false;
+    	Set <String> alphabet = new HashSet<String>();
+    	
+    	for(int i=0; i<sentence.length(); i++) {
+    		
+    		alphabet.add(String.valueOf(sentence.charAt(i)));
+    		
+    		if(alphabet.size() == 26) {
+    			result = true;
+    			break;
+    		}
+    	}
+    	
+        return result;
     }
 
     public static void main(String[] args) {
-
+    	
     }
 }

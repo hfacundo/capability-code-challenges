@@ -44,13 +44,80 @@ package com.challenge.easy.math;
          * s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
          * It is guaranteed that s is a valid roman numeral in the range [1, 3999].
  */
+import java.util.*;
+
 public class RomanToInteger {
 
     public static int romanToInt(String s) {
-        return 0;
+    	int num = 0;
+    	char c = ' ';
+    	char next = ' ';
+
+    	for(int i=0; i<s.length(); i++) {
+    		c = s.charAt(i);
+    		
+    		if(i<s.length()-1) {
+    			next = s.charAt(i+1);
+    		}
+    		
+    		switch(c) {
+    			case 'I':
+					if(next == 'V') {
+						num += 4;
+						i++;
+					} else if(next == 'X') {
+						num += 9;
+						i++;
+					} else {
+						num++;
+					}
+    				
+    				
+    				break;
+    			case 'V':
+    				num += 5;
+    				break;
+    			case 'X':
+					if(next == 'L') {
+						num += 40;
+						i++;
+					} else if(next == 'C') {
+						num += 90;
+						i++;
+					} else {
+						num+= 10;
+					}
+    				break;
+    			case 'L':
+    				num += 50;
+    				break;
+    			case 'C':	
+					if(next == 'D') {
+						num += 400;
+						i++;
+					} else if(next == 'M') {
+						num += 900;
+						i++;
+					} else {
+						num+= 100;
+					}
+    				break;
+    			case 'D':
+    				num += 500;
+    				break;
+    			case 'M':
+    				num += 1000;
+    				break;
+    			default:
+    				break;
+    		
+    		}
+    	}
+    	
+        return num;
     }
 
     public static void main(String[] args) {
-
+    	//System.out.println(romanToInt("MCMXCIV"));
     }
 }

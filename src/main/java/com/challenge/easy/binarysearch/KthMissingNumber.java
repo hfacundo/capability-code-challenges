@@ -28,13 +28,33 @@ package com.challenge.easy.binarysearch;
 
      Could you solve this problem in less than O(n) complexity?
  */
+
+import java.util.*;
+
 public class KthMissingNumber {
 
     public static int findKthPositive(int[] arr, int k) {
-        return 0;
+    	List<Integer> numbers = new ArrayList<Integer>();
+    	List<Integer> missingNumbers = new ArrayList<Integer>();
+    	int x = arr[arr.length -  1];
+    	int result = 0;
+    	    	
+    	for(int i=0; i<arr.length; i++) {
+    		numbers.add(arr[i]);
+    	}
+    	
+    	for(int i=1; i<=x+k; i++) {
+    		if(!numbers.contains(i)) {
+    			missingNumbers.add(i);
+    		}
+    	}
+    	
+    	result = missingNumbers.get(k-1);
+    	
+        return result;
     }
 
     public static void main(String[] args) {
-
+    	
     }
 }

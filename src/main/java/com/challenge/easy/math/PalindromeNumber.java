@@ -27,13 +27,24 @@ package com.challenge.easy.math;
 
      Follow up: Could you solve it without converting the integer to a string?
  */
+import java.util.*;
+
 public class PalindromeNumber {
 
     public static boolean isPalindrome(int x) {
-        return false;
+    	boolean result = true;
+    	String number = String.valueOf(x);
+    	
+    	for(int i=0; i<number.length()/2; i++) {
+			if(number.charAt(i) != number.charAt(number.length()-(i+1))) {
+				result = false;
+			} 
+		}
+    	    	
+        return result;
     }
 
     public static void main(String[] args) {
-
+    	//System.out.println(isPalindrome(10));
     }
 }

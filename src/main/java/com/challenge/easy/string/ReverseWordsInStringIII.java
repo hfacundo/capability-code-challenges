@@ -22,13 +22,29 @@ package com.challenge.easy.string;
          * All the words in s are separated by a single space.
 
  */
+
+import java.util.*;
+import java.lang.Object;
+import java.lang.StringBuilder;
+
 public class ReverseWordsInStringIII {
 
     public static String reverseWords(String s) {
-        return null;
+    	String reverse = "";    	
+    	String[] splited = s.split("\\s+");
+    	    	
+    	for(int i=0; i<splited.length; i++) {
+    		reverse += new StringBuilder(splited[i]).reverse().toString();
+    		
+    		if(i < splited.length-1) {
+    			reverse += " ";
+    		}
+    	}
+    	
+        return reverse;
     }
 
     public static void main(String[] args) {
-
+    	//System.out.println(reverseWords("Let's take LeetCode contest"));
     }
 }

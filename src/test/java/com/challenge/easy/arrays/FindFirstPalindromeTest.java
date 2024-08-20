@@ -2,6 +2,8 @@ package com.challenge.easy.arrays;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.annotations.Ignore;
+
 
 @Test
 public class FindFirstPalindromeTest {

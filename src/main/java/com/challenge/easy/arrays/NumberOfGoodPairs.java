@@ -27,13 +27,44 @@ package com.challenge.easy.arrays;
         * 1 <= nums[i] <= 100
 
  */
+
+import java.util.*;
+
 public class NumberOfGoodPairs {
 
     public static int numIdenticalPairs(int[] nums) {
-        return 0;
+    	int result = 0;
+    	
+    	Map<Integer, Integer> list = new HashMap<Integer, Integer>();
+    	
+    	for(int i=0; i<nums.length; i++) {
+    		if(!list.containsKey(nums[i])) {
+    			list.put(nums[i], 1);
+    		} else {
+    			list.put(nums[i], list.get(nums[i])+1);
+    		} 		
+    	}
+    	
+    	for (Map.Entry<Integer, Integer> entry : list.entrySet()) {
+    		if(entry.getValue() > 1) {
+    			result += getCombinations(entry.getValue());
+    		}
+    	}
+    	
+        return result ;
+    }
+    
+    public static int getCombinations(int value) {
+    	int result = 0;
+    
+    	for(int i=1; i<value; i++) {
+    		result += value - i;
+    	}
+    	
+    	return result;
     }
 
     public static void main(String[] args) {
-
+    	
     }
 }

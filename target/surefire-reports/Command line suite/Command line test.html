@@ -1,0 +1,195 @@
+<html>
+<head>
+<title>TestNG:  Command line test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Command line test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>23/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Aug 16 14:10:44 CST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (140 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.challenge.easy.math.MissingNumberTest.missingNumberTest()'><b>missingNumberTest</b><br>Test class: com.challenge.easy.math.MissingNumberTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.math.MissingNumberTest@429bd883</td></tr>
+<tr>
+<td title='com.challenge.easy.math.RomanToIntegerTest.romanToIntTest()'><b>romanToIntTest</b><br>Test class: com.challenge.easy.math.RomanToIntegerTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.math.RomanToIntegerTest@279ad2e3</td></tr>
+<tr>
+<td title='com.challenge.easy.string.ReverseWordsInStringIIITest.reverseWordsTest()'><b>reverseWordsTest</b><br>Test class: com.challenge.easy.string.ReverseWordsInStringIIITest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.string.ReverseWordsInStringIIITest@226a82c4</td></tr>
+<tr>
+<td title='com.challenge.easy.binarysearch.KthMissingNumberTest.findKthPositiveTest()'><b>findKthPositiveTest</b><br>Test class: com.challenge.easy.binarysearch.KthMissingNumberTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.binarysearch.KthMissingNumberTest@4d339552</td></tr>
+<tr>
+<td title='com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest.uniqueOccurrencesTest()'><b>uniqueOccurrencesTest</b><br>Test class: com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest@345965f2</td></tr>
+<tr>
+<td title='com.challenge.easy.hashtable.FirstUniqueCharTest.firstUniqCharTest()'><b>firstUniqCharTest</b><br>Test class: com.challenge.easy.hashtable.FirstUniqueCharTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.hashtable.FirstUniqueCharTest@6591f517</td></tr>
+<tr>
+<td title='com.challenge.easy.arrays.NumberOfGoodPairsTest.numIdenticalPairsTest()'><b>numIdenticalPairsTest</b><br>Test class: com.challenge.easy.arrays.NumberOfGoodPairsTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.arrays.NumberOfGoodPairsTest@3f200884</td></tr>
+<tr>
+<td title='com.challenge.easy.dynamic.PascalTriangleTest.generateTest()'><b>generateTest</b><br>Test class: com.challenge.easy.dynamic.PascalTriangleTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.dynamic.PascalTriangleTest@5a4aa2f2</td></tr>
+<tr>
+<td title='com.challenge.easy.math.PalindromeNumberTest.isPalindromeTest()'><b>isPalindromeTest</b><br>Test class: com.challenge.easy.math.PalindromeNumberTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.math.PalindromeNumberTest@4d49af10</td></tr>
+<tr>
+<td title='com.challenge.easy.string.DefangingIpAddressTest.defangIPaddrTest()'><b>defangIPaddrTest</b><br>Test class: com.challenge.easy.string.DefangingIpAddressTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.string.DefangingIpAddressTest@35fc6dc4</td></tr>
+<tr>
+<td title='com.challenge.easy.dfs.TreeInorderTraversalTest.inorderTraversalTest3()'><b>inorderTraversalTest3</b><br>Test class: com.challenge.easy.dfs.TreeInorderTraversalTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.dfs.TreeInorderTraversalTest@f0f2775</td></tr>
+<tr>
+<td title='com.challenge.easy.dfs.TreeInorderTraversalTest.inorderTraversalTest2()'><b>inorderTraversalTest2</b><br>Test class: com.challenge.easy.dfs.TreeInorderTraversalTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.dfs.TreeInorderTraversalTest@f0f2775</td></tr>
+<tr>
+<td title='com.challenge.easy.twopointer.ShortestDistanceToCharTest.shortestToCharTest()'><b>shortestToCharTest</b><br>Test class: com.challenge.easy.twopointer.ShortestDistanceToCharTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.twopointer.ShortestDistanceToCharTest@255b53dc</td></tr>
+<tr>
+<td title='com.challenge.easy.matrix.MatrixDiagonalSumTest.diagonalSumTest()'><b>diagonalSumTest</b><br>Test class: com.challenge.easy.matrix.MatrixDiagonalSumTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.matrix.MatrixDiagonalSumTest@4450d156</td></tr>
+<tr>
+<td title='com.challenge.easy.string.SortingSentenceTest.sortSentenceTest()'><b>sortSentenceTest</b><br>Test class: com.challenge.easy.string.SortingSentenceTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.string.SortingSentenceTest@731f8236</td></tr>
+<tr>
+<td title='com.challenge.easy.string.JewelsAndStonesTest.numJewelsInStonesTest()'><b>numJewelsInStonesTest</b><br>Test class: com.challenge.easy.string.JewelsAndStonesTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.string.JewelsAndStonesTest@7fe8ea47</td></tr>
+<tr>
+<td title='com.challenge.easy.string.BalancedStringTest.balancedStringSplitTest()'><b>balancedStringSplitTest</b><br>Test class: com.challenge.easy.string.BalancedStringTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.string.BalancedStringTest@351d0846</td></tr>
+<tr>
+<td title='com.challenge.easy.dfs.TreeInorderTraversalTest.inorderTraversalTest1()'><b>inorderTraversalTest1</b><br>Test class: com.challenge.easy.dfs.TreeInorderTraversalTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.dfs.TreeInorderTraversalTest@f0f2775</td></tr>
+<tr>
+<td title='com.challenge.easy.arrays.FindWordsContainingCharacterTest.numIdenticalPairsTest()'><b>numIdenticalPairsTest</b><br>Test class: com.challenge.easy.arrays.FindWordsContainingCharacterTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.arrays.FindWordsContainingCharacterTest@69b794e2</td></tr>
+<tr>
+<td title='com.challenge.easy.matrix.FlippingImageTest.flipAndInvertImageTest()'><b>flipAndInvertImageTest</b><br>Test class: com.challenge.easy.matrix.FlippingImageTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.matrix.FlippingImageTest@58134517</td></tr>
+<tr>
+<td title='com.challenge.easy.arrays.FindFirstPalindromeTest.firstPalindromeTest()'><b>firstPalindromeTest</b><br>Test class: com.challenge.easy.arrays.FindFirstPalindromeTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.arrays.FindFirstPalindromeTest@709ba3fb</td></tr>
+<tr>
+<td title='com.challenge.easy.recursion.FibonacciNumberTest.fib()'><b>fib</b><br>Test class: com.challenge.easy.recursion.FibonacciNumberTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.recursion.FibonacciNumberTest@4461c7e3</td></tr>
+<tr>
+<td title='com.challenge.easy.string.CheckSentenceIsPangramTest.checkIfPangramTest()'><b>checkIfPangramTest</b><br>Test class: com.challenge.easy.string.CheckSentenceIsPangramTest</td>
+<td></td>
+<td>0</td>
+<td>com.challenge.easy.string.CheckSentenceIsPangramTest@77e4c80f</td></tr>
+</table><p>
+</body>
+</html>
