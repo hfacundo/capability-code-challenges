@@ -1,5 +1,4 @@
 package com.challenge.easy.string;
-
 /**
     # Sorting the Sentence
 
@@ -32,7 +31,16 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+        String[] words = s.split(" ");
+        String[] sortedWords = new String[words.length];
+
+        for (String word : words) {
+            int index = Character.getNumericValue(word.charAt(word.length() - 1)) - 1;
+
+            sortedWords[index] = word.substring(0, word.length() - 1);
+        }
+
+        return String.join(" ",sortedWords);
     }
 
     public static void main(String[] args) {

@@ -18,6 +18,9 @@ package com.challenge.easy.matrix;
          Explanation: First reverse each row: [[0,1,1],[1,0,1],[0,0,0]].
          Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]
 
+    Example 1 :     | 1  1  0 |                | 0  1  1 |                 | 1  0  0 |
+        proof :  A =| 1  0  1 |   flip(A) =    | 1  0  1 |   inverted(A) = | 0  1  0 |
+                    | 0  0  0 |                | 0  0  0 |                 | 1  1  1 |
      Example 2:
          Input: image = [[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]
          Output: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
@@ -33,8 +36,29 @@ package com.challenge.easy.matrix;
  */
 public class FlippingImage {
 
-    public static int[][] flipAndInvertImage(int[][] image) {
-        return null;
+    public static int[][] flipAndInvertImage(int[][] matrix) {
+        int[][] flipped = flipMatrix(matrix);
+        for(int i = 0 ; i < flipped.length; i++){
+            for (int j = 0; j < flipped[i].length; j++){
+                if (flipped[i][j] == 0){
+                    flipped[i][j] = 1;
+                } else if (flipped[i][j] == 1) {
+                    flipped[i][j] = 0;
+                }
+            }
+        }
+        return flipped;
+    }
+    public static int[][] flipMatrix(int[][] A) {
+        int n = A.length; 
+        int[][] flip = new int[n][n];
+        for (int i = 0; i < A.length; i++){
+            for(int j= 0 ; j < A[i].length;j++){
+                flip[i][A.length - 1 - j] = A[i][j];
+            }
+        }
+
+        return flip;
     }
 
     public static void main(String[] args) {

@@ -15,7 +15,7 @@ package com.challenge.easy.arrays;
     Example 2:
         Input: nums = [1,1,1,1]
         Output: 6
-        Explanation: Each pair in the array are good.
+        Explanation: Each pair in the array are good. (0,1) ,(0,2), (0,3), (1,2), (1,3), (2,3)
 
     Example 3:
         Input: nums = [1,2,3]
@@ -30,7 +30,23 @@ package com.challenge.easy.arrays;
 public class NumberOfGoodPairs {
 
     public static int numIdenticalPairs(int[] nums) {
-        return 0;
+        int result = 0 ;
+        if (1 <= nums.length && nums.length <= 100){
+            result = getPairs(nums);
+        } 
+        return result;
+    }
+
+    public static int getPairs(int[] list ) {
+        int count = 0;
+        for(int i = 0 ; i < list.length ; i++) {
+            for( int j = i + 1 ; i < j && j < list.length; j++) {
+                if ((list[i] == list[j]) && (list[i] <=100 && 1 <= list[i])){
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     public static void main(String[] args) {

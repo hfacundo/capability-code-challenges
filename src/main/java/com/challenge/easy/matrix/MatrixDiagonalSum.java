@@ -25,10 +25,10 @@ package com.challenge.easy.matrix;
      Notice that element mat[1][1] = 5 is counted only once.
 
      Example 2:
-         Input: mat = [[1,1,1,1],
-         [1,1,1,1],
-         [1,1,1,1],
-         [1,1,1,1]]
+         Input: mat = [ [1,1,1,1],
+                        [1,1,1,1],
+                        [1,1,1,1],
+                        [1,1,1,1]]
          Output: 8
 
      Example 3:
@@ -43,8 +43,21 @@ package com.challenge.easy.matrix;
  */
 public class MatrixDiagonalSum {
 
-    public static int diagonalSum(int[][] mat) {
-        return 0;
+    public static int diagonalSum(int[][] matrix) {
+        int n = matrix.length;
+        int principalSum = 0;
+        int secondarySum = 0;
+
+        for (int i = 0; i < n; i++) {
+            principalSum += matrix[i][i];
+            secondarySum += matrix[i][n - 1 - i];
+        }
+        if (n % 2 == 1) {
+            int centerIndex = n / 2;
+            secondarySum -= matrix[centerIndex][centerIndex];
+        }
+
+        return principalSum + secondarySum;
     }
 
     public static void main(String[] args) {

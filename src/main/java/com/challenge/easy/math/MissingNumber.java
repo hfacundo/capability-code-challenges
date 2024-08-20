@@ -30,7 +30,15 @@ package com.challenge.easy.math;
 public class MissingNumber {
 
     public static int missingNumber(int[] nums) {
-        return 0;
+        int n = nums.length;
+        int expectedSum = n * (n + 1) / 2;
+        int realSum = 0;
+
+        for (int num: nums) {
+            realSum += num;
+        }
+
+        return expectedSum - realSum;
     }
 
     public static void main(String[] args) {

@@ -1,5 +1,6 @@
 package com.challenge.easy.math;
-
+import java.util.HashMap;
+import java.util.Map;
 /**
     # Roman to Integer
 
@@ -47,7 +48,39 @@ package com.challenge.easy.math;
 public class RomanToInteger {
 
     public static int romanToInt(String s) {
+        if (1 <= s.length() && s.length() <= 15) {
+            return decodeRomanNumbers(s);
+        }
         return 0;
+    }
+
+    public static int decodeRomanNumbers(String str) {
+        int total = 0 ;
+        int prevValue = 0 ;
+        Map <Character,Integer> romanValues = getRomanNumbers();
+        for (int i = str.length() - 1 ; i >= 0 ; i--){
+            char currentChar = Character.toUpperCase(str.charAt(i));
+            int currentValue = romanValues.get(currentChar);
+            if ( currentValue < prevValue ){
+                total -= currentValue;
+            }else{
+                total += currentValue;   
+            }
+            prevValue = currentValue;
+        }
+        return total;
+    }
+
+    public static Map<Character, Integer> getRomanNumbers() {
+        Map <Character,Integer> romanValues = new HashMap<>();
+        romanValues.put('I',1);
+        romanValues.put('V',5);
+        romanValues.put('X',10);
+        romanValues.put('L',50);
+        romanValues.put('C',100);
+        romanValues.put('D',500);
+        romanValues.put('M',1000);
+        return romanValues;
     }
 
     public static void main(String[] args) {

@@ -1,5 +1,6 @@
 package com.challenge.easy.arrays;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -36,7 +37,33 @@ import java.util.List;
 public class FindWordsContainingCharacter {
 
     public static List<Integer> findWordsContaining(String[] words, char x) {
-        return null;
+         List<Integer> output = new ArrayList<>();
+        // Constraint 1 <= words.length <= 50 
+        if ( 1 <= words.length && words.length <= 50 ) {
+            for (int i = 0 ; i < words.length; i++) {
+                if (itContainsIndexLetter(words[i], x)) {
+                    output.add(i);
+                }
+            }
+        }
+        return output;
+    }
+
+    public static Boolean itContainsIndexLetter(String str, char c) {
+        int letterFound = 0;
+        // Constraint 1 <= words[i].length <= 50
+        if(1 <= str.length() && str.length() <= 50) {
+            for (int i = 0 ;i < str.length() ;i++){
+                // Constraint  words[i] consists only of lowercase English letters
+                if (Character.toLowerCase(str.charAt(i)) == c) {
+                    letterFound++;
+                }
+            }
+            if(letterFound >= 1) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static void main(String[] args) {

@@ -1,5 +1,5 @@
 package com.challenge.easy.string;
-
+import java.util.regex.Pattern;
 /**
     # Defanging an IP Address
 
@@ -23,9 +23,20 @@ package com.challenge.easy.string;
 public class DefangingIpAddress {
 
     public static String defangIPaddr(String address) {
+        if (isValidIPv4(address)) {
+            return  address.replace(".", "[.]");
+        }
         return null;
     }
+    public static boolean isValidIPv4(String ipAddress) {
+        String ipv4Pattern = "^(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\\."
+                            + "(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\\."
+                            + "(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\\."
+                            + "(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])$";
+        Pattern pattern = Pattern.compile(ipv4Pattern);
 
+        return pattern.matcher(ipAddress).matches();
+    }
     public static void main(String[] args) {
 
     }

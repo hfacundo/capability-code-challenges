@@ -1,5 +1,6 @@
 package com.challenge.easy.dynamic;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -33,7 +34,32 @@ import java.util.List;
 public class PascalTriangle {
 
     public static List<List<Integer>> generate(int numRows) {
-        return null;
+        if (1 <= numRows && numRows <= 30){
+            return generateTriangle(numRows); 
+        }
+        return null; 
+    }
+
+    public static List<List<Integer>> generateTriangle(int rows){
+        
+        List<List<Integer>> list = new ArrayList<>();
+
+        for (int n = 0; n < rows; n++) {
+            List<Integer> row = new ArrayList<>();
+            row.add(1);
+            if (n > 0) {
+                // Usamos la relación de recurrencia T[n][k] = T[n-1][k-1] + T[n-1][k]
+                List<Integer> previousRow = list.get(n - 1);
+                for (int k = 1; k < n; k++) {
+                    row.add(previousRow.get(k - 1) + previousRow.get(k));
+                }
+            }
+            if (n > 0) {
+                row.add(1); 
+            }
+            list.add(row); 
+        }
+        return list;
     }
 
     public static void main(String[] args) {

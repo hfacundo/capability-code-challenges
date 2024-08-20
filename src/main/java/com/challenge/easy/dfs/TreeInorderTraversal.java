@@ -1,5 +1,5 @@
 package com.challenge.easy.dfs;
-
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -38,9 +38,20 @@ import java.util.List;
 public class TreeInorderTraversal {
 
     public List<Integer> inorderTraversal(TreeNode root) {
-        return null;
+        return inOrderRoute(root);
     }
-
+    public List<Integer> inOrderRoute (TreeNode node ) {
+        List<Integer> expectedValues = new ArrayList<>();
+        if(node != null) {
+            //Recorrer el subárbol izquierdo y agregar los resultados
+           expectedValues.addAll(inOrderRoute(node.left));
+           // Añadir el valor del nodo actual
+           expectedValues.add(node.val);
+           // Recorrer el subárbol derecho y agregar los resultados
+           expectedValues.addAll(inOrderRoute(node.right));
+        }
+        return expectedValues;
+    }
     public static void main(String[] args) {
 
     }
