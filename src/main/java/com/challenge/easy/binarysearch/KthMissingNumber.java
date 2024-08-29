@@ -31,10 +31,22 @@ package com.challenge.easy.binarysearch;
 public class KthMissingNumber {
 
     public static int findKthPositive(int[] arr, int k) {
-        return 0;
+    	
+    	int start = 0;
+    	int end = arr.length -1;
+    	while (start <= end) {
+    		int mid = (start + end) / 2;
+    		if((arr[mid] - mid - 1) < k) { 
+    			start = mid + 1;		 
+    		}else {
+    			end = mid-1;
+    		}
+    	}
+    	    	
+        return start + k;
     }
 
     public static void main(String[] args) {
-
+    	System.out.println(findKthPositive(new int[] {2,3,4,7,11}, 5));
     }
 }

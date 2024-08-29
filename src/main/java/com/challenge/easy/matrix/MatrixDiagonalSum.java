@@ -26,9 +26,9 @@ package com.challenge.easy.matrix;
 
      Example 2:
          Input: mat = [[1,1,1,1],
-         [1,1,1,1],
-         [1,1,1,1],
-         [1,1,1,1]]
+			           [1,1,1,1],
+			           [1,1,1,1],
+			           [1,1,1,1]]
          Output: 8
 
      Example 3:
@@ -44,10 +44,20 @@ package com.challenge.easy.matrix;
 public class MatrixDiagonalSum {
 
     public static int diagonalSum(int[][] mat) {
-        return 0;
+        
+    	int sum = 0;
+    	for(int i = 0; i< mat.length; i++) {
+    		 int j = mat[0].length - 1 - i;
+    		 sum+=mat[i][i] + mat[i][j];
+    		 if(i == j) {
+    			 sum-=mat[i][j];
+    		 }
+    	}
+    	
+    	return sum;
     }
 
     public static void main(String[] args) {
-
+    	System.out.println(diagonalSum(new int[][]{new int[]{5}}));
     }
 }

@@ -30,10 +30,16 @@ package com.challenge.easy.math;
 public class MissingNumber {
 
     public static int missingNumber(int[] nums) {
-        return 0;
+    	
+    	int sum = (nums.length * (nums.length+1)) / 2;
+
+    	for (int num : nums) {
+    		sum-=num;    		
+    	}
+        return sum;
     }
 
     public static void main(String[] args) {
-
+    	System.out.println(missingNumber(new int[] {9,6,4,2,3,8,7,0,1,10}));
     }
 }

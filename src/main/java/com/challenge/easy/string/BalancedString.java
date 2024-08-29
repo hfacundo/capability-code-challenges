@@ -1,5 +1,8 @@
 package com.challenge.easy.string;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
     # Split a String in Balanced Strings
 
@@ -36,10 +39,43 @@ package com.challenge.easy.string;
 public class BalancedString {
 
     public static int balancedStringSplit(String s) {
-        return 0;
+    	
+    	/*
+    	Less lines - equal quantity of characters 
+    	int res= 0;
+    	int count = 0;
+    	for(int i =0; i< s.length();i++) {
+    		count += s.charAt(i) == 'R' ? 1 : -1;
+    		if(count == 0) res++;
+    	}
+    	return res;
+    	*/
+    	
+    	//Adding substring to list and count items
+    	List<String> list = new ArrayList<>();
+    	int countR = 0;
+    	int countL = 0;
+    	String substring = "";
+    	for(int i = 0; i< s.length();i++) {    		
+    		if(s.charAt(i) == 'R') {
+    			countR++;
+    		}else {
+    			countL++;
+    		}    		
+    		
+    		substring+= s.charAt(i);
+
+    		if(countR == countL) {
+    			list.add(substring);
+    			substring = "";
+    			countR = 0;
+    	    	countL = 0;
+    		}
+    	}
+        return list.size();
     }
 
     public static void main(String[] args) {
-
+    	System.out.println(balancedStringSplit("RLRRRLLRLL"));
     }
 }

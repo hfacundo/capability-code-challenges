@@ -22,11 +22,30 @@ package com.challenge.easy.string;
  */
 public class DefangingIpAddress {
 
-    public static String defangIPaddr(String address) {
-        return null;
+    public static String defangIPaddr(String address) {    
+    	    	
+    	StringBuilder sb = new StringBuilder();    	
+    	for(int i = 0; i< address.length(); i++) {
+    		sb.append(address.charAt(i) != '.' ? address.charAt(i) : "[.]");
+    	}
+    	
+    	return sb.toString();
+    	
+    	//Split and join
+    	/*
+    	String[] ip = address.split("\\.");
+    	StringJoiner sj = new StringJoiner("[.]");
+    	for(String part : ip) {
+    		sj.add(part);
+    	}    	
+    	System.out.println(sj.toString());
+    	*/
+        
+    	//Replace
+    	//return address.replace(".", "[.]");
     }
 
     public static void main(String[] args) {
-
+    	System.out.println(defangIPaddr("1.1.1.1"));
     }
 }

@@ -1,5 +1,6 @@
 package com.challenge.easy.arrays;
 
+
 /**
      Given an array of strings words, return the first palindromic string in the array. If there is no such string, return an empty string "".
 
@@ -30,10 +31,25 @@ package com.challenge.easy.arrays;
 public class FindFirstPalindrome {
 
     public static String firstPalindrome(String[] words) {
-        return null;
+    	
+    	//Less lines
+    	/*for(String word : words) {    		 
+    		 if (!word.isBlank() && word.equals(new StringBuilder(word).reverse().toString())) return word;
+    	}*/
+    	
+    	for(String word : words) {
+    		if(word.isBlank()) continue;
+    		for(int i = 0; i< word.length(); i++) {
+    			if(word.charAt(i) != word.charAt(word.length() - (i+1))) break;
+    			if((i+1) == word.length()) return word;
+    		}
+    	}
+    	
+        return "";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {    	
+    	System.out.println(firstPalindrome(new String[] {"abc","car"," ", "","ada","racecar","cool"}));
 
     }
 }

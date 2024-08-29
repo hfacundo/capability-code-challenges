@@ -1,5 +1,7 @@
 package com.challenge.easy.dynamic;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -33,10 +35,31 @@ import java.util.List;
 public class PascalTriangle {
 
     public static List<List<Integer>> generate(int numRows) {
-        return null;
+        
+    	List<List<Integer>> output = new ArrayList<>();
+    	output.add(Arrays.asList(1));
+    	
+    	for(int i = 1; i < numRows; i++) { 
+    		
+    		List<Integer> innerList = new ArrayList<>();    		
+    		innerList.add(1);
+
+    		List<Integer> numbers = output.get(i-1); 
+    		
+    		for(int j = 1; j<i; j++) { 
+    			innerList.add(numbers.get(j-1) + numbers.get(j));
+    		}
+    		
+    		innerList.add(1);
+    		output.add(innerList);
+
+    	}
+    	
+    	return output;
     }
 
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+    	System.out.println(Arrays.toString(generate(6).toArray()));
     }
 }
