@@ -36,7 +36,25 @@ package com.challenge.easy.string;
 public class BalancedString {
 
     public static int balancedStringSplit(String s) {
-        return 0;
+
+        int countBalance= 0;
+        int countWords= 0;
+
+        for (int i= 0; i < s.length(); i++) {
+            if(s.charAt(i) == 'L'){
+                countBalance++;
+            }
+            else{
+                countBalance--;
+            }
+
+            if(countBalance == 0){
+                countWords++;
+            }
+
+        }
+
+        return countWords;
     }
 
     public static void main(String[] args) {

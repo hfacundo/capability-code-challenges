@@ -23,10 +23,10 @@ package com.challenge.easy.string;
 public class DefangingIpAddress {
 
     public static String defangIPaddr(String address) {
-        return null;
+       return address.replaceAll("\\.", "[.]");
     }
 
     public static void main(String[] args) {
-
+        System.out.println(DefangingIpAddress.defangIPaddr("1.1.1.1"));
     }
 }

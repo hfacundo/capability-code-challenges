@@ -1,5 +1,7 @@
 package com.challenge.easy.string;
 
+import java.util.TreeMap;
+
 /**
     # Sorting the Sentence
 
@@ -32,10 +34,24 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+        String [] words= s.split(" ");
+        TreeMap<Integer, String> mapSorted = new TreeMap<>();
+        for(String word: words) {
+            mapSorted.put((int)word.charAt(word.length() -1 ),word.substring(0,word.length()-1));
+        }
+        StringBuilder sb = new StringBuilder();
+        int i=0;
+        for(String word: mapSorted.values()) {
+            sb.append(word);
+            if(i != mapSorted.size()-1) {
+                sb.append(" ");
+            }
+            i++;
+        }
+        return sb.toString();
     }
 
     public static void main(String[] args) {
-
+        SortingSentence.sortSentence("is2 sentence4 This1 a3");
     }
 }

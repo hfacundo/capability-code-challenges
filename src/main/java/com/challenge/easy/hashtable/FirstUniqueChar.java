@@ -25,10 +25,20 @@ package com.challenge.easy.hashtable;
 public class FirstUniqueChar {
 
     public static int firstUniqChar(String s) {
-        return 0;
+        StringBuilder cloneAux = new StringBuilder(s);
+        while(!s.isEmpty()) {
+            char c = s.charAt(0);
+            if(s.length() > 1 && s.substring(1).indexOf(c) != -1 ){
+                s= s.replaceAll(String.valueOf(c), "");
+            }
+            else{
+                return cloneAux.indexOf(c + "");
+            }
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(FirstUniqueChar.firstUniqChar("aabb"));
     }
 }

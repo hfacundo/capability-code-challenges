@@ -47,10 +47,47 @@ package com.challenge.easy.math;
 public class RomanToInteger {
 
     public static int romanToInt(String s) {
-        return 0;
+
+        int acum = 0;
+        int digit = 0;
+        for(int i = 0; i< s.length(); i++){
+            digit = switch (s.charAt(i)) {
+                case 'M' -> {
+                    acum = (digit == 4) ? acum + 800 : acum + 1000;
+                    yield 6;
+                }
+                case 'D' -> {
+                    acum = (digit == 4) ? acum + 300 : acum + 500;
+                    yield 5;
+                }
+                case 'C' -> {
+                    acum = (digit == 2) ? acum + 80 : acum + 100;
+                    yield 4;
+                }
+                case 'L' -> {
+                    acum = (digit == 2) ? acum + 30 : acum + 50;
+                    yield 3;
+                }
+                case 'X' -> {
+                    acum = (digit == 0) ? acum + 8 : acum + 10;
+                    yield 2;
+                }
+                case 'V' -> {
+                    acum = (digit == 0) ? acum + 3 : acum + 5;
+                    yield 1;
+                }
+                case 'I' -> {
+                    acum += 1;
+                    yield 0;
+                }
+                default -> digit;
+            };
+        }
+
+        return acum;
     }
 
     public static void main(String[] args) {
-
+        RomanToInteger.romanToInt("LVIII");
     }
 }

@@ -31,10 +31,23 @@ package com.challenge.easy.recursion;
 public class FibonacciNumber {
 
     public static int fib(int n) {
-        return 0;
+
+        if(n == 0){
+            return 0;
+        }
+        int next =0;
+        int current=1;
+        int previous= 0;
+      for(int i=1;i<n;i++){
+          next = current + previous;
+          previous = current;
+          current = next;
+      }
+
+        return current;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(FibonacciNumber.fib(7));
     }
 }
