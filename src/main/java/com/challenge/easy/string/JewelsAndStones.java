@@ -26,10 +26,17 @@ package com.challenge.easy.string;
 public class JewelsAndStones {
 
     public static int numJewelsInStones(String jewels, String stones) {
-        return 0;
+        int numJewels = 0;
+        for (char c : stones.toCharArray()) {
+            if (jewels.indexOf(c) != -1) {
+                numJewels++;
+            }
+        }
+        return numJewels;
     }
 
     public static void main(String[] args) {
-
+        /*System.out.println(numJewelsInStones("aA", "aAAbbbb"));
+        System.out.println(numJewelsInStones("z", "ZZ"));*/
     }
 }

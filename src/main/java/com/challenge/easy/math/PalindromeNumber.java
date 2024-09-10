@@ -30,10 +30,17 @@ package com.challenge.easy.math;
 public class PalindromeNumber {
 
     public static boolean isPalindrome(int x) {
-        return false;
+        int original = x;
+        int reversed = 0;
+        while (x > 0) {
+            int last = x % 10;
+            reversed = reversed * 10 + last;
+            x = x / 10;
+        }
+        return (original == reversed);
     }
 
     public static void main(String[] args) {
-
+        //System.out.println(isPalindrome(121));
     }
 }

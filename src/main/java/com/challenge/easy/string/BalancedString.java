@@ -36,10 +36,25 @@ package com.challenge.easy.string;
 public class BalancedString {
 
     public static int balancedStringSplit(String s) {
-        return 0;
+        int balancedSub = 0;
+        int start = 0;
+        for (int i = 1; i < s.length(); i++) {
+            int rs = 0;
+            int ls = 0;
+            for (char c : s.substring(start, (i+1)).toCharArray()) {
+                if (c == 'R') rs++;
+                else if (c == 'L') ls++;
+                if (rs == ls) {
+                    balancedSub++;
+                    start = i + 1;
+                    i++;
+                }
+            }
+        }
+        return balancedSub;
     }
 
     public static void main(String[] args) {
-
+        //System.out.println(balancedStringSplit("RLRRRLLRLL"));
     }
 }

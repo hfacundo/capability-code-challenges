@@ -31,7 +31,17 @@ package com.challenge.easy.binarysearch;
 public class KthMissingNumber {
 
     public static int findKthPositive(int[] arr, int k) {
-        return 0;
+        int left = 0;
+        int rigth = arr.length - 1;
+        while (left <= rigth) {
+            int med = left + (rigth - left) / 2;
+            int miss = arr[med] - med - 1;
+            if (miss < k)
+                left = med + 1;
+            else
+                rigth = med -1;
+        }
+        return left + k;
     }
 
     public static void main(String[] args) {

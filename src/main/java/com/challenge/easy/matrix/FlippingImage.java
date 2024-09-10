@@ -34,10 +34,27 @@ package com.challenge.easy.matrix;
 public class FlippingImage {
 
     public static int[][] flipAndInvertImage(int[][] image) {
-        return null;
+        for (int i = 0; i < image.length; i++) {
+            int start = 0;
+            int end = image[i].length - 1;
+            //flip
+            while (start <= end) {
+                //revert
+                int temp = (image[i][start] == 1) ? 0 : 1;
+                image[i][start] = (image[i][end] == 1) ? 0 : 1;
+                image[i][end] = temp;
+                start++;
+                end--;
+            }
+        }
+        return image;
     }
 
     public static void main(String[] args) {
-
+        /*System.out.println(Arrays.deepToString(new int[][]{new int[]{1,1,0}, new int[]{1,0,1}, new int[]{0,0,0}}));
+        System.out.println(Arrays.deepToString(flipAndInvertImage(new int[][]{new int[]{1,1,0}, new int[]{1,0,1}, new int[]{0,0,0}})));
+        System.out.println();
+        System.out.println(Arrays.deepToString(new int[][]{new int[]{1,1,0,0}, new int[]{1,0,0,1}, new int[]{0,1,1,1}, new int[]{1,0,1,0}}));
+        System.out.println(Arrays.deepToString(flipAndInvertImage(new int[][]{new int[]{1,1,0,0}, new int[]{1,0,0,1}, new int[]{0,1,1,1}, new int[]{1,0,1,0}})));*/
     }
 }

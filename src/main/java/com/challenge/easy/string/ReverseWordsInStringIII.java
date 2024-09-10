@@ -25,10 +25,18 @@ package com.challenge.easy.string;
 public class ReverseWordsInStringIII {
 
     public static String reverseWords(String s) {
-        return null;
+        String solution = "";
+        String[] words = s.split(" ");
+        for (int i = 0; i < words.length; i++) {
+            String reversed = new StringBuilder(words[i]).reverse().toString();
+            if (i < words.length -1 )
+                reversed += " ";
+            solution += reversed;
+        }
+        return solution;
     }
 
     public static void main(String[] args) {
-
+        //System.out.println(reverseWords("Let's take LeetCode contest"));
     }
 }

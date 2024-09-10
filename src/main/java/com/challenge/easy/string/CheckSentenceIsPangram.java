@@ -1,5 +1,8 @@
 package com.challenge.easy.string;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
 
     # Check if the Sentence Is Pangram
@@ -25,10 +28,16 @@ package com.challenge.easy.string;
 public class CheckSentenceIsPangram {
 
     public static boolean checkIfPangram(String sentence) {
-        return false;
+        int englishLetters = 26;
+        Set<Character> chars = new HashSet<>();
+        for (char c : sentence.toCharArray()) {
+            chars.add(c);
+        }
+        return (chars.size() == englishLetters);
     }
 
     public static void main(String[] args) {
-
+        /*System.out.println(checkIfPangram("leetcode"));
+        System.out.println(checkIfPangram("thequickbrownfoxjumpsoverthelazydog"));*/
     }
 }

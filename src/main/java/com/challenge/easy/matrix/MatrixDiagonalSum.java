@@ -18,17 +18,17 @@ package com.challenge.easy.matrix;
      https://assets.leetcode.com/uploads/2020/08/14/sample_1911.png
 
      Input: mat = [[1,2,3],
-     [4,5,6],
-     [7,8,9]]
+                   [4,5,6],
+                   [7,8,9]]
      Output: 25
      Explanation: Diagonals sum: 1 + 5 + 9 + 3 + 7 = 25
      Notice that element mat[1][1] = 5 is counted only once.
 
      Example 2:
          Input: mat = [[1,1,1,1],
-         [1,1,1,1],
-         [1,1,1,1],
-         [1,1,1,1]]
+                       [1,1,1,1],
+                       [1,1,1,1],
+                       [1,1,1,1]]
          Output: 8
 
      Example 3:
@@ -44,10 +44,18 @@ package com.challenge.easy.matrix;
 public class MatrixDiagonalSum {
 
     public static int diagonalSum(int[][] mat) {
-        return 0;
+        int sum = 0;
+        for (int i = 0; i < mat.length; i++) {
+            if ((mat.length - i - 1) != i) {
+                sum += mat[i][i] + mat[i][mat.length - i - 1];
+            } else {
+                sum += mat[i][i];
+            }
+        }
+        return sum;
     }
 
     public static void main(String[] args) {
-
+        //System.out.println(diagonalSum(new int[][]{new int[]{1, 2, 3}, new int[]{4, 5, 6}, new int[]{7, 8, 9}}));
     }
 }
