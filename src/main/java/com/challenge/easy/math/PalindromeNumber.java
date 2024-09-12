@@ -30,10 +30,24 @@ package com.challenge.easy.math;
 public class PalindromeNumber {
 
     public static boolean isPalindrome(int x) {
-        return false;
+    	Boolean resultado = null;
+    	if (x < 100 || x > 999) {
+    		resultado = false;
+		}else {
+			Integer div = x/100;
+	    	Integer resuduo = x%100; 
+	    	Integer resuduo2 = resuduo%10;
+	    	if (div == resuduo2) {
+	    		resultado = true;
+			}else {
+				resultado = false;
+			}
+		}
+        return resultado;
     }
 
     public static void main(String[] args) {
 
+    	
     }
 }

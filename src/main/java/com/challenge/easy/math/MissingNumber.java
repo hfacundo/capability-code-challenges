@@ -1,5 +1,8 @@
 package com.challenge.easy.math;
 
+
+import java.util.TreeSet;
+
 /**
     # Missing Number
 
@@ -13,7 +16,8 @@ package com.challenge.easy.math;
      Example 2:
          Input: nums = [0,1]
          Output: 2
-         Explanation: n = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.
+         Explanation: n = 2 since there are 2 numbers, so all numbers are in the range [0,2].
+          2 is the missing number in the range since it does not appear in nums.
 
      Example 3:
          Input: nums = [9,6,4,2,3,5,7,0,1]
@@ -30,10 +34,43 @@ package com.challenge.easy.math;
 public class MissingNumber {
 
     public static int missingNumber(int[] nums) {
-        return 0;
+//       	int nums[] = {0,1};
+    	TreeSet<Integer> lista = new TreeSet<Integer>();
+    	for (Integer number : nums) {
+			lista.add(number);
+		}
+    	Integer pivote1 = 0;
+    	Integer pivote2 = 0;
+    	Integer index = 0;
+    	Integer resultado = null;
+    	
+    	for (Integer integer : lista) {
+			if (index >= 1 && index <= lista.size()) {
+			
+				pivote2 =integer;
+//				System.out.println("Piv1::"+pivote1);
+//				System.out.println("Piv2::"+pivote2);
+				if (pivote1+1 != pivote2) {
+					resultado = pivote1+1;
+			    }
+				pivote1 = integer;
+				
+			}else {
+				pivote1 = integer;
+//				System.out.println("Piv1::"+pivote1);
+			}
+//    		
+    		index++;
+		}
+    	if (resultado == null) {
+			 resultado =  lista.getLast() + 1;
+		}
+    	return resultado;
     }
 
     public static void main(String[] args) {
-
+ 
+    	
+    	
     }
 }

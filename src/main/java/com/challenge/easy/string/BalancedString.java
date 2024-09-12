@@ -1,5 +1,9 @@
 package com.challenge.easy.string;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 /**
     # Split a String in Balanced Strings
 
@@ -36,7 +40,32 @@ package com.challenge.easy.string;
 public class BalancedString {
 
     public static int balancedStringSplit(String s) {
-        return 0;
+//		String  s = "LLLLRRRR";
+		
+		String strFinal = "";
+		
+		List<String> listaStr = new ArrayList<String>();
+		
+		HashMap<String,Integer> lista = new HashMap<String, Integer>();
+		lista.put("R", 0);
+		
+		lista.put("L", 0);
+		
+		String[] arrayStr=s.split("");
+		for (String string : arrayStr) {
+			lista.put(string,lista.get(string)+1);
+			strFinal+=string;
+//			System.out.println(string);
+			if (lista.get("R") == lista.get("L")) {
+//				System.out.println("STR Final:: "+strFinal);
+				listaStr.add(strFinal);
+				strFinal = "";
+			    lista.put("R", 0);
+				lista.put("L", 0);
+			}
+		}
+		
+		return listaStr.size();
     }
 
     public static void main(String[] args) {

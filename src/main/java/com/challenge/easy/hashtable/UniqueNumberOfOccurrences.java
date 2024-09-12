@@ -1,5 +1,10 @@
 package com.challenge.easy.hashtable;
 
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+
 /**
     # Unique Number of Occurrences
 
@@ -26,7 +31,28 @@ package com.challenge.easy.hashtable;
 public class UniqueNumberOfOccurrences {
 
     public static boolean uniqueOccurrences(int[] arr) {
-        return false;
+    	Boolean result = true;
+//    	int arr[] =  {-3,0,1,-3,1,1,1,-3,10,0};
+    	Map<Integer, Integer> lista = new LinkedHashMap<Integer, Integer>();
+    	Set<Integer> noDuplicates = new HashSet<Integer>();
+    	for (int number : arr) {
+    		if (!lista.containsKey(number)) {
+    			lista.put(number, 0);	
+			}else {
+				lista.put(number, lista.get(number)+1);
+			}	
+		}
+    	for (Map.Entry<Integer, Integer> entry : lista.entrySet()) {
+//    		Integer key = entry.getKey();
+    		Integer val = entry.getValue();
+    		if(!noDuplicates.add(val)) {
+    			result = false;
+    			break;
+    		}
+		}
+    	return result;
+//    	System.out.println("El resultado es:: "+result);
+//    	System.out.println(lista.toString());
     }
 
     public static void main(String[] args) {

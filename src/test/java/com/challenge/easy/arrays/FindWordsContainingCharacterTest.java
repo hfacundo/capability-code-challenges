@@ -20,5 +20,6 @@ public class FindWordsContainingCharacterTest {
         Assert.assertEquals(test2.get(0), 0);
         Assert.assertEquals(test2.get(1), 2);
         Assert.assertTrue(test3.isEmpty());
+       
     }
 }

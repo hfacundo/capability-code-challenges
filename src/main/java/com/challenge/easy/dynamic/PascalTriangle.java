@@ -37,6 +37,9 @@ public class PascalTriangle {
     }
 
     public static void main(String[] args) {
-
+    	int numRows = 5;
+    	for (int i = 0; i < numRows; i++) {
+			System.out.println(i);
+		}
     }
 }

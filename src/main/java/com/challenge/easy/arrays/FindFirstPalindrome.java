@@ -30,7 +30,39 @@ package com.challenge.easy.arrays;
 public class FindFirstPalindrome {
 
     public static String firstPalindrome(String[] words) {
-        return null;
+    	
+    	for (String palindromo : words) {
+    		
+    		   String[] arrayString = palindromo.split("");
+    	          
+    	       Integer resuduo = arrayString.length % 2;
+    	       
+    	       Integer mitad = arrayString.length / 2;
+    	       
+    	       //Revisar si es par o inpar
+    	       Integer esInPar = (resuduo != 0) ? 1:0; 
+    	       
+    	       StringBuilder strBuilder = new StringBuilder();
+    	     
+    	       String mitad1 = palindromo.substring(0, mitad);
+    	       String mitad2 = palindromo.substring(mitad+esInPar, arrayString.length);
+    	       strBuilder.append(mitad2);
+    	       String mitad2Reverso = strBuilder.reverse().toString();
+//    		   System.out.println("Mitad 1 "+mitad1);
+//    		   System.out.println("Mitad 2 "+mitad2);
+    		   
+//    		   System.out.println("Mitad 2 reverse "+mitad2Reverso);
+    	       
+    	       if (mitad1.equalsIgnoreCase(mitad2Reverso)) {
+    	    	   return palindromo;
+//    	    	   System.out.println(palindromo);
+//    	    	   System.out.println("Es un palindromo");
+    	       }else {
+//    	    	   System.out.println("No es un palindromo");
+    	       }
+			
+		}
+        return "";
     }
 
     public static void main(String[] args) {

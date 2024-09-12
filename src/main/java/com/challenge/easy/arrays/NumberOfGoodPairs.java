@@ -1,5 +1,7 @@
 package com.challenge.easy.arrays;
 
+import java.util.Iterator;
+
 /**
     # Number of Good Pairs
 
@@ -30,7 +32,15 @@ package com.challenge.easy.arrays;
 public class NumberOfGoodPairs {
 
     public static int numIdenticalPairs(int[] nums) {
-        return 0;
+    	int counter = 0;
+    	for (int i = 0; i < nums.length; i++) {
+    		for (int j = 0; j < nums.length; j++) {
+				if (nums[i] == nums[j] && i < j ) {
+					counter++;
+				}
+			}
+		}
+        return counter;
     }
 
     public static void main(String[] args) {

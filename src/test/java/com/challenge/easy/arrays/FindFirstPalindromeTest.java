@@ -15,3 +15,5 @@ public class FindFirstPalindromeTest {
         Assert.assertEquals(test3, "");
     }
 }
+
+

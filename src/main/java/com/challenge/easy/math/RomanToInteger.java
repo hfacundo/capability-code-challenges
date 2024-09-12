@@ -1,5 +1,9 @@
 package com.challenge.easy.math;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 /**
     # Roman to Integer
 
@@ -34,7 +38,7 @@ package com.challenge.easy.math;
          Explanation: L = 50, V= 5, III = 3.
 
      Example 3:
-         Input: s = "MCMXCIV"
+         Input: s = "M CM XC IV"
          Output: 1994
          Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
@@ -47,7 +51,35 @@ package com.challenge.easy.math;
 public class RomanToInteger {
 
     public static int romanToInt(String s) {
-        return 0;
+//    	String s = "MCMXCIV";
+    	String arr[] = s.split("");
+    	LinkedHashMap<String,Integer> dict = new LinkedHashMap<String,Integer>();
+    	dict.put("M", 1000);
+    	dict.put("D", 500);
+    	dict.put("C", 100);
+    	dict.put("L", 50);
+    	dict.put("X", 10);
+    	dict.put("V", 5);
+    	dict.put("I",1);
+    	Integer total = 0;
+    	Integer pivote1 = 0;
+    	Integer pivote2 = 0;
+    	for (int i = 0; i < arr.length; i++) {
+    		if (i >= 1) {
+    			pivote1 = dict.get(arr[i-1]);
+				pivote2 = dict.get(arr[i]);
+				if (pivote2 <= pivote1) {
+					total += dict.get(arr[i]);	
+				}else {
+					total -= pivote1;
+					total += pivote2 - pivote1;
+				}
+			}else {
+				total += dict.get(arr[i]);	
+			}
+		}
+    
+    	return total;
     }
 
     public static void main(String[] args) {
