@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
+              <span class="suite-name border-passed">Surefire suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Surefire_suite" class="navigator-link ">
+                    <span>[unset file name]</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Surefire_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Surefire_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Surefire_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Surefire_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Surefire_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Surefire_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">21 methods,   21 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Surefire_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.string.BalancedStringTest" class="method navigator-link" hash-for-method="balancedStringSplitTest">balancedStringSplitTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.string.CheckSentenceIsPangramTest" class="method navigator-link" hash-for-method="checkIfPangramTest">checkIfPangramTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.string.DefangingIpAddressTest" class="method navigator-link" hash-for-method="defangIPaddrTest">defangIPaddrTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.matrix.MatrixDiagonalSumTest" class="method navigator-link" hash-for-method="diagonalSumTest">diagonalSumTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.recursion.FibonacciNumberTest" class="method navigator-link" hash-for-method="fib">fib</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.binarysearch.KthMissingNumberTest" class="method navigator-link" hash-for-method="findKthPositiveTest">findKthPositiveTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.arrays.FindFirstPalindromeTest" class="method navigator-link" hash-for-method="firstPalindromeTest">firstPalindromeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.hashtable.FirstUniqueCharTest" class="method navigator-link" hash-for-method="firstUniqCharTest">firstUniqCharTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.matrix.FlippingImageTest" class="method navigator-link" hash-for-method="flipAndInvertImageTest">flipAndInvertImageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.dynamic.PascalTriangleTest" class="method navigator-link" hash-for-method="generateTest">generateTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.dfs.TreeInorderTraversalTest" class="method navigator-link" hash-for-method="inorderTraversalTest1">inorderTraversalTest1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.dfs.TreeInorderTraversalTest" class="method navigator-link" hash-for-method="inorderTraversalTest2">inorderTraversalTest2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.dfs.TreeInorderTraversalTest" class="method navigator-link" hash-for-method="inorderTraversalTest3">inorderTraversalTest3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.math.PalindromeNumberTest" class="method navigator-link" hash-for-method="isPalindromeTest">isPalindromeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.math.MissingNumberTest" class="method navigator-link" hash-for-method="missingNumberTest">missingNumberTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.arrays.NumberOfGoodPairsTest" class="method navigator-link" hash-for-method="numIdenticalPairsTest">numIdenticalPairsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.arrays.FindWordsContainingCharacterTest" class="method navigator-link" hash-for-method="numIdenticalPairsTest">numIdenticalPairsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.string.JewelsAndStonesTest" class="method navigator-link" hash-for-method="numJewelsInStonesTest">numJewelsInStonesTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.string.ReverseWordsInStringIIITest" class="method navigator-link" hash-for-method="reverseWordsTest">reverseWordsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.math.RomanToIntegerTest" class="method navigator-link" hash-for-method="romanToIntTest">romanToIntTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest" class="method navigator-link" hash-for-method="uniqueOccurrencesTest">uniqueOccurrencesTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.math.MissingNumberTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="missingNumberTest">
+                  </a> <!-- missingNumberTest -->
+                  <span class="method-name">missingNumberTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.dfs.TreeInorderTraversalTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="inorderTraversalTest1">
+                  </a> <!-- inorderTraversalTest1 -->
+                  <span class="method-name">inorderTraversalTest1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="inorderTraversalTest2">
+                  </a> <!-- inorderTraversalTest2 -->
+                  <span class="method-name">inorderTraversalTest2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="inorderTraversalTest3">
+                  </a> <!-- inorderTraversalTest3 -->
+                  <span class="method-name">inorderTraversalTest3</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.string.JewelsAndStonesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="numJewelsInStonesTest">
+                  </a> <!-- numJewelsInStonesTest -->
+                  <span class="method-name">numJewelsInStonesTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.arrays.FindWordsContainingCharacterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="numIdenticalPairsTest">
+                  </a> <!-- numIdenticalPairsTest -->
+                  <span class="method-name">numIdenticalPairsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.matrix.FlippingImageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="flipAndInvertImageTest">
+                  </a> <!-- flipAndInvertImageTest -->
+                  <span class="method-name">flipAndInvertImageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.arrays.NumberOfGoodPairsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="numIdenticalPairsTest">
+                  </a> <!-- numIdenticalPairsTest -->
+                  <span class="method-name">numIdenticalPairsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.string.DefangingIpAddressTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="defangIPaddrTest">
+                  </a> <!-- defangIPaddrTest -->
+                  <span class="method-name">defangIPaddrTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.math.RomanToIntegerTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="romanToIntTest">
+                  </a> <!-- romanToIntTest -->
+                  <span class="method-name">romanToIntTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.string.CheckSentenceIsPangramTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkIfPangramTest">
+                  </a> <!-- checkIfPangramTest -->
+                  <span class="method-name">checkIfPangramTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.hashtable.FirstUniqueCharTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="firstUniqCharTest">
+                  </a> <!-- firstUniqCharTest -->
+                  <span class="method-name">firstUniqCharTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.matrix.MatrixDiagonalSumTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="diagonalSumTest">
+                  </a> <!-- diagonalSumTest -->
+                  <span class="method-name">diagonalSumTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.binarysearch.KthMissingNumberTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="findKthPositiveTest">
+                  </a> <!-- findKthPositiveTest -->
+                  <span class="method-name">findKthPositiveTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.arrays.FindFirstPalindromeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="firstPalindromeTest">
+                  </a> <!-- firstPalindromeTest -->
+                  <span class="method-name">firstPalindromeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.recursion.FibonacciNumberTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="fib">
+                  </a> <!-- fib -->
+                  <span class="method-name">fib</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.string.ReverseWordsInStringIIITest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="reverseWordsTest">
+                  </a> <!-- reverseWordsTest -->
+                  <span class="method-name">reverseWordsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="uniqueOccurrencesTest">
+                  </a> <!-- uniqueOccurrencesTest -->
+                  <span class="method-name">uniqueOccurrencesTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.dynamic.PascalTriangleTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="generateTest">
+                  </a> <!-- generateTest -->
+                  <span class="method-name">generateTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.math.PalindromeNumberTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="isPalindromeTest">
+                  </a> <!-- isPalindromeTest -->
+                  <span class="method-name">isPalindromeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.challenge.easy.string.BalancedStringTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="balancedStringSplitTest">
+                  </a> <!-- balancedStringSplitTest -->
+                  <span class="method-name">balancedStringSplitTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+        </div> <!-- panel Surefire_suite -->
+        <div panel-name="test-xml-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.challenge.easy.arrays.FindFirstPalindromeTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.arrays.FindWordsContainingCharacterTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.arrays.NumberOfGoodPairsTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.binarysearch.KthMissingNumberTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.dfs.TreeInorderTraversalTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.dynamic.PascalTriangleTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.hashtable.FirstUniqueCharTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.math.MissingNumberTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.math.PalindromeNumberTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.math.RomanToIntegerTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.matrix.FlippingImageTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.matrix.MatrixDiagonalSumTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.recursion.FibonacciNumberTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.string.BalancedStringTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.string.CheckSentenceIsPangramTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.string.DefangingIpAddressTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.string.JewelsAndStonesTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.string.ReverseWordsInStringIIITest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.string.SortingSentenceTest&quot;/&gt;
+      &lt;class name=&quot;com.challenge.easy.twopointer.ShortestDistanceToCharTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Surefire test --&gt;
+&lt;/suite&gt; &lt;!-- Surefire suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Surefire test (21 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Surefire_suite');
+function tableData_Surefire_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(21);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'firstPalindromeTest')
+data.setCell(0, 2, 'com.challenge.easy.arrays.FindFirstPalindromeTest')
+data.setCell(0, 3, 26);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'inorderTraversalTest1')
+data.setCell(1, 2, 'com.challenge.easy.dfs.TreeInorderTraversalTest')
+data.setCell(1, 3, 7);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'numJewelsInStonesTest')
+data.setCell(2, 2, 'com.challenge.easy.string.JewelsAndStonesTest')
+data.setCell(2, 3, 4);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'checkIfPangramTest')
+data.setCell(3, 2, 'com.challenge.easy.string.CheckSentenceIsPangramTest')
+data.setCell(3, 3, 3);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'missingNumberTest')
+data.setCell(4, 2, 'com.challenge.easy.math.MissingNumberTest')
+data.setCell(4, 3, 3);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'findKthPositiveTest')
+data.setCell(5, 2, 'com.challenge.easy.binarysearch.KthMissingNumberTest')
+data.setCell(5, 3, 2);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'balancedStringSplitTest')
+data.setCell(6, 2, 'com.challenge.easy.string.BalancedStringTest')
+data.setCell(6, 3, 2);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'generateTest')
+data.setCell(7, 2, 'com.challenge.easy.dynamic.PascalTriangleTest')
+data.setCell(7, 3, 2);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'numIdenticalPairsTest')
+data.setCell(8, 2, 'com.challenge.easy.arrays.NumberOfGoodPairsTest')
+data.setCell(8, 3, 2);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'flipAndInvertImageTest')
+data.setCell(9, 2, 'com.challenge.easy.matrix.FlippingImageTest')
+data.setCell(9, 3, 2);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'numIdenticalPairsTest')
+data.setCell(10, 2, 'com.challenge.easy.arrays.FindWordsContainingCharacterTest')
+data.setCell(10, 3, 2);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'defangIPaddrTest')
+data.setCell(11, 2, 'com.challenge.easy.string.DefangingIpAddressTest')
+data.setCell(11, 3, 2);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'reverseWordsTest')
+data.setCell(12, 2, 'com.challenge.easy.string.ReverseWordsInStringIIITest')
+data.setCell(12, 3, 2);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'diagonalSumTest')
+data.setCell(13, 2, 'com.challenge.easy.matrix.MatrixDiagonalSumTest')
+data.setCell(13, 3, 1);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'firstUniqCharTest')
+data.setCell(14, 2, 'com.challenge.easy.hashtable.FirstUniqueCharTest')
+data.setCell(14, 3, 1);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'isPalindromeTest')
+data.setCell(15, 2, 'com.challenge.easy.math.PalindromeNumberTest')
+data.setCell(15, 3, 1);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'fib')
+data.setCell(16, 2, 'com.challenge.easy.recursion.FibonacciNumberTest')
+data.setCell(16, 3, 1);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'uniqueOccurrencesTest')
+data.setCell(17, 2, 'com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest')
+data.setCell(17, 3, 1);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'inorderTraversalTest2')
+data.setCell(18, 2, 'com.challenge.easy.dfs.TreeInorderTraversalTest')
+data.setCell(18, 3, 1);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'romanToIntTest')
+data.setCell(19, 2, 'com.challenge.easy.math.RomanToIntegerTest')
+data.setCell(19, 3, 1);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'inorderTraversalTest3')
+data.setCell(20, 2, 'com.challenge.easy.dfs.TreeInorderTraversalTest')
+data.setCell(20, 3, 0);
+window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 66 ms</span>
+              <div id="times-div-Surefire_suite">
+              </div> <!-- times-div-Surefire_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Surefire suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">2 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.challenge.easy.twopointer.ShortestDistanceToCharTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">shortestToCharTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.challenge.easy.string.SortingSentenceTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">sortSentenceTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Surefire_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.arrays.FindFirstPalindromeTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">firstPalindromeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.arrays.FindWordsContainingCharacterTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">numIdenticalPairsTest</span>
+                <span class="method-start">34 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.arrays.NumberOfGoodPairsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">numIdenticalPairsTest</span>
+                <span class="method-start">37 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.binarysearch.KthMissingNumberTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">findKthPositiveTest</span>
+                <span class="method-start">41 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.dfs.TreeInorderTraversalTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">inorderTraversalTest1</span>
+                <span class="method-start">45 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">inorderTraversalTest2</span>
+                <span class="method-start">53 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">inorderTraversalTest3</span>
+                <span class="method-start">55 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.dynamic.PascalTriangleTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">generateTest</span>
+                <span class="method-start">56 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.hashtable.FirstUniqueCharTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">firstUniqCharTest</span>
+                <span class="method-start">59 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">uniqueOccurrencesTest</span>
+                <span class="method-start">63 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.math.MissingNumberTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">missingNumberTest</span>
+                <span class="method-start">65 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.math.PalindromeNumberTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">isPalindromeTest</span>
+                <span class="method-start">69 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.math.RomanToIntegerTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">romanToIntTest</span>
+                <span class="method-start">71 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.matrix.FlippingImageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">flipAndInvertImageTest</span>
+                <span class="method-start">74 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.matrix.MatrixDiagonalSumTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">diagonalSumTest</span>
+                <span class="method-start">77 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.recursion.FibonacciNumberTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">fib</span>
+                <span class="method-start">79 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.string.BalancedStringTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">balancedStringSplitTest</span>
+                <span class="method-start">82 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.string.CheckSentenceIsPangramTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">checkIfPangramTest</span>
+                <span class="method-start">85 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.string.DefangingIpAddressTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">defangIPaddrTest</span>
+                <span class="method-start">89 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.string.JewelsAndStonesTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">numJewelsInStonesTest</span>
+                <span class="method-start">92 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.challenge.easy.string.ReverseWordsInStringIIITest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">reverseWordsTest</span>
+                <span class="method-start">98 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

@@ -1,5 +1,9 @@
 package com.challenge.easy.twopointer;
 
+import com.challenge.easy.arrays.FindFirstPalindrome;
+
+import java.util.logging.Logger;
+
 /**
     # Shortest Distance To A Character
 
@@ -29,10 +33,44 @@ package com.challenge.easy.twopointer;
 public class ShortestDistanceToChar {
 
     public static int[] shortestToChar(String s, char c) {
-        return null;
+        int[] responseArray=new int[s.length()];
+        int cOccurrences=s.length()+1;
+
+        for(int i=0; i<s.length(); i++){
+            if (s.charAt(i)==c){
+                cOccurrences =i;
+            }
+            responseArray[i] = (cOccurrences==(s.length()+1)) ? s.length()+1 : i-cOccurrences;
+        }
+
+        cOccurrences=s.length()+1;
+        for(int i=s.length()-1; i>=0; i--){
+            if(s.charAt(i)==c){
+                cOccurrences=i;
+            }
+            if(cOccurrences!=(s.length()+1)){
+                responseArray[i] = (responseArray[i]>(cOccurrences -i)) ? cOccurrences -i:responseArray[i];
+            }
+        }
+        return responseArray;
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindFirstPalindrome.class.getName());
 
+        String s = "loveleetcode";
+        char c = 'e';
+        int [] responseArray = shortestToChar(s,c);
+
+        logger.info("Response array: ");
+        System.out.print("[");
+        for(int i=0;i<responseArray.length;i++){
+            if(i==(responseArray.length-1)){
+                System.out.println(responseArray[i]+"]");
+            }else{
+                System.out.print(responseArray[i]+",");
+            }
+        }
     }
+
 }

@@ -1,5 +1,9 @@
 package com.challenge.easy.string;
 
+import com.challenge.easy.arrays.FindFirstPalindrome;
+
+import java.util.logging.Logger;
+
 /**
     # Defanging an IP Address
 
@@ -23,10 +27,22 @@ package com.challenge.easy.string;
 public class DefangingIpAddress {
 
     public static String defangIPaddr(String address) {
-        return null;
+        StringBuilder sb = new StringBuilder(address);
+        int increment = 1;
+        for(int i=0; i<sb.length();i++){
+            if(sb.charAt(i)=='.' && sb.charAt(i-1)!='[' && sb.charAt(i+1)!=']'){
+                sb.replace(i,i+increment,"[.]");
+                //increment+=1;
+            }
+        }
+        return sb.toString();
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindFirstPalindrome.class.getName());
 
+        String address = "255.100.50.0";
+
+        logger.info("Defanged version: "+defangIPaddr(address));
     }
 }

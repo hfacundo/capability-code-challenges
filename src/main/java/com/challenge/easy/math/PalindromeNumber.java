@@ -1,5 +1,9 @@
 package com.challenge.easy.math;
 
+import com.challenge.easy.arrays.FindFirstPalindrome;
+
+import java.util.logging.Logger;
+
 /**
     # Palindrome Number
 
@@ -30,10 +34,19 @@ package com.challenge.easy.math;
 public class PalindromeNumber {
 
     public static boolean isPalindrome(int x) {
+        String xString = String.valueOf(x);
+        StringBuilder xSb = new StringBuilder(xString);
+        if(xString.contentEquals(xSb.reverse())){
+            return true;
+        }
         return false;
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindFirstPalindrome.class.getName());
 
+        int x = 121;
+
+        logger.info("Is a palindrome number? "+isPalindrome(x));
     }
 }

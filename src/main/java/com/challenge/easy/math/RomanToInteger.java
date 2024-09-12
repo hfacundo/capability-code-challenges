@@ -1,5 +1,10 @@
 package com.challenge.easy.math;
 
+import com.challenge.easy.arrays.FindFirstPalindrome;
+
+import java.util.HashMap;
+import java.util.logging.Logger;
+
 /**
     # Roman to Integer
 
@@ -47,10 +52,54 @@ package com.challenge.easy.math;
 public class RomanToInteger {
 
     public static int romanToInt(String s) {
-        return 0;
+        char [] sArray = s.toCharArray();
+        Integer number=0;
+        char nextChar = '0', currentChar = '0';
+        boolean lastNumberFlag=false;
+        HashMap<String, Integer> romanMap = new HashMap<String, Integer>();
+        romanMap.put("I",1);
+        romanMap.put("V",5);
+        romanMap.put("X",10);
+        romanMap.put("L",50);
+        romanMap.put("C",100);
+        romanMap.put("D",500);
+        romanMap.put("M",1000);
+
+        for(int i=0; i<sArray.length; i++){
+            currentChar = sArray[i];
+            if((i+1) > (sArray.length-1)){
+                lastNumberFlag = true;
+            }else{
+                nextChar = sArray[i+1];
+            }
+            if(lastNumberFlag || romanMap.get(String.valueOf(currentChar)) >= romanMap.get(String.valueOf(nextChar))){
+                number = number + romanMap.get(String.valueOf(currentChar));
+            }else{
+                if ((currentChar=='I' && (nextChar=='V'||nextChar=='X'))
+                   || (currentChar=='X' && (nextChar=='L'||nextChar=='C'))
+                   || (currentChar=='C' && (nextChar=='D'||nextChar=='M'))){
+                        number = number + (romanMap.get(String.valueOf(nextChar)) - romanMap.get(String.valueOf(currentChar)));
+                        i++;
+                }else{
+                    number = -1;
+                    return number;
+                }
+            }
+        }
+
+        return number;
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindFirstPalindrome.class.getName());
 
+        String s = "III";
+        int integerNumber = romanToInt(s);
+
+        if(integerNumber != -1){
+            logger.info("Integer value: "+integerNumber);
+        }else{
+            logger.info("Ivalid Roman Number");
+        }
     }
 }

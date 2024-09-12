@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="0.849" tests="21" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\david.lorenzo\Documents\Java Projects\Easy Java Code Challenges\capability-code-challenges\target\test-classes;C:\Users\david.lorenzo\Documents\Java Projects\Easy Java Code Challenges\capability-code-challenges\target\classes;C:\Users\david.lorenzo\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\david.lorenzo\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\david.lorenzo\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\david.lorenzo\.m2\repository\org\slf4j\slf4j-api\2.1.0-alpha1\slf4j-api-2.1.0-alpha1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\david.lorenzo\AppData\Local\Temp\surefire16416874962863175541\surefirebooter-20240911124122394_3.jar C:\Users\david.lorenzo\AppData\Local\Temp\surefire16416874962863175541 2024-09-11T12-41-22_112-jvmRun1 surefire-20240911124122394_1tmp surefire_0-20240911124122394_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\david.lorenzo\Documents\Java Projects\Easy Java Code Challenges\capability-code-challenges\target\test-classes;C:\Users\david.lorenzo\Documents\Java Projects\Easy Java Code Challenges\capability-code-challenges\target\classes;C:\Users\david.lorenzo\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\david.lorenzo\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\david.lorenzo\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\david.lorenzo\.m2\repository\org\slf4j\slf4j-api\2.1.0-alpha1\slf4j-api-2.1.0-alpha1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\david.lorenzo"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\david.lorenzo\Documents\Java Projects\Easy Java Code Challenges\capability-code-challenges"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\david.lorenzo\AppData\Local\Temp\surefire16416874962863175541\surefirebooter-20240911124122394_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
+    <property name="user.name" value="david.lorenzo"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\david.lorenzo\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\DAVID~1.LOR\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2024.2"/>
+    <property name="java.version" value="17.0.12"/>
+    <property name="user.dir" value="C:\Users\david.lorenzo\Documents\Java Projects\Easy Java Code Challenges\capability-code-challenges"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PowerShell\7\;C:\Users\david.lorenzo\AppData\Local\Microsoft\WindowsApps;C:\Users\david.lorenzo\AppData\Local\Programs\Git\cmd;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.12+8-LTS-286"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="firstPalindromeTest" classname="com.challenge.easy.arrays.FindFirstPalindromeTest" time="0.023">
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="numIdenticalPairsTest" classname="com.challenge.easy.arrays.FindWordsContainingCharacterTest" time="0.002"/>
+  <testcase name="numIdenticalPairsTest" classname="com.challenge.easy.arrays.NumberOfGoodPairsTest" time="0.002"/>
+  <testcase name="findKthPositiveTest" classname="com.challenge.easy.binarysearch.KthMissingNumberTest" time="0.003"/>
+  <testcase name="inorderTraversalTest1" classname="com.challenge.easy.dfs.TreeInorderTraversalTest" time="0.007"/>
+  <testcase name="inorderTraversalTest2" classname="com.challenge.easy.dfs.TreeInorderTraversalTest" time="0.0"/>
+  <testcase name="inorderTraversalTest3" classname="com.challenge.easy.dfs.TreeInorderTraversalTest" time="0.001"/>
+  <testcase name="generateTest" classname="com.challenge.easy.dynamic.PascalTriangleTest" time="0.002"/>
+  <testcase name="firstUniqCharTest" classname="com.challenge.easy.hashtable.FirstUniqueCharTest" time="0.002"/>
+  <testcase name="uniqueOccurrencesTest" classname="com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest" time="0.002"/>
+  <testcase name="missingNumberTest" classname="com.challenge.easy.math.MissingNumberTest" time="0.002"/>
+  <testcase name="isPalindromeTest" classname="com.challenge.easy.math.PalindromeNumberTest" time="0.002"/>
+  <testcase name="romanToIntTest" classname="com.challenge.easy.math.RomanToIntegerTest" time="0.001"/>
+  <testcase name="flipAndInvertImageTest" classname="com.challenge.easy.matrix.FlippingImageTest" time="0.001"/>
+  <testcase name="diagonalSumTest" classname="com.challenge.easy.matrix.MatrixDiagonalSumTest" time="0.002"/>
+  <testcase name="fib" classname="com.challenge.easy.recursion.FibonacciNumberTest" time="0.002"/>
+  <testcase name="balancedStringSplitTest" classname="com.challenge.easy.string.BalancedStringTest" time="0.008">
+    <system-out><![CDATA[Balanced Substring: RL
+Balanced Substring: RRLL
+Balanced Substring: RL
+Balanced Substring: RL
+Balanced Substring: RL
+Balanced Substring: RRRLLRLL
+Balanced Substring: LLLLRRRR
+]]></system-out>
+  </testcase>
+  <testcase name="checkIfPangramTest" classname="com.challenge.easy.string.CheckSentenceIsPangramTest" time="0.0"/>
+  <testcase name="defangIPaddrTest" classname="com.challenge.easy.string.DefangingIpAddressTest" time="0.001"/>
+  <testcase name="numJewelsInStonesTest" classname="com.challenge.easy.string.JewelsAndStonesTest" time="0.004"/>
+  <testcase name="reverseWordsTest" classname="com.challenge.easy.string.ReverseWordsInStringIIITest" time="0.003"/>
+</testsuite>

@@ -1,5 +1,9 @@
 package com.challenge.easy.binarysearch;
 
+import com.challenge.easy.arrays.FindWordsContainingCharacter;
+
+import java.util.logging.Logger;
+
 /**
     # Kth Missing Positive Number
 
@@ -31,10 +35,29 @@ package com.challenge.easy.binarysearch;
 public class KthMissingNumber {
 
     public static int findKthPositive(int[] arr, int k) {
-        return 0;
+        int kCount=0, kValue=0, i=1, j=0;
+        while(kCount!=k/*i<12*/){
+            if(j == arr.length){
+                j-=1;
+            }
+            if(i != arr[j]){
+                kCount++;
+                kValue=i;
+            }
+            if(i == arr[j]){
+                j++;
+            }
+            i++;
+        }
+        return kValue;
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindWordsContainingCharacter.class.getName());
 
+        int nums[] = {2,3,4,7,11,14,15,16,20};
+        int k = 5;
+
+        logger.info("kth value = " + findKthPositive(nums, k));
     }
 }

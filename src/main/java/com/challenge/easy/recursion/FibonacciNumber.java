@@ -1,5 +1,9 @@
 package com.challenge.easy.recursion;
 
+import com.challenge.easy.arrays.FindFirstPalindrome;
+
+import java.util.logging.Logger;
+
 /**
     # Fibonacci Number
 
@@ -31,10 +35,20 @@ package com.challenge.easy.recursion;
 public class FibonacciNumber {
 
     public static int fib(int n) {
-        return 0;
+        if(n<=1){
+            return n;
+        }
+
+        return (fib(n-1)+fib(n-2));
+
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindFirstPalindrome.class.getName());
 
+        int n = 9;
+        int fibonacciNumber = fib(n);
+
+        logger.info("Fibonacci Number: "+fibonacciNumber);
     }
 }

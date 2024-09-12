@@ -1,5 +1,10 @@
 package com.challenge.easy.string;
 
+import com.challenge.easy.arrays.FindFirstPalindrome;
+
+import java.util.HashMap;
+import java.util.logging.Logger;
+
 /**
     # Sorting the Sentence
 
@@ -32,10 +37,39 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+        StringBuilder sortedSentence = new StringBuilder("");
+        HashMap<Integer, String> wordIndexes = new HashMap<>();
+        int begin=0, ending=0;
+        boolean flag=false;
+
+        for(int i=0; i < s.length(); i++){
+            if(s.charAt(i)!=' ' && flag==false){
+                begin = i;
+                flag = true;
+            }
+            if((i==(s.length()-1) || s.charAt(i+1)==' ') && flag==true){
+                ending = i;
+                flag=false;
+                wordIndexes.put(Character.getNumericValue(s.charAt(i)),begin+"-"+ending);
+            }
+        }
+
+        String[] indexes = new String[2];
+        for(int i=1; i<=wordIndexes.size();i++){
+            indexes = wordIndexes.get(i).split("-");
+            sortedSentence.append(s.substring(Integer.valueOf(indexes[0]),Integer.valueOf(indexes[1])));
+            if(i!=(wordIndexes.size())){
+                sortedSentence.append(" ");
+            }
+        }
+        return sortedSentence.toString();
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindFirstPalindrome.class.getName());
 
+        String s = "is2 sentence4 This1 a3";
+
+        logger.info("Sorted sentence: "+sortSentence(s));
     }
 }

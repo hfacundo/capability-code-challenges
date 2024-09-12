@@ -1,6 +1,10 @@
 package com.challenge.easy.dynamic;
 
+import com.challenge.easy.arrays.FindWordsContainingCharacter;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
     # Pascal's Triangle
@@ -33,10 +37,38 @@ import java.util.List;
 public class PascalTriangle {
 
     public static List<List<Integer>> generate(int numRows) {
-        return null;
+        List<List<Integer>> pascalTriangle = new ArrayList<List<Integer>>();
+        int i=0, j=0, k=0;
+
+        while(i < numRows){
+            pascalTriangle.add(new ArrayList<Integer>());
+
+            j=0;
+            k=0;
+            while(j <= i){
+                if(j==0 || j==i){
+                    pascalTriangle.get(i).add(1);
+                }else{
+                    pascalTriangle.get(i).add(pascalTriangle.get(i-1).get(k)+pascalTriangle.get(i-1).get(k+1));
+                    k++;
+                }
+                j++;
+            }
+
+            i++;
+        }
+
+        return pascalTriangle;
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindWordsContainingCharacter.class.getName());
 
+        List<List<Integer>> pascalTriangle = generate(9);
+
+        logger.info("Pascal Triangle: ");
+        for(List<Integer> row : pascalTriangle ){
+            System.out.println(row);
+        }
     }
 }

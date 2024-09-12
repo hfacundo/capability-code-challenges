@@ -1,5 +1,9 @@
 package com.challenge.easy.matrix;
 
+import com.challenge.easy.arrays.FindFirstPalindrome;
+
+import java.util.logging.Logger;
+
 /**
     # Flipping An Image
 
@@ -34,10 +38,50 @@ package com.challenge.easy.matrix;
 public class FlippingImage {
 
     public static int[][] flipAndInvertImage(int[][] image) {
-        return null;
+        int i = 0, j = 0, x;
+        int[][] flippingImage = new int[image.length][image[0].length];
+        for(i=0; i<image.length; i++){
+            x=image[i].length-1;
+            for(j=0; j<image[i].length; j++){
+                if(image[i][j]==1){
+                    flippingImage[i][x] = 0;
+                }else{
+                    flippingImage[i][x] = 1;
+                }
+                x--;
+            }
+        }
+        return flippingImage;
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindFirstPalindrome.class.getName());
+
+
+        //Image for example 1:
+        int[][] image = { { 1,1,0 },
+                            { 1,0,1 },
+                            { 0,0,0 } };
+        //Image for example 2:
+        /*int[][] image = { { 1,1,0,0 },
+                          { 1,0,0,1 },
+                          { 0,1,1,1 },
+                          { 1,0,1,0 } };*/
+
+        int[][] flippingImage = flipAndInvertImage(image);
+
+        logger.info("Flipping Image: ");
+        printFlippingImage(flippingImage);
+    }
+
+    public static void printFlippingImage(int[][] flippingImage){
+        for(int i=0; i<flippingImage.length; i++){
+            System.out.print("[");
+            for(int j=0; j<flippingImage[i].length; j++){
+                System.out.print(flippingImage[i][j]);
+            }
+            System.out.println("]");
+        }
 
     }
 }

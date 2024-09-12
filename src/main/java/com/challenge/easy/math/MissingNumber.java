@@ -1,5 +1,10 @@
 package com.challenge.easy.math;
 
+import com.challenge.easy.arrays.FindWordsContainingCharacter;
+
+import java.util.HashSet;
+import java.util.logging.Logger;
+
 /**
     # Missing Number
 
@@ -30,10 +35,32 @@ package com.challenge.easy.math;
 public class MissingNumber {
 
     public static int missingNumber(int[] nums) {
-        return 0;
+        int i,j;
+        int[] numbers = new int[nums.length+1];
+        HashSet<Integer> charsChecked = new HashSet<Integer>();
+
+        for(i = 0; i < (nums.length); i++){
+            numbers[nums[i]]=nums[i];
+        }
+
+        j=0;
+        i=0;
+        while(j!=-1){
+            if(numbers[j]!=j){
+                i = j;
+                j=-1;
+            }else{
+                j++;
+            }
+        }
+        return i;
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindWordsContainingCharacter.class.getName());
 
+        int[] arr = {9,6,4,2,3,5,7,0,1};
+
+        logger.info("The missing number is " + missingNumber(arr));
     }
 }

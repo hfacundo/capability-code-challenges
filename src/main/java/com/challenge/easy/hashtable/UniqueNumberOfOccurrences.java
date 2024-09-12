@@ -1,5 +1,11 @@
 package com.challenge.easy.hashtable;
 
+import com.challenge.easy.arrays.FindWordsContainingCharacter;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.logging.Logger;
+
 /**
     # Unique Number of Occurrences
 
@@ -26,10 +32,37 @@ package com.challenge.easy.hashtable;
 public class UniqueNumberOfOccurrences {
 
     public static boolean uniqueOccurrences(int[] arr) {
-        return false;
+        HashMap<Integer, Integer> arrsChecked = new HashMap<Integer, Integer>();
+        int currentNumber;
+        int i, j, repetitions;
+        boolean containsUniqueNumberOfOcurrences=false;
+        for(i = 0; i < arr.length; i++){
+            currentNumber = arr[i];
+
+            if(!arrsChecked.containsValue(currentNumber)){
+                repetitions = 1;
+                for(j = i+1; j < arr.length; j++){
+                    if(arr[j]== currentNumber){
+                        repetitions++;
+                    }
+                }
+                if(!arrsChecked.containsKey(repetitions)){
+                    arrsChecked.put(repetitions,currentNumber);
+                    containsUniqueNumberOfOcurrences = true;
+                }else{
+                    containsUniqueNumberOfOcurrences = false;
+                    break;
+                }
+            }
+        }
+        return containsUniqueNumberOfOcurrences;
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindWordsContainingCharacter.class.getName());
 
+        int[] arr = {1,2,2,1,1,3};
+
+        logger.info("" + uniqueOccurrences(arr));
     }
 }

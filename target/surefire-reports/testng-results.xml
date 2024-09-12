@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="21" passed="21" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-11T12:41:24 PDT" name="Surefire suite" finished-at="2024-09-11T12:41:24 PDT" duration-ms="173">
+    <groups>
+    </groups>
+    <test started-at="2024-09-11T12:41:24 PDT" name="Surefire test" finished-at="2024-09-11T12:41:24 PDT" duration-ms="173">
+      <class name="com.challenge.easy.arrays.FindWordsContainingCharacterTest">
+        <test-method signature="numIdenticalPairsTest()[pri:0, instance:com.challenge.easy.arrays.FindWordsContainingCharacterTest@60704c]" started-at="2024-09-11T12:41:24 PDT" name="numIdenticalPairsTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- numIdenticalPairsTest -->
+      </class> <!-- com.challenge.easy.arrays.FindWordsContainingCharacterTest -->
+      <class name="com.challenge.easy.dynamic.PascalTriangleTest">
+        <test-method signature="generateTest()[pri:0, instance:com.challenge.easy.dynamic.PascalTriangleTest@75f32542]" started-at="2024-09-11T12:41:24 PDT" name="generateTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateTest -->
+      </class> <!-- com.challenge.easy.dynamic.PascalTriangleTest -->
+      <class name="com.challenge.easy.matrix.FlippingImageTest">
+        <test-method signature="flipAndInvertImageTest()[pri:0, instance:com.challenge.easy.matrix.FlippingImageTest@184cf7cf]" started-at="2024-09-11T12:41:24 PDT" name="flipAndInvertImageTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flipAndInvertImageTest -->
+      </class> <!-- com.challenge.easy.matrix.FlippingImageTest -->
+      <class name="com.challenge.easy.hashtable.FirstUniqueCharTest">
+        <test-method signature="firstUniqCharTest()[pri:0, instance:com.challenge.easy.hashtable.FirstUniqueCharTest@7f1302d6]" started-at="2024-09-11T12:41:24 PDT" name="firstUniqCharTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstUniqCharTest -->
+      </class> <!-- com.challenge.easy.hashtable.FirstUniqueCharTest -->
+      <class name="com.challenge.easy.arrays.FindFirstPalindromeTest">
+        <test-method signature="firstPalindromeTest()[pri:0, instance:com.challenge.easy.arrays.FindFirstPalindromeTest@2133814f]" started-at="2024-09-11T12:41:24 PDT" name="firstPalindromeTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstPalindromeTest -->
+      </class> <!-- com.challenge.easy.arrays.FindFirstPalindromeTest -->
+      <class name="com.challenge.easy.binarysearch.KthMissingNumberTest">
+        <test-method signature="findKthPositiveTest()[pri:0, instance:com.challenge.easy.binarysearch.KthMissingNumberTest@2a32de6c]" started-at="2024-09-11T12:41:24 PDT" name="findKthPositiveTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findKthPositiveTest -->
+      </class> <!-- com.challenge.easy.binarysearch.KthMissingNumberTest -->
+      <class name="com.challenge.easy.recursion.FibonacciNumberTest">
+        <test-method signature="fib()[pri:0, instance:com.challenge.easy.recursion.FibonacciNumberTest@5bfa9431]" started-at="2024-09-11T12:41:24 PDT" name="fib" finished-at="2024-09-11T12:41:24 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fib -->
+      </class> <!-- com.challenge.easy.recursion.FibonacciNumberTest -->
+      <class name="com.challenge.easy.math.MissingNumberTest">
+        <test-method signature="missingNumberTest()[pri:0, instance:com.challenge.easy.math.MissingNumberTest@23529fee]" started-at="2024-09-11T12:41:24 PDT" name="missingNumberTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- missingNumberTest -->
+      </class> <!-- com.challenge.easy.math.MissingNumberTest -->
+      <class name="com.challenge.easy.math.RomanToIntegerTest">
+        <test-method signature="romanToIntTest()[pri:0, instance:com.challenge.easy.math.RomanToIntegerTest@2805c96b]" started-at="2024-09-11T12:41:24 PDT" name="romanToIntTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- romanToIntTest -->
+      </class> <!-- com.challenge.easy.math.RomanToIntegerTest -->
+      <class name="com.challenge.easy.arrays.NumberOfGoodPairsTest">
+        <test-method signature="numIdenticalPairsTest()[pri:0, instance:com.challenge.easy.arrays.NumberOfGoodPairsTest@6b19b79]" started-at="2024-09-11T12:41:24 PDT" name="numIdenticalPairsTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- numIdenticalPairsTest -->
+      </class> <!-- com.challenge.easy.arrays.NumberOfGoodPairsTest -->
+      <class name="com.challenge.easy.string.JewelsAndStonesTest">
+        <test-method signature="numJewelsInStonesTest()[pri:0, instance:com.challenge.easy.string.JewelsAndStonesTest@37918c79]" started-at="2024-09-11T12:41:24 PDT" name="numJewelsInStonesTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- numJewelsInStonesTest -->
+      </class> <!-- com.challenge.easy.string.JewelsAndStonesTest -->
+      <class name="com.challenge.easy.string.ReverseWordsInStringIIITest">
+        <test-method signature="reverseWordsTest()[pri:0, instance:com.challenge.easy.string.ReverseWordsInStringIIITest@78e94dcf]" started-at="2024-09-11T12:41:24 PDT" name="reverseWordsTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reverseWordsTest -->
+      </class> <!-- com.challenge.easy.string.ReverseWordsInStringIIITest -->
+      <class name="com.challenge.easy.string.DefangingIpAddressTest">
+        <test-method signature="defangIPaddrTest()[pri:0, instance:com.challenge.easy.string.DefangingIpAddressTest@38c5cc4c]" started-at="2024-09-11T12:41:24 PDT" name="defangIPaddrTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- defangIPaddrTest -->
+      </class> <!-- com.challenge.easy.string.DefangingIpAddressTest -->
+      <class name="com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest">
+        <test-method signature="uniqueOccurrencesTest()[pri:0, instance:com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest@43ee72e6]" started-at="2024-09-11T12:41:24 PDT" name="uniqueOccurrencesTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uniqueOccurrencesTest -->
+      </class> <!-- com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest -->
+      <class name="com.challenge.easy.matrix.MatrixDiagonalSumTest">
+        <test-method signature="diagonalSumTest()[pri:0, instance:com.challenge.easy.matrix.MatrixDiagonalSumTest@2fd6b6c7]" started-at="2024-09-11T12:41:24 PDT" name="diagonalSumTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- diagonalSumTest -->
+      </class> <!-- com.challenge.easy.matrix.MatrixDiagonalSumTest -->
+      <class name="com.challenge.easy.math.PalindromeNumberTest">
+        <test-method signature="isPalindromeTest()[pri:0, instance:com.challenge.easy.math.PalindromeNumberTest@4fe767f3]" started-at="2024-09-11T12:41:24 PDT" name="isPalindromeTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isPalindromeTest -->
+      </class> <!-- com.challenge.easy.math.PalindromeNumberTest -->
+      <class name="com.challenge.easy.dfs.TreeInorderTraversalTest">
+        <test-method signature="inorderTraversalTest1()[pri:0, instance:com.challenge.easy.dfs.TreeInorderTraversalTest@7692d9cc]" started-at="2024-09-11T12:41:24 PDT" name="inorderTraversalTest1" finished-at="2024-09-11T12:41:24 PDT" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inorderTraversalTest1 -->
+        <test-method signature="inorderTraversalTest2()[pri:0, instance:com.challenge.easy.dfs.TreeInorderTraversalTest@7692d9cc]" started-at="2024-09-11T12:41:24 PDT" name="inorderTraversalTest2" finished-at="2024-09-11T12:41:24 PDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inorderTraversalTest2 -->
+        <test-method signature="inorderTraversalTest3()[pri:0, instance:com.challenge.easy.dfs.TreeInorderTraversalTest@7692d9cc]" started-at="2024-09-11T12:41:24 PDT" name="inorderTraversalTest3" finished-at="2024-09-11T12:41:24 PDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inorderTraversalTest3 -->
+      </class> <!-- com.challenge.easy.dfs.TreeInorderTraversalTest -->
+      <class name="com.challenge.easy.string.CheckSentenceIsPangramTest">
+        <test-method signature="checkIfPangramTest()[pri:0, instance:com.challenge.easy.string.CheckSentenceIsPangramTest@223f3642]" started-at="2024-09-11T12:41:24 PDT" name="checkIfPangramTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkIfPangramTest -->
+      </class> <!-- com.challenge.easy.string.CheckSentenceIsPangramTest -->
+      <class name="com.challenge.easy.string.BalancedStringTest">
+        <test-method signature="balancedStringSplitTest()[pri:0, instance:com.challenge.easy.string.BalancedStringTest@5db250b4]" started-at="2024-09-11T12:41:24 PDT" name="balancedStringSplitTest" finished-at="2024-09-11T12:41:24 PDT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- balancedStringSplitTest -->
+      </class> <!-- com.challenge.easy.string.BalancedStringTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

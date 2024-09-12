@@ -1,5 +1,7 @@
 package com.challenge.easy.arrays;
 
+import java.util.logging.Logger;
+
 /**
     # Number of Good Pairs
 
@@ -30,10 +32,22 @@ package com.challenge.easy.arrays;
 public class NumberOfGoodPairs {
 
     public static int numIdenticalPairs(int[] nums) {
-        return 0;
+        int goodPairs = 0;
+        for(int i=0; i<nums.length; i++){
+            for(int j=0; j<nums.length; j++){
+                if(i<j && nums[i]==nums[j]){
+                    goodPairs++;
+                }
+            }
+        }
+        return goodPairs;
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindWordsContainingCharacter.class.getName());
 
+        int nums[] = {1,2,3,1,1,3};
+
+        logger.info("Number of good pairs = " + numIdenticalPairs(nums));
     }
 }

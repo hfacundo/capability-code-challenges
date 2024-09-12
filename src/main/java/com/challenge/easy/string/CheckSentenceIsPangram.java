@@ -1,5 +1,12 @@
 package com.challenge.easy.string;
 
+import com.challenge.easy.arrays.FindFirstPalindrome;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.logging.Logger;
+import java.util.stream.Collectors;
+
 /**
 
     # Check if the Sentence Is Pangram
@@ -25,10 +32,24 @@ package com.challenge.easy.string;
 public class CheckSentenceIsPangram {
 
     public static boolean checkIfPangram(String sentence) {
-        return false;
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        HashSet<Character> sentenceSet = sentence.chars()
+                .mapToObj(e -> (char) e)
+                .collect(Collectors.toCollection(HashSet::new));
+
+        for(int i=0; i<alphabet.length();i++){
+            if(!sentenceSet.contains(alphabet.charAt(i))){
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindFirstPalindrome.class.getName());
 
+        String sentence = "thequickbrownfoxjumpsoverthelazydog";
+
+        logger.info("Is the sentence a pangram? "+checkIfPangram(sentence));
     }
 }

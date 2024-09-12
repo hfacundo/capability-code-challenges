@@ -1,5 +1,9 @@
 package com.challenge.easy.string;
 
+import com.challenge.easy.arrays.FindFirstPalindrome;
+
+import java.util.logging.Logger;
+
 /**
     # Split a String in Balanced Strings
 
@@ -36,10 +40,54 @@ package com.challenge.easy.string;
 public class BalancedString {
 
     public static int balancedStringSplit(String s) {
-        return 0;
+        String currentSubstring;
+        int i, countOfBalancedStrings=0, incrementForBegin=2, incrementForEnd=2;
+        if(!isBalanced(s)){
+            return -1;
+        }
+
+        for(i=0; i<(s.length()); i+=incrementForBegin){
+            if(i < s.length()){
+                currentSubstring = s.substring((i),(i+incrementForEnd));
+                if(isBalanced(currentSubstring)){
+                    System.out.println("Balanced Substring: "+currentSubstring);
+                    countOfBalancedStrings++;
+                    incrementForBegin = (i+incrementForEnd)-i;
+                    incrementForEnd=2;
+                }else{
+                    if((i+incrementForEnd) >= s.length()){
+                        return countOfBalancedStrings;
+                    }
+                    i-=incrementForBegin;
+                    incrementForEnd+=2;
+                }
+            }
+        }
+        return countOfBalancedStrings;
+    }
+
+    public static boolean isBalanced(String substring){
+        int numberOfL=0, numberOfR=0, i=0;
+        char currentChar;
+        while(i<substring.length()){
+            currentChar = substring.charAt(i);
+            if(currentChar == 'R'){
+                numberOfR++;
+            }
+            if(currentChar == 'L'){
+                numberOfL++;
+            }
+            i++;
+        }
+        return (numberOfL==numberOfR) ? true:false ;
     }
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger(FindFirstPalindrome.class.getName());
 
+        String s = "RLRRLLRLRL";
+        int maximumNumberOfBalancedStrings = balancedStringSplit(s);
+
+        logger.info("Maximum Number Of Balanced Strings: "+maximumNumberOfBalancedStrings);
     }
 }
