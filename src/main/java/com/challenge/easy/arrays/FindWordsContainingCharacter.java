@@ -1,6 +1,7 @@
 package com.challenge.easy.arrays;
 
 import java.util.List;
+import java.util.ArrayList;
 
 /**
      # Find Words Containing Character.
@@ -36,7 +37,14 @@ import java.util.List;
 public class FindWordsContainingCharacter {
 
     public static List<Integer> findWordsContaining(String[] words, char x) {
-        return null;
+        List<Integer> occurences = new ArrayList<>();
+        String c = Character.toString(x);
+
+        for(int i = 0; i < words.length; i++){
+            if(words[i].contains(c))
+                occurences.add(i);
+        }
+        return occurences;
     }
 
     public static void main(String[] args) {
