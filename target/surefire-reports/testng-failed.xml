@@ -3,11 +3,11 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.challenge.easy.dfs.TreeInorderTraversalTest">
+      <class name="com.challenge.easy.dynamic.PascalTriangleTest">
         <methods>
-          <include name="inorderTraversalTest2"/>
+          <include name="generateTest"/>
         </methods>
-      </class> <!-- com.challenge.easy.dfs.TreeInorderTraversalTest -->
+      </class> <!-- com.challenge.easy.dynamic.PascalTriangleTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
