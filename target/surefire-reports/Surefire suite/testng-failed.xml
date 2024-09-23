@@ -3,11 +3,11 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.challenge.easy.dynamic.PascalTriangleTest">
+      <class name="com.challenge.easy.hashtable.FirstUniqueCharTest">
         <methods>
-          <include name="generateTest"/>
+          <include name="firstUniqCharTest"/>
         </methods>
-      </class> <!-- com.challenge.easy.dynamic.PascalTriangleTest -->
+      </class> <!-- com.challenge.easy.hashtable.FirstUniqueCharTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
