@@ -3,11 +3,11 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.challenge.easy.binarysearch.KthMissingNumberTest">
+      <class name="com.challenge.easy.dfs.TreeInorderTraversalTest">
         <methods>
-          <include name="findKthPositiveTest"/>
+          <include name="inorderTraversalTest2"/>
         </methods>
-      </class> <!-- com.challenge.easy.binarysearch.KthMissingNumberTest -->
+      </class> <!-- com.challenge.easy.dfs.TreeInorderTraversalTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

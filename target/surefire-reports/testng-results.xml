@@ -1,35 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-23T09:38:32 CST" name="Surefire suite" finished-at="2024-09-23T09:38:32 CST" duration-ms="49">
+  <suite started-at="2024-09-23T11:08:23 CST" name="Surefire suite" finished-at="2024-09-23T11:08:23 CST" duration-ms="41">
     <groups>
     </groups>
-    <test started-at="2024-09-23T09:38:32 CST" name="Surefire test" finished-at="2024-09-23T09:38:32 CST" duration-ms="49">
+    <test started-at="2024-09-23T11:08:23 CST" name="Surefire test" finished-at="2024-09-23T11:08:23 CST" duration-ms="41">
       <class name="com.challenge.easy.arrays.FindWordsContainingCharacterTest">
-        <test-method signature="numIdenticalPairsTest()[pri:0, instance:com.challenge.easy.arrays.FindWordsContainingCharacterTest@7920ba90]" started-at="2024-09-23T09:38:32 CST" name="numIdenticalPairsTest" finished-at="2024-09-23T09:38:32 CST" duration-ms="0" status="PASS">
+        <test-method signature="numIdenticalPairsTest()[pri:0, instance:com.challenge.easy.arrays.FindWordsContainingCharacterTest@6b419da]" started-at="2024-09-23T11:08:23 CST" name="numIdenticalPairsTest" finished-at="2024-09-23T11:08:23 CST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- numIdenticalPairsTest -->
       </class> <!-- com.challenge.easy.arrays.FindWordsContainingCharacterTest -->
       <class name="com.challenge.easy.arrays.FindFirstPalindromeTest">
-        <test-method signature="firstPalindromeTest()[pri:0, instance:com.challenge.easy.arrays.FindFirstPalindromeTest@53ca01a2]" started-at="2024-09-23T09:38:32 CST" name="firstPalindromeTest" finished-at="2024-09-23T09:38:32 CST" duration-ms="18" status="PASS">
+        <test-method signature="firstPalindromeTest()[pri:0, instance:com.challenge.easy.arrays.FindFirstPalindromeTest@358c99f5]" started-at="2024-09-23T11:08:23 CST" name="firstPalindromeTest" finished-at="2024-09-23T11:08:23 CST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstPalindromeTest -->
       </class> <!-- com.challenge.easy.arrays.FindFirstPalindromeTest -->
       <class name="com.challenge.easy.binarysearch.KthMissingNumberTest">
-        <test-method signature="findKthPositiveTest()[pri:0, instance:com.challenge.easy.binarysearch.KthMissingNumberTest@3b2da18f]" started-at="2024-09-23T09:38:32 CST" name="findKthPositiveTest" finished-at="2024-09-23T09:38:32 CST" duration-ms="0" status="PASS">
+        <test-method signature="findKthPositiveTest()[pri:0, instance:com.challenge.easy.binarysearch.KthMissingNumberTest@5906ebcb]" started-at="2024-09-23T11:08:23 CST" name="findKthPositiveTest" finished-at="2024-09-23T11:08:23 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- findKthPositiveTest -->
       </class> <!-- com.challenge.easy.binarysearch.KthMissingNumberTest -->
       <class name="com.challenge.easy.arrays.NumberOfGoodPairsTest">
-        <test-method signature="numIdenticalPairsTest()[pri:0, instance:com.challenge.easy.arrays.NumberOfGoodPairsTest@6b419da]" started-at="2024-09-23T09:38:32 CST" name="numIdenticalPairsTest" finished-at="2024-09-23T09:38:32 CST" duration-ms="0" status="PASS">
+        <test-method signature="numIdenticalPairsTest()[pri:0, instance:com.challenge.easy.arrays.NumberOfGoodPairsTest@3b2da18f]" started-at="2024-09-23T11:08:23 CST" name="numIdenticalPairsTest" finished-at="2024-09-23T11:08:23 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- numIdenticalPairsTest -->
       </class> <!-- com.challenge.easy.arrays.NumberOfGoodPairsTest -->
+      <class name="com.challenge.easy.dfs.TreeInorderTraversalTest">
+        <test-method signature="inorderTraversalTest3()[pri:0, instance:com.challenge.easy.dfs.TreeInorderTraversalTest@258e2e41]" started-at="2024-09-23T11:08:23 CST" name="inorderTraversalTest3" finished-at="2024-09-23T11:08:23 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inorderTraversalTest3 -->
+        <test-method signature="inorderTraversalTest1()[pri:0, instance:com.challenge.easy.dfs.TreeInorderTraversalTest@258e2e41]" started-at="2024-09-23T11:08:23 CST" name="inorderTraversalTest1" finished-at="2024-09-23T11:08:23 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inorderTraversalTest1 -->
+        <test-method signature="inorderTraversalTest2()[pri:0, instance:com.challenge.easy.dfs.TreeInorderTraversalTest@258e2e41]" started-at="2024-09-23T11:08:23 CST" name="inorderTraversalTest2" finished-at="2024-09-23T11:08:23 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inorderTraversalTest2 -->
+      </class> <!-- com.challenge.easy.dfs.TreeInorderTraversalTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
