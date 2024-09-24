@@ -30,7 +30,9 @@ package com.challenge.easy.math;
 public class PalindromeNumber {
 
     public static boolean isPalindrome(int x) {
-        return false;
+        String number = String.valueOf(x);
+        String reverseWord = new StringBuilder(number).reverse().toString();
+        return reverseWord.equals(number);
     }
 
     public static void main(String[] args) {

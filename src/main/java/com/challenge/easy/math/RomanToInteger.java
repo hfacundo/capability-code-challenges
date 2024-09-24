@@ -1,5 +1,6 @@
 package com.challenge.easy.math;
 
+import java.util.HashMap;
 /**
     # Roman to Integer
 
@@ -47,7 +48,24 @@ package com.challenge.easy.math;
 public class RomanToInteger {
 
     public static int romanToInt(String s) {
-        return 0;
+        String[] ROMANS = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        int[] ARABICS = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};  
+
+        String num = s;
+        int integerValue = 0;
+
+        for(int i = 0; i < ROMANS.length; i++){
+            while (true){
+                if(num.startsWith(ROMANS[i])){
+                    integerValue += ARABICS[i];
+                    num = num.substring(ROMANS[i].length());
+                }else{
+                    break;
+                }
+            }
+        }
+
+        return integerValue;
     }
 
     public static void main(String[] args) {
