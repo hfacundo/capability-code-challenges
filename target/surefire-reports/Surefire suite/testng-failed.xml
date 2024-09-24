@@ -3,11 +3,11 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.challenge.easy.matrix.MatrixDiagonalSumTest">
+      <class name="com.challenge.easy.string.BalancedStringTest">
         <methods>
-          <include name="diagonalSumTest"/>
+          <include name="balancedStringSplitTest"/>
         </methods>
-      </class> <!-- com.challenge.easy.matrix.MatrixDiagonalSumTest -->
+      </class> <!-- com.challenge.easy.string.BalancedStringTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

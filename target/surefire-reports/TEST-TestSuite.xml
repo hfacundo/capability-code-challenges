@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="0.489" tests="16" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="0.544" tests="22" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\esteban.hernandez\AppData\Local\Temp\surefire6324974204048130242\surefirebooter-20240924105344913_3.jar C:\Users\esteban.hernandez\AppData\Local\Temp\surefire6324974204048130242 2024-09-24T10-53-44_745-jvmRun1 surefire-20240924105344913_1tmp surefire_0-20240924105344913_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\esteban.hernandez\AppData\Local\Temp\surefire7615106086115329118\surefirebooter-20240924122642991_3.jar C:\Users\esteban.hernandez\AppData\Local\Temp\surefire7615106086115329118 2024-09-24T12-26-42_806-jvmRun1 surefire-20240924122642991_1tmp surefire_0-20240924122642991_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="c:\Users\esteban.hernandez\Documents\Java\capability-code-challenges\target\test-classes;c:\Users\esteban.hernandez\Documents\Java\capability-code-challenges\target\classes;C:\Users\esteban.hernandez\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\esteban.hernandez\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\esteban.hernandez\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\esteban.hernandez\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\esteban.hernandez\AppData\Local\Temp\surefire6324974204048130242\surefirebooter-20240924105344913_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\esteban.hernandez\AppData\Local\Temp\surefire7615106086115329118\surefirebooter-20240924122642991_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -56,7 +56,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="firstPalindromeTest" classname="com.challenge.easy.arrays.FindFirstPalindromeTest" time="0.015">
+  <testcase name="firstPalindromeTest" classname="com.challenge.easy.arrays.FindFirstPalindromeTest" time="0.006">
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
@@ -65,7 +65,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
   <testcase name="numIdenticalPairsTest" classname="com.challenge.easy.arrays.FindWordsContainingCharacterTest" time="0.0"/>
   <testcase name="numIdenticalPairsTest" classname="com.challenge.easy.arrays.NumberOfGoodPairsTest" time="0.0"/>
   <testcase name="findKthPositiveTest" classname="com.challenge.easy.binarysearch.KthMissingNumberTest" time="0.0"/>
-  <testcase name="inorderTraversalTest1" classname="com.challenge.easy.dfs.TreeInorderTraversalTest" time="0.006"/>
+  <testcase name="inorderTraversalTest1" classname="com.challenge.easy.dfs.TreeInorderTraversalTest" time="0.017"/>
   <testcase name="inorderTraversalTest2" classname="com.challenge.easy.dfs.TreeInorderTraversalTest" time="0.0"/>
   <testcase name="inorderTraversalTest3" classname="com.challenge.easy.dfs.TreeInorderTraversalTest" time="0.0"/>
   <testcase name="generateTest" classname="com.challenge.easy.dynamic.PascalTriangleTest" time="0.0"/>
@@ -75,6 +75,12 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
   <testcase name="isPalindromeTest" classname="com.challenge.easy.math.PalindromeNumberTest" time="0.0"/>
   <testcase name="romanToIntTest" classname="com.challenge.easy.math.RomanToIntegerTest" time="0.0"/>
   <testcase name="flipAndInvertImageTest" classname="com.challenge.easy.matrix.FlippingImageTest" time="0.0"/>
-  <testcase name="diagonalSumTest" classname="com.challenge.easy.matrix.MatrixDiagonalSumTest" time="0.0"/>
+  <testcase name="diagonalSumTest" classname="com.challenge.easy.matrix.MatrixDiagonalSumTest" time="0.01"/>
   <testcase name="fib" classname="com.challenge.easy.recursion.FibonacciNumberTest" time="0.0"/>
+  <testcase name="balancedStringSplitTest" classname="com.challenge.easy.string.BalancedStringTest" time="0.005"/>
+  <testcase name="checkIfPangramTest" classname="com.challenge.easy.string.CheckSentenceIsPangramTest" time="0.0"/>
+  <testcase name="defangIPaddrTest" classname="com.challenge.easy.string.DefangingIpAddressTest" time="0.001"/>
+  <testcase name="numJewelsInStonesTest" classname="com.challenge.easy.string.JewelsAndStonesTest" time="0.0"/>
+  <testcase name="reverseWordsTest" classname="com.challenge.easy.string.ReverseWordsInStringIIITest" time="0.005"/>
+  <testcase name="sortSentenceTest" classname="com.challenge.easy.string.SortingSentenceTest" time="0.0"/>
 </testsuite>
