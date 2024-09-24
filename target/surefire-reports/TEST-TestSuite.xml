@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="0.54" tests="23" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="0.574" tests="23" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\esteban.hernandez\AppData\Local\Temp\surefire751877518272572950\surefirebooter-20240924161146474_3.jar C:\Users\esteban.hernandez\AppData\Local\Temp\surefire751877518272572950 2024-09-24T16-11-46_315-jvmRun1 surefire-20240924161146474_1tmp surefire_0-20240924161146474_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\esteban.hernandez\AppData\Local\Temp\surefire17675267473564973298\surefirebooter-20240924163125941_3.jar C:\Users\esteban.hernandez\AppData\Local\Temp\surefire17675267473564973298 2024-09-24T16-31-25_748-jvmRun1 surefire-20240924163125941_1tmp surefire_0-20240924163125941_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="c:\Users\esteban.hernandez\Documents\Java\capability-code-challenges\target\test-classes;c:\Users\esteban.hernandez\Documents\Java\capability-code-challenges\target\classes;C:\Users\esteban.hernandez\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\esteban.hernandez\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\esteban.hernandez\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\esteban.hernandez\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\esteban.hernandez\AppData\Local\Temp\surefire751877518272572950\surefirebooter-20240924161146474_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\esteban.hernandez\AppData\Local\Temp\surefire17675267473564973298\surefirebooter-20240924163125941_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -56,73 +56,32 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="firstPalindromeTest" classname="com.challenge.easy.arrays.FindFirstPalindromeTest" time="0.011">
+  <testcase name="firstPalindromeTest" classname="com.challenge.easy.arrays.FindFirstPalindromeTest" time="0.01">
     <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="numIdenticalPairsTest" classname="com.challenge.easy.arrays.FindWordsContainingCharacterTest" time="0.002"/>
-  <testcase name="numIdenticalPairsTest" classname="com.challenge.easy.arrays.NumberOfGoodPairsTest" time="0.003"/>
-  <testcase name="findKthPositiveTest" classname="com.challenge.easy.binarysearch.KthMissingNumberTest" time="0.002"/>
-  <testcase name="inorderTraversalTest1" classname="com.challenge.easy.dfs.TreeInorderTraversalTest" time="0.0"/>
-  <testcase name="inorderTraversalTest2" classname="com.challenge.easy.dfs.TreeInorderTraversalTest" time="0.0"/>
+  <testcase name="numIdenticalPairsTest" classname="com.challenge.easy.arrays.FindWordsContainingCharacterTest" time="0.0"/>
+  <testcase name="numIdenticalPairsTest" classname="com.challenge.easy.arrays.NumberOfGoodPairsTest" time="0.0"/>
+  <testcase name="findKthPositiveTest" classname="com.challenge.easy.binarysearch.KthMissingNumberTest" time="0.0"/>
+  <testcase name="inorderTraversalTest1" classname="com.challenge.easy.dfs.TreeInorderTraversalTest" time="0.011"/>
+  <testcase name="inorderTraversalTest2" classname="com.challenge.easy.dfs.TreeInorderTraversalTest" time="0.001"/>
   <testcase name="inorderTraversalTest3" classname="com.challenge.easy.dfs.TreeInorderTraversalTest" time="0.0"/>
-  <testcase name="generateTest" classname="com.challenge.easy.dynamic.PascalTriangleTest" time="0.0"/>
-  <testcase name="firstUniqCharTest" classname="com.challenge.easy.hashtable.FirstUniqueCharTest" time="0.0"/>
-  <testcase name="uniqueOccurrencesTest" classname="com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest" time="0.0"/>
-  <testcase name="missingNumberTest" classname="com.challenge.easy.math.MissingNumberTest" time="0.0"/>
-  <testcase name="isPalindromeTest" classname="com.challenge.easy.math.PalindromeNumberTest" time="0.0"/>
+  <testcase name="generateTest" classname="com.challenge.easy.dynamic.PascalTriangleTest" time="0.002"/>
+  <testcase name="firstUniqCharTest" classname="com.challenge.easy.hashtable.FirstUniqueCharTest" time="0.002"/>
+  <testcase name="uniqueOccurrencesTest" classname="com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest" time="0.001"/>
+  <testcase name="missingNumberTest" classname="com.challenge.easy.math.MissingNumberTest" time="0.001"/>
+  <testcase name="isPalindromeTest" classname="com.challenge.easy.math.PalindromeNumberTest" time="0.001"/>
   <testcase name="romanToIntTest" classname="com.challenge.easy.math.RomanToIntegerTest" time="0.0"/>
-  <testcase name="flipAndInvertImageTest" classname="com.challenge.easy.matrix.FlippingImageTest" time="0.0"/>
+  <testcase name="flipAndInvertImageTest" classname="com.challenge.easy.matrix.FlippingImageTest" time="0.004"/>
   <testcase name="diagonalSumTest" classname="com.challenge.easy.matrix.MatrixDiagonalSumTest" time="0.0"/>
   <testcase name="fib" classname="com.challenge.easy.recursion.FibonacciNumberTest" time="0.0"/>
   <testcase name="balancedStringSplitTest" classname="com.challenge.easy.string.BalancedStringTest" time="0.0"/>
   <testcase name="checkIfPangramTest" classname="com.challenge.easy.string.CheckSentenceIsPangramTest" time="0.0"/>
   <testcase name="defangIPaddrTest" classname="com.challenge.easy.string.DefangingIpAddressTest" time="0.0"/>
-  <testcase name="numJewelsInStonesTest" classname="com.challenge.easy.string.JewelsAndStonesTest" time="0.0"/>
-  <testcase name="reverseWordsTest" classname="com.challenge.easy.string.ReverseWordsInStringIIITest" time="0.0"/>
-  <testcase name="sortSentenceTest" classname="com.challenge.easy.string.SortingSentenceTest" time="0.01"/>
-  <testcase name="shortestToCharTest" classname="com.challenge.easy.twopointer.ShortestDistanceToCharTest" time="0.01">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at com.challenge.easy.twopointer.ShortestDistanceToCharTest.shortestToCharTest(ShortestDistanceToCharTest.java:14)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]></failure>
-  </testcase>
+  <testcase name="numJewelsInStonesTest" classname="com.challenge.easy.string.JewelsAndStonesTest" time="0.013"/>
+  <testcase name="reverseWordsTest" classname="com.challenge.easy.string.ReverseWordsInStringIIITest" time="0.002"/>
+  <testcase name="sortSentenceTest" classname="com.challenge.easy.string.SortingSentenceTest" time="0.0"/>
+  <testcase name="shortestToCharTest" classname="com.challenge.easy.twopointer.ShortestDistanceToCharTest" time="0.0"/>
 </testsuite>
