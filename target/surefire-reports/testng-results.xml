@@ -1,135 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="22" passed="22" failed="0" skipped="0">
+<testng-results ignored="0" total="23" passed="22" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-24T12:26:44 CST" name="Surefire suite" finished-at="2024-09-24T12:26:45 CST" duration-ms="94">
+  <suite started-at="2024-09-24T16:11:48 CST" name="Surefire suite" finished-at="2024-09-24T16:11:48 CST" duration-ms="110">
     <groups>
     </groups>
-    <test started-at="2024-09-24T12:26:44 CST" name="Surefire test" finished-at="2024-09-24T12:26:45 CST" duration-ms="94">
+    <test started-at="2024-09-24T16:11:48 CST" name="Surefire test" finished-at="2024-09-24T16:11:48 CST" duration-ms="110">
       <class name="com.challenge.easy.string.SortingSentenceTest">
-        <test-method signature="sortSentenceTest()[pri:0, instance:com.challenge.easy.string.SortingSentenceTest@78dd667e]" started-at="2024-09-24T12:26:45 CST" name="sortSentenceTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="sortSentenceTest()[pri:0, instance:com.challenge.easy.string.SortingSentenceTest@501edcf1]" started-at="2024-09-24T16:11:48 CST" name="sortSentenceTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sortSentenceTest -->
       </class> <!-- com.challenge.easy.string.SortingSentenceTest -->
+      <class name="com.challenge.easy.twopointer.ShortestDistanceToCharTest">
+        <test-method signature="shortestToCharTest()[pri:0, instance:com.challenge.easy.twopointer.ShortestDistanceToCharTest@78b729e6]" started-at="2024-09-24T16:11:48 CST" name="shortestToCharTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.challenge.easy.twopointer.ShortestDistanceToCharTest.shortestToCharTest(ShortestDistanceToCharTest.java:14)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shortestToCharTest -->
+      </class> <!-- com.challenge.easy.twopointer.ShortestDistanceToCharTest -->
       <class name="com.challenge.easy.arrays.FindWordsContainingCharacterTest">
-        <test-method signature="numIdenticalPairsTest()[pri:0, instance:com.challenge.easy.arrays.FindWordsContainingCharacterTest@78047b92]" started-at="2024-09-24T12:26:45 CST" name="numIdenticalPairsTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="numIdenticalPairsTest()[pri:0, instance:com.challenge.easy.arrays.FindWordsContainingCharacterTest@79ca92b9]" started-at="2024-09-24T16:11:48 CST" name="numIdenticalPairsTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- numIdenticalPairsTest -->
       </class> <!-- com.challenge.easy.arrays.FindWordsContainingCharacterTest -->
       <class name="com.challenge.easy.dynamic.PascalTriangleTest">
-        <test-method signature="generateTest()[pri:0, instance:com.challenge.easy.dynamic.PascalTriangleTest@4f638935]" started-at="2024-09-24T12:26:45 CST" name="generateTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="generateTest()[pri:0, instance:com.challenge.easy.dynamic.PascalTriangleTest@6e75aa0d]" started-at="2024-09-24T16:11:48 CST" name="generateTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateTest -->
       </class> <!-- com.challenge.easy.dynamic.PascalTriangleTest -->
       <class name="com.challenge.easy.matrix.FlippingImageTest">
-        <test-method signature="flipAndInvertImageTest()[pri:0, instance:com.challenge.easy.matrix.FlippingImageTest@1198b989]" started-at="2024-09-24T12:26:45 CST" name="flipAndInvertImageTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="flipAndInvertImageTest()[pri:0, instance:com.challenge.easy.matrix.FlippingImageTest@add0edd]" started-at="2024-09-24T16:11:48 CST" name="flipAndInvertImageTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flipAndInvertImageTest -->
       </class> <!-- com.challenge.easy.matrix.FlippingImageTest -->
       <class name="com.challenge.easy.hashtable.FirstUniqueCharTest">
-        <test-method signature="firstUniqCharTest()[pri:0, instance:com.challenge.easy.hashtable.FirstUniqueCharTest@4387b79e]" started-at="2024-09-24T12:26:45 CST" name="firstUniqCharTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="firstUniqCharTest()[pri:0, instance:com.challenge.easy.hashtable.FirstUniqueCharTest@7fc229ab]" started-at="2024-09-24T16:11:48 CST" name="firstUniqCharTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstUniqCharTest -->
       </class> <!-- com.challenge.easy.hashtable.FirstUniqueCharTest -->
       <class name="com.challenge.easy.arrays.FindFirstPalindromeTest">
-        <test-method signature="firstPalindromeTest()[pri:0, instance:com.challenge.easy.arrays.FindFirstPalindromeTest@3bd40a57]" started-at="2024-09-24T12:26:45 CST" name="firstPalindromeTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="6" status="PASS">
+        <test-method signature="firstPalindromeTest()[pri:0, instance:com.challenge.easy.arrays.FindFirstPalindromeTest@d83da2e]" started-at="2024-09-24T16:11:48 CST" name="firstPalindromeTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstPalindromeTest -->
       </class> <!-- com.challenge.easy.arrays.FindFirstPalindromeTest -->
       <class name="com.challenge.easy.binarysearch.KthMissingNumberTest">
-        <test-method signature="findKthPositiveTest()[pri:0, instance:com.challenge.easy.binarysearch.KthMissingNumberTest@79ca92b9]" started-at="2024-09-24T12:26:45 CST" name="findKthPositiveTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="findKthPositiveTest()[pri:0, instance:com.challenge.easy.binarysearch.KthMissingNumberTest@4f638935]" started-at="2024-09-24T16:11:48 CST" name="findKthPositiveTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- findKthPositiveTest -->
       </class> <!-- com.challenge.easy.binarysearch.KthMissingNumberTest -->
       <class name="com.challenge.easy.recursion.FibonacciNumberTest">
-        <test-method signature="fib()[pri:0, instance:com.challenge.easy.recursion.FibonacciNumberTest@add0edd]" started-at="2024-09-24T12:26:45 CST" name="fib" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="fib()[pri:0, instance:com.challenge.easy.recursion.FibonacciNumberTest@7ea37dbf]" started-at="2024-09-24T16:11:48 CST" name="fib" finished-at="2024-09-24T16:11:48 CST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fib -->
       </class> <!-- com.challenge.easy.recursion.FibonacciNumberTest -->
       <class name="com.challenge.easy.math.MissingNumberTest">
-        <test-method signature="missingNumberTest()[pri:0, instance:com.challenge.easy.math.MissingNumberTest@7fc229ab]" started-at="2024-09-24T12:26:45 CST" name="missingNumberTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="missingNumberTest()[pri:0, instance:com.challenge.easy.math.MissingNumberTest@527e5409]" started-at="2024-09-24T16:11:48 CST" name="missingNumberTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- missingNumberTest -->
       </class> <!-- com.challenge.easy.math.MissingNumberTest -->
       <class name="com.challenge.easy.math.RomanToIntegerTest">
-        <test-method signature="romanToIntTest()[pri:0, instance:com.challenge.easy.math.RomanToIntegerTest@527e5409]" started-at="2024-09-24T12:26:45 CST" name="romanToIntTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="romanToIntTest()[pri:0, instance:com.challenge.easy.math.RomanToIntegerTest@7ff95560]" started-at="2024-09-24T16:11:48 CST" name="romanToIntTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- romanToIntTest -->
       </class> <!-- com.challenge.easy.math.RomanToIntegerTest -->
       <class name="com.challenge.easy.arrays.NumberOfGoodPairsTest">
-        <test-method signature="numIdenticalPairsTest()[pri:0, instance:com.challenge.easy.arrays.NumberOfGoodPairsTest@8909f18]" started-at="2024-09-24T12:26:45 CST" name="numIdenticalPairsTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="numIdenticalPairsTest()[pri:0, instance:com.challenge.easy.arrays.NumberOfGoodPairsTest@1460a8c0]" started-at="2024-09-24T16:11:48 CST" name="numIdenticalPairsTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- numIdenticalPairsTest -->
       </class> <!-- com.challenge.easy.arrays.NumberOfGoodPairsTest -->
       <class name="com.challenge.easy.string.JewelsAndStonesTest">
-        <test-method signature="numJewelsInStonesTest()[pri:0, instance:com.challenge.easy.string.JewelsAndStonesTest@290d210d]" started-at="2024-09-24T12:26:45 CST" name="numJewelsInStonesTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="numJewelsInStonesTest()[pri:0, instance:com.challenge.easy.string.JewelsAndStonesTest@78dd667e]" started-at="2024-09-24T16:11:48 CST" name="numJewelsInStonesTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- numJewelsInStonesTest -->
       </class> <!-- com.challenge.easy.string.JewelsAndStonesTest -->
       <class name="com.challenge.easy.string.ReverseWordsInStringIIITest">
-        <test-method signature="reverseWordsTest()[pri:0, instance:com.challenge.easy.string.ReverseWordsInStringIIITest@1d76aeea]" started-at="2024-09-24T12:26:45 CST" name="reverseWordsTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="5" status="PASS">
+        <test-method signature="reverseWordsTest()[pri:0, instance:com.challenge.easy.string.ReverseWordsInStringIIITest@10db82ae]" started-at="2024-09-24T16:11:48 CST" name="reverseWordsTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reverseWordsTest -->
       </class> <!-- com.challenge.easy.string.ReverseWordsInStringIIITest -->
       <class name="com.challenge.easy.string.DefangingIpAddressTest">
-        <test-method signature="defangIPaddrTest()[pri:0, instance:com.challenge.easy.string.DefangingIpAddressTest@4b44655e]" started-at="2024-09-24T12:26:45 CST" name="defangIPaddrTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="5" status="PASS">
+        <test-method signature="defangIPaddrTest()[pri:0, instance:com.challenge.easy.string.DefangingIpAddressTest@1d76aeea]" started-at="2024-09-24T16:11:48 CST" name="defangIPaddrTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- defangIPaddrTest -->
       </class> <!-- com.challenge.easy.string.DefangingIpAddressTest -->
       <class name="com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest">
-        <test-method signature="uniqueOccurrencesTest()[pri:0, instance:com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest@6e75aa0d]" started-at="2024-09-24T12:26:45 CST" name="uniqueOccurrencesTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="uniqueOccurrencesTest()[pri:0, instance:com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest@2cbb3d47]" started-at="2024-09-24T16:11:48 CST" name="uniqueOccurrencesTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- uniqueOccurrencesTest -->
       </class> <!-- com.challenge.easy.hashtable.UniqueNumberOfOccurrencesTest -->
       <class name="com.challenge.easy.matrix.MatrixDiagonalSumTest">
-        <test-method signature="diagonalSumTest()[pri:0, instance:com.challenge.easy.matrix.MatrixDiagonalSumTest@7ff95560]" started-at="2024-09-24T12:26:45 CST" name="diagonalSumTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="diagonalSumTest()[pri:0, instance:com.challenge.easy.matrix.MatrixDiagonalSumTest@2aa3cd93]" started-at="2024-09-24T16:11:48 CST" name="diagonalSumTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- diagonalSumTest -->
       </class> <!-- com.challenge.easy.matrix.MatrixDiagonalSumTest -->
       <class name="com.challenge.easy.math.PalindromeNumberTest">
-        <test-method signature="isPalindromeTest()[pri:0, instance:com.challenge.easy.math.PalindromeNumberTest@2cbb3d47]" started-at="2024-09-24T12:26:45 CST" name="isPalindromeTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="isPalindromeTest()[pri:0, instance:com.challenge.easy.math.PalindromeNumberTest@1198b989]" started-at="2024-09-24T16:11:48 CST" name="isPalindromeTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isPalindromeTest -->
       </class> <!-- com.challenge.easy.math.PalindromeNumberTest -->
       <class name="com.challenge.easy.dfs.TreeInorderTraversalTest">
-        <test-method signature="inorderTraversalTest1()[pri:0, instance:com.challenge.easy.dfs.TreeInorderTraversalTest@1460a8c0]" started-at="2024-09-24T12:26:45 CST" name="inorderTraversalTest1" finished-at="2024-09-24T12:26:45 CST" duration-ms="16" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- inorderTraversalTest1 -->
-        <test-method signature="inorderTraversalTest3()[pri:0, instance:com.challenge.easy.dfs.TreeInorderTraversalTest@1460a8c0]" started-at="2024-09-24T12:26:45 CST" name="inorderTraversalTest3" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="inorderTraversalTest3()[pri:0, instance:com.challenge.easy.dfs.TreeInorderTraversalTest@4387b79e]" started-at="2024-09-24T16:11:48 CST" name="inorderTraversalTest3" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inorderTraversalTest3 -->
-        <test-method signature="inorderTraversalTest2()[pri:0, instance:com.challenge.easy.dfs.TreeInorderTraversalTest@1460a8c0]" started-at="2024-09-24T12:26:45 CST" name="inorderTraversalTest2" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="inorderTraversalTest1()[pri:0, instance:com.challenge.easy.dfs.TreeInorderTraversalTest@4387b79e]" started-at="2024-09-24T16:11:48 CST" name="inorderTraversalTest1" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inorderTraversalTest1 -->
+        <test-method signature="inorderTraversalTest2()[pri:0, instance:com.challenge.easy.dfs.TreeInorderTraversalTest@4387b79e]" started-at="2024-09-24T16:11:48 CST" name="inorderTraversalTest2" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inorderTraversalTest2 -->
       </class> <!-- com.challenge.easy.dfs.TreeInorderTraversalTest -->
       <class name="com.challenge.easy.string.CheckSentenceIsPangramTest">
-        <test-method signature="checkIfPangramTest()[pri:0, instance:com.challenge.easy.string.CheckSentenceIsPangramTest@7ea37dbf]" started-at="2024-09-24T12:26:45 CST" name="checkIfPangramTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="checkIfPangramTest()[pri:0, instance:com.challenge.easy.string.CheckSentenceIsPangramTest@290d210d]" started-at="2024-09-24T16:11:48 CST" name="checkIfPangramTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkIfPangramTest -->
       </class> <!-- com.challenge.easy.string.CheckSentenceIsPangramTest -->
       <class name="com.challenge.easy.string.BalancedStringTest">
-        <test-method signature="balancedStringSplitTest()[pri:0, instance:com.challenge.easy.string.BalancedStringTest@2aa3cd93]" started-at="2024-09-24T12:26:45 CST" name="balancedStringSplitTest" finished-at="2024-09-24T12:26:45 CST" duration-ms="0" status="PASS">
+        <test-method signature="balancedStringSplitTest()[pri:0, instance:com.challenge.easy.string.BalancedStringTest@4b44655e]" started-at="2024-09-24T16:11:48 CST" name="balancedStringSplitTest" finished-at="2024-09-24T16:11:48 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- balancedStringSplitTest -->

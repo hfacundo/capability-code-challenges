@@ -29,7 +29,24 @@ package com.challenge.easy.twopointer;
 public class ShortestDistanceToChar {
 
     public static int[] shortestToChar(String s, char c) {
-        return null;
+        int[] distances = new int[s.length()];
+        String subString = s;
+        int prev = 0;
+        int next = subString.indexOf(c);
+        for(int i = 0; i < s.length(); i++){
+            if(i > next){
+                prev = next;
+                subString = s.substring(i);
+                next = subString.indexOf(c) + prev + 1;
+            }
+
+            if(prev == 0){
+                distances[i] = next - i;
+            }else{
+                distances[i] = Math.min((i-prev), (next - i));
+            }
+        }
+        return distances;
     }
 
     public static void main(String[] args) {

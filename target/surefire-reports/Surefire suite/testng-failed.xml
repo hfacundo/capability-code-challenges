@@ -3,11 +3,11 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.challenge.easy.string.BalancedStringTest">
+      <class name="com.challenge.easy.twopointer.ShortestDistanceToCharTest">
         <methods>
-          <include name="balancedStringSplitTest"/>
+          <include name="shortestToCharTest"/>
         </methods>
-      </class> <!-- com.challenge.easy.string.BalancedStringTest -->
+      </class> <!-- com.challenge.easy.twopointer.ShortestDistanceToCharTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

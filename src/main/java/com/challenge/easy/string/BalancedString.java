@@ -41,20 +41,19 @@ public class BalancedString {
         int countL = 0;
         int total = 0;
         for (String letter : letters){
-            if(letter.equals("R")){
-                countR++;
-            }else{
-                countL++;
-            }
-            
             if(countL == countR){
                 total++;
                 countL = 0;
                 countR = 0;
             }
-        }
 
-        return total == 0 ? 1 : total;
+            if(letter.equals("R")){
+                countR++;
+            }else{
+                countL++;
+            }
+        }
+        return total;
     }
 
     public static void main(String[] args) {
