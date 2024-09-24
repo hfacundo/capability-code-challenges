@@ -3,11 +3,11 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.challenge.easy.math.RomanToIntegerTest">
+      <class name="com.challenge.easy.matrix.MatrixDiagonalSumTest">
         <methods>
-          <include name="romanToIntTest"/>
+          <include name="diagonalSumTest"/>
         </methods>
-      </class> <!-- com.challenge.easy.math.RomanToIntegerTest -->
+      </class> <!-- com.challenge.easy.matrix.MatrixDiagonalSumTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->
