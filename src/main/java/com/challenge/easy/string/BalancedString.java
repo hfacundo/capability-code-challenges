@@ -36,7 +36,19 @@ package com.challenge.easy.string;
 public class BalancedString {
 
     public static int balancedStringSplit(String s) {
-        return 0;
+        int count = 0;
+        int balance = 0;
+        for (Character c : s.toCharArray()) {
+            if ('R' == c) {
+                balance = balance + 1;
+            } else {
+                balance = balance - 1;
+            }
+            if (balance == 0) {
+                count = count + 1;
+            }
+        }
+        return count;
     }
 
     public static void main(String[] args) {

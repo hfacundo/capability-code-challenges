@@ -1,5 +1,8 @@
 package com.challenge.easy.string;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
     # Sorting the Sentence
 
@@ -32,7 +35,20 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+        Map<Integer,String> words = new HashMap<>();
+        StringBuilder result = new StringBuilder();
+        for (String word : s.split(" ")) {
+            Character c = word.charAt(word.length()-1);
+            words.put(Character.getNumericValue(c), word.substring(0, word.length()-1));
+        }
+        for(int i=1; i<=words.size(); i++) {
+            if (i == words.size()) {
+                result.append(words.get(i));
+            } else {
+                result.append(words.get(i) + " ");
+            }
+        }
+        return result.toString();
     }
 
     public static void main(String[] args) {

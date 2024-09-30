@@ -1,5 +1,8 @@
 package com.challenge.easy.math;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
     # Missing Number
 
@@ -30,7 +33,16 @@ package com.challenge.easy.math;
 public class MissingNumber {
 
     public static int missingNumber(int[] nums) {
-        return 0;
+        List<Integer> numbers = new ArrayList<>();
+        List<Integer> array = new ArrayList<>();
+        for(int i=0; i<=nums.length; i++) {
+            numbers.add(i);
+        }
+        for (Integer integer : nums) {
+            array.add(integer);
+        }
+        numbers.removeAll(array);
+        return numbers.get(0);
     }
 
     public static void main(String[] args) {

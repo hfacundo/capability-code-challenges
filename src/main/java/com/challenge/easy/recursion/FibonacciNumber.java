@@ -31,7 +31,17 @@ package com.challenge.easy.recursion;
 public class FibonacciNumber {
 
     public static int fib(int n) {
-        return 0;
+        if (n<=1) {
+            return n;
+        }
+        int fib1=0;
+        int fib2=1;
+        for(int i=2; i<=n; i++) {
+            int temp = fib1 + fib2;
+            fib1 = fib2;
+            fib2 = temp;
+        }
+        return fib2;
     }
 
     public static void main(String[] args) {

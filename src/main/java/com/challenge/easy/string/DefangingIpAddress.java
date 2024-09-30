@@ -23,7 +23,15 @@ package com.challenge.easy.string;
 public class DefangingIpAddress {
 
     public static String defangIPaddr(String address) {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for(Character character : address.toCharArray()) {
+            if (character == '.') {
+                result.append("[" + character + "]");
+            } else {
+                result.append(character);
+            }
+        }
+        return result.toString();
     }
 
     public static void main(String[] args) {

@@ -30,10 +30,18 @@ package com.challenge.easy.arrays;
 public class FindFirstPalindrome {
 
     public static String firstPalindrome(String[] words) {
-        return null;
+    	String palindrome = "";
+    	for (String word: words) {
+    		StringBuilder sb = new StringBuilder(word);
+    		sb.reverse();
+    		if (word.equals(sb.toString())) {
+				return word;
+			}
+    	}
+        return palindrome;
     }
 
     public static void main(String[] args) {
-
+    	
     }
 }

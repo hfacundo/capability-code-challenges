@@ -30,7 +30,15 @@ package com.challenge.easy.math;
 public class PalindromeNumber {
 
     public static boolean isPalindrome(int x) {
-        return false;
+        int reverse = 0;
+        int original = x;
+        while (x>0) {
+            int lastDigit = x % 10;
+            reverse = (reverse * 10) + lastDigit;
+            x = x/10;
+
+        }
+        return original == reverse;
     }
 
     public static void main(String[] args) {
