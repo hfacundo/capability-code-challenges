@@ -32,7 +32,20 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+        // Split sentence
+        String[] words = s.split(" ");
+
+        String[] sortedWords = new String[words.length];
+
+        // Place each word according to its position
+        for (String word : words) {
+            // Last character in the word indicates the position
+            int position = Character.getNumericValue(word.charAt(word.length() - 1)) - 1;
+            sortedWords[position] = word.substring(0, word.length() - 1); // Remove the last character which is the position
+        }
+
+        // Join the sorted words into a single string
+        return String.join(" ", sortedWords);
     }
 
     public static void main(String[] args) {

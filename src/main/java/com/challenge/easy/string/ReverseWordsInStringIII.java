@@ -25,7 +25,18 @@ package com.challenge.easy.string;
 public class ReverseWordsInStringIII {
 
     public static String reverseWords(String s) {
-        return null;
+        // Split sentence
+        String[] words = s.split(" ");
+
+        StringBuilder newSentence = new StringBuilder();
+
+        // Reverse each word and append it to the new sentence
+        for (String word : words) {
+            newSentence.append(new StringBuilder(word).reverse()).append(" ");
+        }
+
+        // Return new sentence by trimming last space added
+        return newSentence.toString().trim();
     }
 
     public static void main(String[] args) {

@@ -36,7 +36,25 @@ package com.challenge.easy.string;
 public class BalancedString {
 
     public static int balancedStringSplit(String s) {
-        return 0;
+        int balance = 0;
+        int count = 0;
+
+        // Traverse through string
+        for (char c : s.toCharArray()) {
+            // Increment balance for L, decrement for R
+            if (c == 'L') {
+                balance++;
+            } else if (c == 'R') {
+                balance--;
+            }
+
+            // Whenever the balance is 0, we found a balanced substring
+            if (balance == 0) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     public static void main(String[] args) {

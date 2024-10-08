@@ -1,5 +1,9 @@
 package com.challenge.easy.string;
 
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 /**
 
      # Jewels and Stones
@@ -26,7 +30,21 @@ package com.challenge.easy.string;
 public class JewelsAndStones {
 
     public static int numJewelsInStones(String jewels, String stones) {
-        return 0;
+        // Extract unique jewels in the string
+        Set<Character> jewelSet = jewels.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.toSet());
+
+        int count = 0;
+
+        // Check how many stones are jewels
+        for (char stone : stones.toCharArray()) {
+            if (jewelSet.contains(stone)) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     public static void main(String[] args) {
