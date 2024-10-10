@@ -30,7 +30,29 @@ package com.challenge.easy.math;
 public class PalindromeNumber {
 
     public static boolean isPalindrome(int x) {
-        return false;
+        // if x is negative, it cannot be a palindrome
+        if(x < 0){
+            return false;
+        }
+        // if x end in 0 and it is not 0 itself, it cannot be a palindrome
+        if(x!=0 && x%10 ==0){
+            return false;
+        }
+
+        //reverse half of the digits. 121
+        // 1.reverseHalf = 0*10 + 121%10 = 1
+        // 1. x= 121/10 = 12
+        // 2. reverseHalf = 1*10 + 12%10 =10+ 2 = 12
+        // 2. x= 12/10 = 1
+        // 3. x < reverseHalf = true; break
+        int reverseHalf=0;
+        while(x > reverseHalf){
+            reverseHalf = reverseHalf*10 + x%10;
+            x /= 10;
+        }
+        // Check if reverseHalf matches the remaining part
+        // if x has an odd number of dogots, we divide reverseHalf by 10 to remove the middle digit
+        return x == reverseHalf || x == reverseHalf/10;
     }
 
     public static void main(String[] args) {

@@ -1,6 +1,8 @@
 package com.challenge.easy.dfs;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
     # Binary Tree Inorder Traversal
@@ -37,8 +39,31 @@ import java.util.List;
  */
 public class TreeInorderTraversal {
 
+    /**
+     * A Stack can help us to keep track of the nodes we need to visit. We push the nodes
+     * from the root to he leftmost node, process the node and then move to the rightr subtree
+     * @param root node
+     * @return
+     */
     public List<Integer> inorderTraversal(TreeNode root) {
-        return null;
+        List<Integer> result = new ArrayList<Integer>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode current = root;
+        while(current != null || !stack.isEmpty()) {
+            // we go to the leftmost node while pushing all left nodes of the current node
+            // onto the stack until we reach a node with no left child
+            while(current != null) {
+                stack.push(current);
+                current = current.left;
+            }
+            // Pop the node from the stack, and we visit it( we added the value to the result)
+            current = stack.pop();
+            result.add(current.val);
+
+            // Move to the right subtree
+            current = current.right;
+        }
+        return result;
     }
 
     public static void main(String[] args) {

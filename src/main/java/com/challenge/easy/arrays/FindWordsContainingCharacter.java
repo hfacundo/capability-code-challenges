@@ -1,5 +1,6 @@
 package com.challenge.easy.arrays;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -36,7 +37,28 @@ import java.util.List;
 public class FindWordsContainingCharacter {
 
     public static List<Integer> findWordsContaining(String[] words, char x) {
-        return null;
+        // validate constraints
+        if(words == null || words.length == 0){
+            return List.of();
+        }
+        List<Integer> result = new ArrayList<>();
+        // iterate through eac word
+        for(int i = 0; i < words.length; i++){
+            String word = words[i];
+            // iterate trough each character in the word
+            for(int j = 0; j < word.length(); j++){
+                // compare the current character if its equal to the expected character
+                if(word.charAt(j) == x){
+                    // if so we add the index 'i' of the array word we are validating
+                    result.add(i);
+                    // we dont need to continue checking if the word contains another character 'x'
+                    // so we break the inner loop
+                    break;
+                }
+            }
+        }
+
+        return result;
     }
 
     public static void main(String[] args) {

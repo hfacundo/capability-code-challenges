@@ -1,5 +1,8 @@
 package com.challenge.easy.string;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
 
     # Check if the Sentence Is Pangram
@@ -25,7 +28,22 @@ package com.challenge.easy.string;
 public class CheckSentenceIsPangram {
 
     public static boolean checkIfPangram(String sentence) {
-        return false;
+        // we define the variable that holds all the lowercase letter og English Alphabet
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        // we declare a Set to hold all the characters of the sentence string
+        Set<Character> seenChars = new HashSet<Character>();
+
+        // We travers all the characters of the sentence string and we store them into the Set
+        for(char c: sentence.toCharArray()) {
+            // check if the character is between 'a' and 'z',
+            if(c>='a' && c<='z') {
+                // we store the chars
+                seenChars.add(c);
+            }
+        }
+
+        // if the set contains 26 characters by the end of the traversal, the sentence is a pangram
+        return seenChars.size()==26;
     }
 
     public static void main(String[] args) {

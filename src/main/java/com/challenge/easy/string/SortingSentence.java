@@ -1,5 +1,9 @@
 package com.challenge.easy.string;
 
+import java.io.StringWriter;
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
     # Sorting the Sentence
 
@@ -32,7 +36,19 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+        // Divide the sentence in array of words
+        String[] words = s.split(" ");
+        // We sort the array by comparing the number at the end of each word in the array
+        Arrays.sort(words, Comparator.comparingInt(word-> word.charAt(word.length()-1) -'0'));
+
+        StringWriter result = new StringWriter();
+        // We traverse each word of the ordered array
+        for (String word : words) {
+            // we append to the result the word excluding the las character number and append a space
+            result.append(word, 0, word.length()-1).append(" ");
+        }
+        // We remove leading and trailing spaces from the string and return it
+        return result.toString().trim();
     }
 
     public static void main(String[] args) {

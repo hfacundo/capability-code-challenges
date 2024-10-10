@@ -1,5 +1,7 @@
 package com.challenge.easy.string;
 
+import java.io.StringWriter;
+
 /**
     # Reverse Words in a String III
 
@@ -25,7 +27,32 @@ package com.challenge.easy.string;
 public class ReverseWordsInStringIII {
 
     public static String reverseWords(String s) {
-        return null;
+        // We declare the variable that holds the strings reversed
+        StringWriter result = new StringWriter();
+        String[] words = s.split(" ");
+        for(String word : words) {
+            // we define a char array for each word
+            char[] arr = word.toCharArray();
+            // Reverse each array of characters
+            reverseWord(arr);
+            // We create a String with the arr and append to the result
+            result.append(new String(arr));
+            // We append an space after each word appended to the result
+            result.append(" ");
+        }
+        // We return a final String but before we remove leading and trailing spaces.
+        return result.toString().trim();
+    }
+
+    private static void reverseWord(char[] word) {
+        int left = 0, right = word.length - 1;
+        while (left < right) {
+            char temp = word[left];
+            word[left] = word[right];
+            word[right] = temp;
+            left++;
+            right--;
+        }
     }
 
     public static void main(String[] args) {

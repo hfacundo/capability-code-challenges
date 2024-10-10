@@ -1,5 +1,7 @@
 package com.challenge.easy.string;
 
+import java.io.StringWriter;
+
 /**
     # Defanging an IP Address
 
@@ -23,7 +25,23 @@ package com.challenge.easy.string;
 public class DefangingIpAddress {
 
     public static String defangIPaddr(String address) {
-        return null;
+        // we declare the variable that will hold the defanged ip address
+        StringWriter defrangedIP = new StringWriter();
+        if( address == null || address.length() == 0 ) {
+            return "";
+        }
+        // traverse each character of the IP
+        for(char c : address.toCharArray()) {
+            // We check if the char is '.'
+            if(c == '.') {
+                // we append "[.]" instead of period
+                defrangedIP.append("[.]");
+            }else{
+                // Otherwise we append the character
+                defrangedIP.append(c);
+            }
+        }
+        return defrangedIP.toString();
     }
 
     public static void main(String[] args) {

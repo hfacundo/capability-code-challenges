@@ -1,5 +1,8 @@
 package com.challenge.easy.recursion;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
     # Fibonacci Number
 
@@ -29,9 +32,24 @@ package com.challenge.easy.recursion;
         * 0 <= n <= 30
  */
 public class FibonacciNumber {
-
+    // Hashmap to store previously computed fibonacci numbers
+    private static Map<Integer, Integer> memo = new HashMap<>();
     public static int fib(int n) {
-        return 0;
+        // we define de base cases
+        if (n <= 1) {
+            return n;
+        }
+        // Check if the fibonacci number of n is already computed
+        if(memo.containsKey(n)) {
+            // we return the already computed fibonacci number
+            return memo.get(n);
+        }
+        // we define de recursive relation
+        int result = fib(n - 1) + fib(n - 2);
+        // we store the computed fibonacci number
+        memo.put(n, result);
+        // we return the fibonacci number for n
+        return result;
     }
 
     public static void main(String[] args) {

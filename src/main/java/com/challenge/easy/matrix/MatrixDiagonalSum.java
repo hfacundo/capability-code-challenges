@@ -44,7 +44,20 @@ package com.challenge.easy.matrix;
 public class MatrixDiagonalSum {
 
     public static int diagonalSum(int[][] mat) {
-        return 0;
+        int n = mat.length;// number of rows or columns since it´s a square matrix
+        int sum = 0;
+        // Traverse through each row
+        for (int i = 0; i < n; i++) {
+            // add the values of the primary diagonal (i,i)
+            sum += mat[i][i];
+
+            // Ensure we don´t count the middle element twice if n is odd
+            if( i != n - i -1 ){
+                // add the secondary diagonal element (i, n-i-1)
+                sum += mat[i][n - i - 1];
+            }
+        }
+        return sum;
     }
 
     public static void main(String[] args) {

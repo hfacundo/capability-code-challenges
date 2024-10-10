@@ -29,8 +29,26 @@ package com.challenge.easy.math;
  */
 public class MissingNumber {
 
+    /**
+     * The sum of the first n natural numbers can be calculated using this formula:
+     * sum[0,n] = n(n+1)/2
+     * The missing number can be found by subtracting the actual sum of the array from the
+     * expected sum
+     * @param nums
+     * @return
+     */
     public static int missingNumber(int[] nums) {
-        return 0;
+        int n = nums.length;
+        // Calculate the expected sum of the numbers from 0 to n
+        int expectedSum = n*(n+1)/2;
+        // actual sum
+        int actualSum = 0;
+        // Calculate the actual sum of the numbers of the array
+        for(int value: nums){
+            actualSum += value;
+        }
+        // the missing number is the differentce between the expected sum and the actual sum
+        return expectedSum - actualSum;
     }
 
     public static void main(String[] args) {

@@ -34,9 +34,34 @@ package com.challenge.easy.string;
 
  */
 public class BalancedString {
-
+    /**
+     * We need to traverse string character by character. We mantain a balance counter,
+     * which increases by for each 'R' and decreases by '1' for each 'L'. Whenever the balance reach 0, it means the
+     * substring up to that point is balanced, an we increment the count of balanced substrings.
+     * We continue until we process the entire string
+     * @param s
+     * @return
+     */
     public static int balancedStringSplit(String s) {
-        return 0;
+        if(s == null || s.isEmpty()){
+            return 0;
+        }
+        int balanceCounter = 0;
+        int count = 0;
+        for(int i = 0; i < s.length(); i++){
+            int c = s.charAt(i);
+            // increase balanceCounter for 'R' and decrease balanceCounter for 'L'
+            if(c == 'L'){
+                balanceCounter--;
+            }else if(c == 'R'){
+                balanceCounter++;
+            }
+            // When balance reaches 0, we found a balanced String
+            if(balanceCounter == 0){
+                count++;
+            }
+        }
+        return count;
     }
 
     public static void main(String[] args) {

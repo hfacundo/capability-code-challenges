@@ -34,7 +34,22 @@ package com.challenge.easy.matrix;
 public class FlippingImage {
 
     public static int[][] flipAndInvertImage(int[][] image) {
-        return null;
+        // traverse each row of the image
+        for(int[] row : image) {
+            // We use two pointer technique to flip and invert the row simultaneously
+           int left = 0, right = image.length - 1;
+           while(left <= right) {
+               //Flip elements at the left and right pointers
+               // Inverting: XOR with 1 flips 0 to 1 and 1 to 0
+               int temp = row[left] ^ 1; // Invert left element
+               row[left] = row[right] ^ 1; // Invert right element and move to left
+               row[right] = temp;  // place inverted left element on the right
+               // Move the pointers towards the center
+               left++;
+               right--;
+           }
+        }
+        return image;
     }
 
     public static void main(String[] args) {

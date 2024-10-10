@@ -1,5 +1,10 @@
 package com.challenge.easy.hashtable;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 /**
     # Unique Number of Occurrences
 
@@ -26,10 +31,32 @@ package com.challenge.easy.hashtable;
 public class UniqueNumberOfOccurrences {
 
     public static boolean uniqueOccurrences(int[] arr) {
-        return false;
+        // validate edge cases
+        if(arr == null || arr.length == 0) {
+            return false;
+        }
+        // store the frequency of each integer in the array
+        Map<Integer, Integer> mapFreq = new HashMap<>();
+        // store the frequency in a hashset to check if we encounter duplicate frequencies
+        Set<Integer> seenFreq = new HashSet<>();
+
+        // first iteration we store the frequency of each integer
+        for (int j : arr) {
+            mapFreq.put(j, mapFreq.getOrDefault(j, 0) + 1);
+        }
+        // second iteration, if we found that a frequency is duplicated
+        // we immediately return false
+        for(Integer val: mapFreq.values()) {
+            if(!seenFreq.add(val)) {
+                return false;
+            }
+        }
+        // we return true if the second for validation does not find duplicate frequencies
+        return  true;
     }
 
     public static void main(String[] args) {
+
 
     }
 }
