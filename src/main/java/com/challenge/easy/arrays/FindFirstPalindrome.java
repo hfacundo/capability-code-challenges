@@ -30,10 +30,27 @@ package com.challenge.easy.arrays;
 public class FindFirstPalindrome {
 
     public static String firstPalindrome(String[] words) {
-        return null;
+        String palindromeWords="";
+        boolean isPalindrome,
+                isFirstPalindrome=true;
+        for (String word:words){
+            isPalindrome =true;
+            char [] characters=word.toCharArray();
+            for(int x=0,y=word.length()-1;x<word.length();x++,y--){
+                if(characters[x]!=characters[y]){
+                    isPalindrome =false;
+                }
+            }
+            if(isPalindrome && isFirstPalindrome){
+                palindromeWords=word;
+                isFirstPalindrome=false;
+            }
+        }
+        return palindromeWords;
     }
 
     public static void main(String[] args) {
 
     }
 }
+
