@@ -1,5 +1,10 @@
 package com.challenge.easy.string;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
     # Reverse Words in a String III
 
@@ -25,7 +30,24 @@ package com.challenge.easy.string;
 public class ReverseWordsInStringIII {
 
     public static String reverseWords(String s) {
-        return null;
+        return Arrays.stream(s.split(" "))
+                .map(ReverseWordsInStringIII::reverseString)
+                .collect(Collectors.joining(" "));
+        /*String[] words = s.split(" ");
+        List<String> reversedWords = new ArrayList<>(words.length);
+        for (String word : words) {
+            reversedWords.add(reverseString(word));
+        }
+        return String.join(" ", reversedWords);*/
+        //return reversedWords.stream().collect(Collectors.joining(" "));
+    }
+
+    private static String reverseString(String s) {
+        char[] reversedArray = new char[s.length()];
+        for (int i = 0; i < s.length(); i++) {
+            reversedArray[i] = s.charAt(s.length() - 1 - i);
+        }
+        return new String(reversedArray);
     }
 
     public static void main(String[] args) {

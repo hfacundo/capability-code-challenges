@@ -9,7 +9,9 @@ public class KthMissingNumberTest {
     public void findKthPositiveTest() {
         int test1 = KthMissingNumber.findKthPositive(new int[] {2,3,4,7,11}, 5);
         int test2 = KthMissingNumber.findKthPositive(new int[] {1,2,3,4}, 2);
+        int test3 = KthMissingNumber.findKthPositive(new int[] {3,4,6}, 1);
         Assert.assertEquals(test1, 9);
         Assert.assertEquals(test2, 6);
+        Assert.assertEquals(test3, 1);
     }
 }

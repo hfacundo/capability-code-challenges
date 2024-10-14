@@ -12,6 +12,7 @@ public class NumberOfGoodPairsTest {
     public void numIdenticalPairsTest() {
         Assert.assertEquals(numIdenticalPairs(new int[]{1,2,3,1,1,3}), 4);
         Assert.assertEquals(numIdenticalPairs(new int[]{1,1,1,1}), 6);
+        Assert.assertEquals(numIdenticalPairs(new int[]{1,1,1,1,1}), 10);
         Assert.assertEquals(numIdenticalPairs(new int[]{1,2,3}), 0);
     }
 }

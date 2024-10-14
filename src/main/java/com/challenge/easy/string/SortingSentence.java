@@ -1,5 +1,9 @@
 package com.challenge.easy.string;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.stream.Collectors;
+
 /**
     # Sorting the Sentence
 
@@ -31,8 +35,21 @@ package com.challenge.easy.string;
  */
 public class SortingSentence {
 
+    private static final Comparator<String> byOriginalPosition = (String a, String b) -> {
+        int aValue = a.charAt(a.length() - 1);
+        int bValue = b.charAt(b.length() - 1);
+        return Integer.compare(aValue, bValue);
+    };
+
+    private static String removeNumber(String s) {
+        return s.replaceAll("[1-9]", "");
+    }
+
     public static String sortSentence(String s) {
-        return null;
+        return Arrays.stream(s.split(" "))
+                .sorted(byOriginalPosition)
+                .map(SortingSentence::removeNumber)
+                .collect(Collectors.joining(" "));
     }
 
     public static void main(String[] args) {

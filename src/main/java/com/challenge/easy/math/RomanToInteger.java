@@ -1,5 +1,8 @@
 package com.challenge.easy.math;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
     # Roman to Integer
 
@@ -45,9 +48,27 @@ package com.challenge.easy.math;
          * It is guaranteed that s is a valid roman numeral in the range [1, 3999].
  */
 public class RomanToInteger {
+    static Map<Character, Integer> romanValues = Map.of(
+            'I', 1,
+            'V', 5,
+            'X', 10,
+            'L', 50,
+            'C', 100,
+            'D', 500,
+            'M', 1000);
 
     public static int romanToInt(String s) {
-        return 0;
+        int sum = 0;
+        Character previous= null;
+
+        for (char c : s.toCharArray()) {
+            if (previous != null && romanValues.get(previous) < romanValues.get(c)) {
+                sum -= romanValues.get(previous) * 2;
+            }
+            sum += romanValues.get(c);
+            previous = c;
+        }
+        return sum;
     }
 
     public static void main(String[] args) {

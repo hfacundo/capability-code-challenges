@@ -1,5 +1,9 @@
 package com.challenge.easy.string;
 
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
+
 /**
 
      # Jewels and Stones
@@ -26,7 +30,23 @@ package com.challenge.easy.string;
 public class JewelsAndStones {
 
     public static int numJewelsInStones(String jewels, String stones) {
-        return 0;
+        Set<Character> jewelsSet = jewels.chars().mapToObj(c ->(char) c).collect(Collectors.toSet());
+
+        /*return stones.chars().mapToObj(c -> (char) c).map(stone -> {
+            if (jewelsSet.contains(stone)){
+                return 1;
+            }
+            return 0;
+        }).reduce(Integer::sum).orElse(0);*/
+
+        int jewelsCount = 0;
+        for (char stone : stones.toCharArray()) {
+            if (jewelsSet.contains(stone)){
+                jewelsCount++;
+            }
+        }
+        return jewelsCount;
+
     }
 
     public static void main(String[] args) {
