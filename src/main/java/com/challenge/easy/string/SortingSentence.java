@@ -32,7 +32,22 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+        String[] inorder = s.split(" ");
+        String[] words = new String[inorder.length];
+
+        for (String word : inorder) {
+            words[Integer.parseInt( word.substring(word.length()-1, word.length())) -1] = 
+            word.substring(0, word.length() -1);
+        }
+
+        String sentence = "";
+        for (int c=0; c < words.length; c++) {
+            sentence += words[c];
+            if(c != words.length-1){
+                sentence += " ";
+            }
+        }
+        return sentence;
     }
 
     public static void main(String[] args) {
