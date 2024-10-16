@@ -31,7 +31,23 @@ package com.challenge.easy.binarysearch;
 public class KthMissingNumber {
 
     public static int findKthPositive(int[] arr, int k) {
-        return 0;
+
+        int pointer1 = 0; //First array's pointer
+        int pointer2 = 0; //Second array's pointer
+        int currentValue = 1; //Number we're looking for in the second array
+
+        //If we reach the k index in second array, we return the value in the second array
+        while(pointer2 < k) {
+            if(pointer1 < arr.length && arr[pointer1] == currentValue) {
+                pointer1++;
+            } else {
+                pointer2++;
+            }
+            currentValue++;
+        }
+
+        //It's incremented at the end of the loop
+        return currentValue - 1;
     }
 
     public static void main(String[] args) {

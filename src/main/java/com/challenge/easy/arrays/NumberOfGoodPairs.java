@@ -1,5 +1,7 @@
 package com.challenge.easy.arrays;
 
+import java.util.HashMap;
+
 /**
     # Number of Good Pairs
 
@@ -30,7 +32,26 @@ package com.challenge.easy.arrays;
 public class NumberOfGoodPairs {
 
     public static int numIdenticalPairs(int[] nums) {
-        return 0;
+
+        HashMap<Integer, Integer> countMap = new HashMap<>();
+        int goodPairs = 0;
+
+        //Return the value for that key or the default value
+        for(int num : nums) {
+            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+        }
+
+        //Number of good pairs
+        /*
+         * count -1 = Possible pairs, the last one can't form a pair
+         * count * (count - 1) = ways to choose pairs counted twice
+         */
+        for(int count : countMap.values()) {
+            if(count > 1) {
+                goodPairs += (count * (count - 1)) / 2;
+            }
+        }
+        return goodPairs;
     }
 
     public static void main(String[] args) {
