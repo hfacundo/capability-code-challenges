@@ -51,7 +51,7 @@ public class TreeInorderTraversal {
                 current = current.left;
             }
             current = stack.pop();
-            result.add(current.val);
+            result.add(current.val); // Output
             current = current.right;
         }
 
