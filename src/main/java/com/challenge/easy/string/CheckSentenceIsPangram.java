@@ -25,10 +25,14 @@ package com.challenge.easy.string;
 public class CheckSentenceIsPangram {
 
     public static boolean checkIfPangram(String sentence) {
-        return false;
+        for (int i = 0; i < 26; i++) {
+            if(!sentence.contains(String.valueOf((char) ('a' + i)) )){
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
-
     }
 }

@@ -31,10 +31,27 @@ package com.challenge.easy.binarysearch;
 public class KthMissingNumber {
 
     public static int findKthPositive(int[] arr, int k) {
-        return 0;
+        int res = 0;
+        int dif = arr[0] - 0;
+        int count = dif -1;
+        for (int c = 0; c < arr.length-1; c++) {
+            if(dif != 0)
+                dif = arr[c+1] - arr[c];
+            if( dif != 1){
+                for (int j = arr[c] + 1; j < arr[c+1]; j++) {
+                    count++;
+                    if(count == k){
+                        res = j;
+                    }
+                }
+            }
+        }
+        if(count < k)
+            res =arr[arr.length-1] + (k-count);
+
+        return res;
     }
 
     public static void main(String[] args) {
-
     }
 }

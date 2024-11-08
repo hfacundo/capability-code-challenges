@@ -36,10 +36,36 @@ package com.challenge.easy.string;
 public class BalancedString {
 
     public static int balancedStringSplit(String s) {
-        return 0;
+        int balance = 0;
+        String temp = "";
+        for (int i = 0; i < s.length() - 1; i += 2) {
+            String letters = s.substring(i, i + 2);
+
+            if (letters.charAt(0) != letters.charAt(1)) {
+                if (temp.equals("") || temp.contains(letters)) {
+                    balance++;
+                    temp = letters;
+                }
+            } else {
+                if (i == s.length() - 2) {
+                    break;
+                }
+
+                String second = s.substring(i + 2, i + 4);
+                if (second.charAt(0) == second.charAt(1)) {
+                    if (!letters.equals(second)) {
+                        i += 2;
+                    } else {
+                        temp = letters + second;
+                        i += 4;
+                    }
+                    balance++;
+                }
+            }
+        }
+        return balance;
     }
 
     public static void main(String[] args) {
-
     }
 }

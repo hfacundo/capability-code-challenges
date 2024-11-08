@@ -47,10 +47,68 @@ package com.challenge.easy.math;
 public class RomanToInteger {
 
     public static int romanToInt(String s) {
-        return 0;
+        int sum = 0;
+        int temp = 0;
+        String letter = "";
+
+        String[] roms = s.split("");
+        for(int i = 0; i < roms.length; i++) {
+            letter = roms[i];
+            switch (letter) {
+                case "I" -> {
+                    temp = 1;
+                    if(i < roms.length-1){
+                        if(roms[i+1].equals("V") || roms[i+1].equals("X")){
+                            i++;
+                            if(roms[i].equals("V"))
+                                temp = 4;
+                            else
+                                temp = 9;
+                        }
+                    }                    
+                }
+                case "V" -> {
+                    temp = 5;
+                }
+                case "X" -> {
+                    temp = 10;
+                    if(i < roms.length-1){
+                        if(roms[i+1].equals("L") || roms[i+1].equals("C")){
+                            i++;
+                            if(roms[i].equals("L"))
+                                temp = 40;
+                            else
+                                temp = 90;
+                        }
+                    }
+                }
+                case "L" -> {
+                    temp = 50;
+                }
+                case "C" -> {
+                    temp = 100;
+                    if(i < roms.length-1){
+                        if(roms[i+1].equals("D") || roms[i+1].equals("M")){
+                            i++;
+                            if(roms[i].equals("D"))
+                                temp = 400;
+                            else
+                                temp = 900;
+                        }
+                    }
+                }
+                case "D" -> {
+                    temp = 500;
+                }
+                case "M" -> {
+                    temp = 1000;
+                }
+            }
+            sum += temp;
+        }
+        return sum;
     }
 
     public static void main(String[] args) {
-
     }
 }
