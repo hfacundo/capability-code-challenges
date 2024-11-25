@@ -1,5 +1,7 @@
 package com.challenge.easy.math;
 
+import java.util.HashMap;
+
 /**
     # Roman to Integer
 
@@ -47,10 +49,51 @@ package com.challenge.easy.math;
 public class RomanToInteger {
 
     public static int romanToInt(String s) {
-        return 0;
+
+        // Dict to simplify the retrieval of numbers
+        HashMap<Character,Integer> romanDict = new HashMap<>();
+
+        romanDict.put('I',1);
+        romanDict.put('V',5);
+        romanDict.put('X',10);
+        romanDict.put('L',50);
+        romanDict.put('C',100);
+        romanDict.put('D',500);
+        romanDict.put('M',1000);
+
+        int result = 0;
+
+        for (int i=0; i < s.length(); i++){
+            // We add three conditional to catch the special cases, otherwise we add the value of the letter
+            if (s.toCharArray()[i] == 'I') {
+                if (i + 1 < s.length() && (s.toCharArray()[i + 1] == 'V' || s.toCharArray()[i + 1] == 'X')) {
+                    result += romanDict.get(s.toCharArray()[i + 1]) - 1;
+                    i++;
+                }
+                else
+                    result += 1;
+            }
+            else if (s.toCharArray()[i] == 'X'){
+                if (i + 1 < s.length() && (s.toCharArray()[i + 1] == 'L' || s.toCharArray()[i + 1] == 'C')) {
+                    result += romanDict.get(s.toCharArray()[i + 1]) - 10;
+                    i++;
+                }
+                else result += 10;
+            } else if (s.toCharArray()[i] == 'C') {
+                if (i + 1 < s.length() && (s.toCharArray()[i + 1] == 'D' || s.toCharArray()[i + 1] == 'M')){
+                    result += romanDict.get(s.toCharArray()[i + 1]) - 100;
+                    i++;
+                }
+                else result += 100;
+            }
+            else
+                result += romanDict.get(s.toCharArray()[i]);
+        }
+
+        return result;
     }
 
     public static void main(String[] args) {
-
+System.out.println(romanToInt("XCIX"));
     }
 }

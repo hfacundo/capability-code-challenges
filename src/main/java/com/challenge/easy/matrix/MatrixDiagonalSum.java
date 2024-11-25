@@ -44,10 +44,21 @@ package com.challenge.easy.matrix;
 public class MatrixDiagonalSum {
 
     public static int diagonalSum(int[][] mat) {
-        return 0;
+
+        int result = 0;
+
+        // On the first iteration we add every number in the first diagonal
+        for (int i = 0; i < mat.length; i++)
+            result += mat[i][i];
+
+        // On the second iteration we exclude the crossover with the first diagonal and add everything else
+        for (int i = mat.length-1; i >= 0; i--)
+            if (!(mat.length%2 == 1 && i == mat.length/2))
+                result += mat[i][i];
+
+        return result;
     }
 
     public static void main(String[] args) {
-
     }
 }

@@ -29,11 +29,21 @@ package com.challenge.easy.math;
  */
 public class PalindromeNumber {
 
+    // The constraints help to limit the necessary code with three conditions
+    // 1. if the number is less than 0 it cant be a palindrome
+    // 2. if it's a two-digit number, both have to be the same
+    // 3. if it's a three-digit number, only the first and last have to be the same
     public static boolean isPalindrome(int x) {
-        return false;
+
+        if(x < 0 )
+            return false;
+
+        if(x <= 99)
+            return x%10 == x/10; // We get the numbers with the reminder of dividing by ten and by dividing the number by ten
+        else
+            return x%10 == x/100; // We get the numbers with the reminder of dividing by ten and by dividing the number by a hundred
     }
 
     public static void main(String[] args) {
-
     }
 }

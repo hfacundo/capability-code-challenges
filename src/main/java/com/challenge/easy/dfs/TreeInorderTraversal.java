@@ -1,6 +1,11 @@
 package com.challenge.easy.dfs;
 
+import org.w3c.dom.Node;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
     # Binary Tree Inorder Traversal
@@ -38,11 +43,34 @@ import java.util.List;
 public class TreeInorderTraversal {
 
     public List<Integer> inorderTraversal(TreeNode root) {
-        return null;
+        List<Integer> result = new ArrayList<Integer>();
+
+        Stack<TreeNode> stack = new Stack<>();
+
+        TreeNode currentNode = root;
+
+        while (currentNode != null || !stack.isEmpty()){
+
+            // We go to the deepest left node
+            while (currentNode != null){
+                stack.push(currentNode);
+                currentNode = currentNode.left;
+            }
+
+            // Retrieve the last element inserted in the stack
+            currentNode = stack.pop();
+            result.add(currentNode.val);
+
+            // We get the right node, if its null the program skips to the next node in the stack in the following loop instance
+            currentNode = currentNode.right;
+
+        }
+
+        return  result;
+
     }
 
     public static void main(String[] args) {
-
     }
 
     public class TreeNode {

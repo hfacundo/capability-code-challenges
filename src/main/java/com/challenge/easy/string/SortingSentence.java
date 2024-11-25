@@ -32,10 +32,29 @@ package com.challenge.easy.string;
 public class SortingSentence {
 
     public static String sortSentence(String s) {
-        return null;
+
+        String[] stringArr = s.split(" ");
+
+        // Create a result variable with the same length as the sentence
+        String[] orderedStr = new String[stringArr.length];
+
+        char[] word;
+
+        int index;
+
+        // For each word, the index is extracted, transformed to a numeric value and used to insert the rest of the word in the new array
+        for (String str:stringArr){
+            word = str.toCharArray();
+
+            index = Character.getNumericValue(word[word.length - 1]) - 1;
+
+            orderedStr[index] = str.substring(0,str.length()-1);
+        }
+
+        return String.join(" " ,orderedStr);
     }
 
     public static void main(String[] args) {
-
+        System.out.println(sortSentence("Myself2 Me1 I4 and3"));
     }
 }

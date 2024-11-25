@@ -36,7 +36,26 @@ package com.challenge.easy.string;
 public class BalancedString {
 
     public static int balancedStringSplit(String s) {
-        return 0;
+
+        int lnum = 0;
+        int rnum = 0;
+        int result = 0;
+
+        // We count the number of R's and L's until they are the same and then add to the counter
+        for(char ch:s.toCharArray()){
+            if (ch == 'R')
+                rnum += 1;
+            if (ch == 'L')
+                lnum += 1;
+
+            if (rnum == lnum){
+                result += 1;
+                rnum = 0;
+                lnum = 0;
+            }
+        }
+
+        return result;
     }
 
     public static void main(String[] args) {

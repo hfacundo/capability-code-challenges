@@ -29,8 +29,31 @@ package com.challenge.easy.arrays;
  */
 public class FindFirstPalindrome {
 
+    // Function to determine if a word is a palindrome
+    // Complexity: O(n) where n is the length of the word
+    public static Boolean isPalindrome(String word){
+
+        // Get word properties for easy access
+        int len = word.length();
+        char[] chars = word.toCharArray();
+
+        // Checks each letter to see if it's the same as the one in the opposite side
+        for (int i = 0; i < len; i++) {
+            if (chars[i] != chars[len-1-i])
+                return  false;
+        }
+
+        return true;
+    }
+
     public static String firstPalindrome(String[] words) {
-        return null;
+
+        for(String w: words){
+            if(isPalindrome(w))
+                return w;
+        }
+
+        return "";
     }
 
     public static void main(String[] args) {

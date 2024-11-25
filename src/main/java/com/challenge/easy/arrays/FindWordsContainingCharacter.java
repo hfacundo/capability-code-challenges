@@ -1,5 +1,6 @@
 package com.challenge.easy.arrays;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,8 +36,28 @@ import java.util.List;
  */
 public class FindWordsContainingCharacter {
 
+    // Returns true if the letter is in the word
+    // Complexity: O(n) where n is the length of the word
+    public static boolean containsLetter(String word, char x){
+
+        for (char letter: word.toCharArray()){
+            if (x == letter)
+                return true;
+        }
+        return false;
+    }
+
     public static List<Integer> findWordsContaining(String[] words, char x) {
-        return null;
+
+        List<Integer> result = new ArrayList<>();
+
+        for (int i = 0; i < words.length; i++) {
+            // If the word contains the letter the index is added to the result array
+            if (containsLetter(words[i], x))
+                result.add(i);
+        }
+
+        return result;
     }
 
     public static void main(String[] args) {

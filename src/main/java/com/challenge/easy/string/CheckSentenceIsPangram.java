@@ -25,7 +25,20 @@ package com.challenge.easy.string;
 public class CheckSentenceIsPangram {
 
     public static boolean checkIfPangram(String sentence) {
-        return false;
+
+        if (sentence.length() < 26)
+            return false;
+
+        // We define a string with every valid character
+        String thealphabet = "abcdefghijklmnopqrstuvwxyz";
+
+        // For every letter we see if its contained in the sentence
+        // Complexity: O(n) where n is the length of the sentence, the complexity of iterating over every letter in the alphabet is a constant 26
+        for (char letter:thealphabet.toCharArray())
+            if(!sentence.contains(""+letter))
+                return false;
+
+        return true;
     }
 
     public static void main(String[] args) {

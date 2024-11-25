@@ -1,5 +1,7 @@
 package com.challenge.easy.string;
 
+import java.util.HashMap;
+
 /**
 
      # Jewels and Stones
@@ -26,7 +28,20 @@ package com.challenge.easy.string;
 public class JewelsAndStones {
 
     public static int numJewelsInStones(String jewels, String stones) {
-        return 0;
+
+        int jewelsNum = 0;
+        HashMap<Character, Integer> dict = new HashMap<>();
+
+        // We save in a hashmap the elements that are jewels
+        for (char ch:jewels.toCharArray())
+            dict.put(ch,1);
+
+        // We iterate over the elements to see if they are present in the jewel map
+        for (char ch: stones.toCharArray())
+            if (dict.containsKey(ch))
+                jewelsNum += 1;
+
+        return jewelsNum;
     }
 
     public static void main(String[] args) {

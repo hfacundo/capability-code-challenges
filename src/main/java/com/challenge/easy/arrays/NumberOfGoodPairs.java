@@ -29,8 +29,22 @@ package com.challenge.easy.arrays;
  */
 public class NumberOfGoodPairs {
 
+    // Returns the number of good pairs
+    // Complexity o(n*n) where n is the length of the array
     public static int numIdenticalPairs(int[] nums) {
-        return 0;
+
+        int counter = 0;
+
+        // We define i to iterate over the array, then we go through the rest of the array, this satisfies the i < j condition
+        // Then we increase the counter everytime the elements in the indexes are the same.
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i+1; j < nums.length; j++) {
+                if (nums[i] == nums[j])
+                    counter++;
+            }
+        }
+
+        return counter;
     }
 
     public static void main(String[] args) {
