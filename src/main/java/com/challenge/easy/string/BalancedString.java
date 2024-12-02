@@ -1,45 +1,38 @@
 package com.challenge.easy.string;
 
-/**
-    # Split a String in Balanced Strings
-
-     Balanced strings are those that have an equal quantity of 'L' and 'R' characters.
-
-     Given a balanced string s, split it into some number of substrings such that:
-
-     Each substring is balanced.
-     Return the maximum number of balanced strings you can obtain.
-
-     Example 1:
-         Input: s = "RLRRLLRLRL"
-         Output: 4
-         Explanation: s can be split into "RL", "RRLL", "RL", "RL", each substring contains same number of 'L' and 'R'.
-
-     Example 2:
-         Input: s = "RLRRRLLRLL"
-         Output: 2
-         Explanation: s can be split into "RL", "RRRLLRLL", each substring contains same number of 'L' and 'R'.
-         Note that s cannot be split into "RL", "RR", "RL", "LR", "LL", because the 2nd and 5th substrings are not balanced.
-
-     Example 3:
-         Input: s = "LLLLRRRR"
-         Output: 1
-         Explanation: s can be split into "LLLLRRRR".
-
-     Constraints:
-
-         # 2 <= s.length <= 1000
-         # s[i] is either 'L' or 'R'.
-         # s is a balanced string.
-
- */
 public class BalancedString {
 
+    /**
+     * Splits a balanced string into the maximum number of balanced substrings.
+     *
+     * @param s The input balanced string.
+     * @return The maximum number of balanced substrings.
+     */
     public static int balancedStringSplit(String s) {
-        return 0;
+        int balance = 0; // Tracks the balance between 'L' and 'R'
+        int count = 0;   // Tracks the number of balanced substrings
+
+        // Iterate through the string
+        for (char c : s.toCharArray()) {
+            // Update balance based on the character
+            if (c == 'L') {
+                balance++;
+            } else {
+                balance--;
+            }
+
+            // When balance is zero, we have a balanced substring
+            if (balance == 0) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(balancedStringSplit("RLRRLLRLRL")); // Output: 4
+        System.out.println(balancedStringSplit("RLRRRLLRLL")); // Output: 2
+        System.out.println(balancedStringSplit("LLLLRRRR"));   // Output: 1
     }
 }

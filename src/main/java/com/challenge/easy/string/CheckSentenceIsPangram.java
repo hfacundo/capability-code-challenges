@@ -1,34 +1,31 @@
 package com.challenge.easy.string;
 
-/**
+import java.util.HashSet;
+import java.util.Set;
 
-    # Check if the Sentence Is Pangram
-
-     A pangram is a sentence where every letter of the English alphabet appears at least once.
-
-     Given a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.
-
-     Example 1:
-         Input: sentence = "thequickbrownfoxjumpsoverthelazydog"
-         Output: true
-         Explanation: sentence contains at least one of every letter of the English alphabet.
-
-     Example 2:
-         Input: sentence = "leetcode"
-         Output: false
-
-     Constraints:
-
-         * 1 <= sentence.length <= 1000
-         * sentence consists of lowercase English letters.
- */
 public class CheckSentenceIsPangram {
 
+    /**
+     * Checks if the given sentence is a pangram.
+     *
+     * @param sentence The input string.
+     * @return True if the sentence is a pangram, false otherwise.
+     */
     public static boolean checkIfPangram(String sentence) {
-        return false;
+        Set<Character> uniqueChars = new HashSet<>();
+
+        for (char c : sentence.toCharArray()) {
+            uniqueChars.add(c);
+            if (uniqueChars.size() == 26) {
+                return true;
+            }
+        }
+
+        return uniqueChars.size() == 26;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(checkIfPangram("thequickbrownfoxjumpsoverthelazydog")); // Output: true
+        System.out.println(checkIfPangram("leetcode")); // Output: false
     }
 }

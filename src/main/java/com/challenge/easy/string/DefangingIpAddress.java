@@ -1,32 +1,20 @@
 package com.challenge.easy.string;
 
-/**
-    # Defanging an IP Address
-
-     Given a valid (IPv4) IP address, return a defanged version of that IP address.
-
-     A defanged IP address replaces every period "." with "[.]".
-
-     Example 1:
-         Input: address = "1.1.1.1"
-         Output: "1[.]1[.]1[.]1"
-
-     Example 2:
-         Input: address = "255.100.50.0"
-         Output: "255[.]100[.]50[.]0"
-
-     Constraints:
-
-        * The given address is a valid IPv4 address.
-
- */
 public class DefangingIpAddress {
 
+    /**
+     * Defangs an IPv4 address by replacing each '.' with '[.]'.
+     *
+     * @param address The input IPv4 address.
+     * @return The defanged version of the address.
+     */
     public static String defangIPaddr(String address) {
-        return null;
+        return address.replace(".", "[.]");
     }
 
     public static void main(String[] args) {
-
+        System.out.println(defangIPaddr("1.1.1.1")); // Output: "1[.]1[.]1[.]1"
+        System.out.println(defangIPaddr("255.100.50.0")); // Output: "255[.]100[.]50[.]0"
     }
 }
+
